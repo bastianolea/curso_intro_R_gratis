@@ -32,11 +32,11 @@ $code-block-bg: #1A111E;
 $code-block-border-color: lighten($code-block-bg, 10%);
 $code-block-font-size: 0.55em;
 
+
+// general
 p {
   color: $body-color;
-}
-
-p {
+  
   code {
     padding: 3px;
   }
@@ -46,8 +46,17 @@ a {
   text-decoration: underline !important;
 }
 
+h1 {
+  color: #9F69C7 !important;
+}
+
+strong {
+  color: #9069C0 !important;
+}
 
 .footer {
+  font-size: 0.4em !important;
+  
   p {
   color: #442A54 !important;
   }
@@ -55,20 +64,6 @@ a {
   a {
   color: #442A54 !important;
   }
-}
-
-h1 {
-  color: #9F69C7 !important;
-}
-
-// bold
-strong {
-  color: #9069C0 !important;
-}
-
-// footer
-.reveal .footer {
-  font-size: 0.4em !important;
 }
 
 .title {
@@ -82,29 +77,6 @@ strong {
   font-style: italic;
   font-weight: normal;
 }
-
-.espaciar {
-      padding-right: 10%; /* Adjust the percentage as needed */
-}
-    
-.borde {
-  border-radius: 7px !important;
-  margin: 12px !important;
-}
-
-.borde-linea {
-  border-radius: 8px !important;
-}
-
-.linea {
-  border: solid 2px #442A54;
-}
-
-.centrar {
-  margin-top: auto !important;
-  margin-bottom: auto !important;
-}
-
 
 // images
 .reveal section.img_container {
@@ -123,13 +95,28 @@ strong {
 }
 
 
-/*-- scss:rules --*/
-
-.reveal .slide blockquote {
-  border-left: 3px solid $text-muted;
-  padding-left: 0.5em;
+// creados
+.espaciar {
+      padding-right: 10%; /* Adjust the percentage as needed */
 }
 
+.borde {
+  border-radius: 7px !important;
+  margin: 12px !important;
+}
+
+.borde-linea {
+  border-radius: 8px !important;
+}
+
+.linea {
+  border: solid 2px #442A54;
+}
+
+.centrar {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
 
 .grande
 {
@@ -147,4 +134,12 @@ strong {
     padding-bottom: 4px !important;
     margin: 10px;
     background-color: #31193F;
+}
+
+
+/*-- scss:rules --*/
+
+.reveal .slide blockquote {
+  border-left: 3px solid $text-muted;
+  padding-left: 0.5em;
 }
