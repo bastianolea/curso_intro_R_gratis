@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-969ddfa49e00a70eb3423444dbc81f6c.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.25">
+
+  <meta name="author" content="Bastián Olea Herrera">
+  <title>Compartir y colaborar desde el cruce entre las ciencias de datos y sociales</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #e1e4e8; background-color: #24292e; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #e1e4e8; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #f97583; } /* Attribute */
+    code span.bn { color: #79b8ff; } /* BaseN */
+    code span.bu { color: #f97583; } /* BuiltIn */
+    code span.cf { color: #f97583; } /* ControlFlow */
+    code span.ch { color: #9ecbff; } /* Char */
+    code span.cn { color: #79b8ff; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #f97583; } /* DataType */
+    code span.dv { color: #79b8ff; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #f97583; font-weight: bold; } /* Extension */
+    code span.fl { color: #79b8ff; } /* Float */
+    code span.fu { color: #b392f0; } /* Function */
+    code span.im { color: #9ecbff; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #f97583; } /* Keyword */
+    code span.op { color: #e1e4e8; } /* Operator */
+    code span.ot { color: #b392f0; } /* Other */
+    code span.pp { color: #f97583; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #79b8ff; } /* SpecialChar */
+    code span.ss { color: #9ecbff; } /* SpecialString */
+    code span.st { color: #9ecbff; } /* String */
+    code span.va { color: #ffab70; } /* Variable */
+    code span.vs { color: #9ecbff; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-978f3fd1af6cf055b0607ce7e21b77f4.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-dark">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Compartir y colaborar desde el cruce entre las ciencias de datos y sociales</h1>
+  <p class="subtitle">Diplomado de Ciencia de Datos para Ciencias Sociales y Humanidades</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Bastián Olea Herrera 
+</div>
+</div>
+</div>
+
+</section>
+<section id="temario" class="slide level2">
+<h2>Temario</h2>
+<ul>
+<li>Mi experiencia con el análisis de datos desde la <strong>sociología</strong></li>
+<li>Revisar algunos de mis proyectos de <strong>análisis de datos con R</strong></li>
+<li>Principios para guiarnos:</li>
+</ul>
+<div class="cuadro">
+<ol type="1">
+<li><em>Crear</em></li>
+<li><em>Diferenciarse</em></li>
+<li><em>Compartir</em></li>
+</ol>
+</div>
+<p><br></p>
+<div class="cuadro">
+<p><strong>Consejos prácticos</strong> para lograrlo <span style="font-size: 120%; color: #9069C0;">♥</span></p>
+</div>
+</section>
+<section>
+<section id="trayectoria" class="title-slide slide level1 center">
+<h1>Trayectoria</h1>
+
+</section>
+<section id="portafolio" class="slide level2">
+<h2>Portafolio</h2>
+<p>Aplicaciones desarrolladas en R y <code>{shiny}</code> centradas en visualización de datos públicos</p>
+
+<img data-src="img/pantallazo_2.png" class="borde linea r-stretch"></section>
+<section id="aplicaciones" class="slide level2">
+<h2>Aplicaciones</h2>
+<p><a href="https://bastianolea.github.io/shiny_apps/">Página web</a> para presentar mis aplicaciones.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="img/apps1.png" class="borde"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="img/apps2.png" class="borde"></p>
+</div></div>
+<p>Página creada en <a href="https://quarto.org/docs/computations/r.html">R con Quarto</a> y hosteada en <a href="https://docs.github.com/es/pages">GitHub Pages</a>.</p>
+</section>
+<section id="sitio-web" class="slide level2">
+<h2>Sitio web</h2>
+<p><a href="https://bastianolea.rbind.io" class="uri">https://bastianolea.rbind.io</a></p>
+<p>Sitio web sobre contenido de R, principalmente guías, tutoriales y recomendaciones</p>
+
+<img data-src="img/sitio.png" class="borde linea r-stretch"></section>
+<section id="blog-de-r" class="slide level2">
+<h2>Blog de R</h2>
+<p><a href="https://bastianolea.rbind.io" class="uri">https://bastianolea.rbind.io</a></p>
+<p>Blog donde puedo compartir cosas que aprendo, consejos para los demás, y guías para invitar a que más gente use estas herramientas.</p>
+<div class="columns">
+<div class="column" style="margin-top:10px;">
+<p><img data-src="img/blog1.png" class="borde linea"></p>
+</div><div class="column">
+<p><img data-src="img/blog2.png" class="borde linea" style="height: 80%; object-fit: contain;"></p>
+</div></div>
+</section>
+<section id="repositorio-de-datos" class="slide level2">
+<h2>Repositorio de datos</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="img/datos.png" class="borde"></p>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><a href="https://bastianolea.github.io/datos_sociales/">Otra página web</a> donde voy manteniendo un repositorio de datos sociales que he usado para otros proyectos.</li>
+<li>La idea es recolectar todo en un mismo lugar para <strong>facilitar el acceso a datos</strong>.</li>
+<li>Cada proyecto contiene <strong>datos limpios/procesados</strong>, código abierto para <strong>procesar y explorar</strong> los datos, y ejemplos de visualización asociados.</li>
+</ul>
+</div></div>
+<p>Esta página también fue creada en <a href="https://quarto.org/docs/computations/r.html">R con Quarto</a>, principalmente con una tabla hecha con <a href="https://gt.rstudio.com">el paquete <code>{gt}</code></a>, y hosteada en <a href="https://docs.github.com/es/pages">GitHub Pages</a>.</p>
+</section></section>
+<section>
+<section id="creación" class="title-slide slide level1 center">
+<h1>Creación</h1>
+
+</section>
+<section id="creación-1" class="slide level2">
+<h2>Creación</h2>
+<ul>
+<li class="fragment">Desarrollar temas de su <strong>experticia, campo o disciplina</strong> 🔬</li>
+<li class="fragment">Abordar temas de <strong>relevancia social </strong> ✊🏼</li>
+<li class="fragment">Hacer públicos <strong>estudios o investigaciones académicas</strong> 📝</li>
+<li class="fragment">Explorar repositorios de <strong>datos públicos</strong></li>
+<li class="fragment"><strong>Reutilización</strong> de datos públicos ♻️</li>
+<li class="fragment">Participar de <a href="https://github.com/rfordatascience/tidytuesday">TidyTuesday</a> 🌎</li>
+<li class="fragment"><a href="https://latinr.org">Latin R</a>, presentar trabajos <a href="https://latinr.org/blog/es/2025-05-31-presentacion-trabajos-2025.html">hasta el 25 de agosto</a></li>
+</ul>
+<div class="fragment">
+<p>Siempre va a haber gente interesada! ☺️</p>
+</div>
+</section>
+<section id="ejemplos" class="slide level2">
+<h2>Ejemplos</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Portal de reutilización del sitio de <a href="https://datos.gob.cl/data_reuse">Datos Abiertos del Gobierno de Chile</a></p>
+<p><img data-src="img/reutilizacion.png" class="borde"></p>
+</div><div class="column" style="width:50%;">
+<p>Visualizador de datos de <a href="https://bastianoleah.shinyapps.io/censo_proyecciones/">proyecciones de población del Censo, Chile</a></p>
+<p><img data-src="img/app_censo.png" class="borde"></p>
+</div></div>
+</section></section>
+<section>
+<section id="diferenciación" class="title-slide slide level1 center">
+<h1>Diferenciación</h1>
+
+</section>
+<section id="diferenciación-1" class="slide level2">
+<h2>Diferenciación</h2>
+<ul>
+<li class="fragment">Abordar temáticas de forma <strong>inclusiva</strong> a todo público</li>
+<li class="fragment">Preocuparse por la apariencia de los productos!</li>
+<li class="fragment">Gráficos <code>{ggplot2}</code> con <a href="https://rstudio.github.io/thematic/">temas de colores</a> con <code>{thematic}</code> y <a href="https://r-graph-gallery.com/package/showtext.html">tipografías</a> con <code>{showtext}</code></li>
+<li class="fragment">Aplicaciones <code>{shiny}</code> con <a href="https://rstudio.github.io/bslib/articles/theming/index.html">temas de colores</a> con <code>{bslib}</code></li>
+<li class="fragment">Atención a las tipografías: pares tipográficos ️✒️💎</li>
+<li class="fragment">Selección de paletas de colores llamativas y con personalidad 💅🏼✨</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="tipografías">Tipografías</h3>
+<ul>
+<li><a href="https://fonts.google.com/">fonts.google.com</a>, tipografías de Google</li>
+<li><a href="https://www.fontpair.co/all">fontpair.co</a>, pares de tipografías</li>
+</ul>
+<p>Gráficos de <code>{ggplot2}</code> con tipografías personalizadas:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(showtext)</span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a><span class="fu">font_add_google</span>(<span class="at">name =</span> <span class="st">"Montserrat"</span>) <span class="co"># descargar</span></span>
+<span id="cb1-4"><a></a></span>
+<span id="cb1-5"><a></a><span class="co"># activar el uso de tipografías</span></span>
+<span id="cb1-6"><a></a><span class="fu">showtext_auto</span>()</span>
+<span id="cb1-7"><a></a><span class="fu">showtext_opts</span>(<span class="at">dpi =</span> <span class="dv">300</span>) <span class="co"># resolución para que se vean bien</span></span>
+<span id="cb1-8"><a></a></span>
+<span id="cb1-9"><a></a><span class="co"># cambiar tipografía global</span></span>
+<span id="cb1-10"><a></a>grafico <span class="sc">+</span></span>
+<span id="cb1-11"><a></a>  <span class="fu">theme_classic</span>(<span class="at">base_family =</span> <span class="st">"Montserrat"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="colores">Colores</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Gráficos <code>{ggplot2}</code> con temas de colores:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-2"><a></a><span class="fu">library</span>(thematic)</span>
+<span id="cb2-3"><a></a></span>
+<span id="cb2-4"><a></a>thematic<span class="sc">::</span><span class="fu">thematic_on</span>(<span class="at">bg =</span> <span class="st">"#222222"</span>,</span>
+<span id="cb2-5"><a></a>                      <span class="at">fg =</span> <span class="st">"white"</span>, </span>
+<span id="cb2-6"><a></a>                      <span class="at">accent =</span> <span class="st">"#0CE3AC"</span>)</span>
+<span id="cb2-7"><a></a></span>
+<span id="cb2-8"><a></a>iris <span class="sc">|&gt;</span> </span>
+<span id="cb2-9"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb2-10"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Width) <span class="sc">+</span></span>
+<span id="cb2-11"><a></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div><div class="column" style="width:50%;">
+<p>Aplicaciones Shiny con temas de colores, incluyendo gráficos:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(shiny)</span>
+<span id="cb3-2"><a></a><span class="fu">library</span>(thematic)</span>
+<span id="cb3-3"><a></a></span>
+<span id="cb3-4"><a></a><span class="fu">thematic_shiny</span>()</span>
+<span id="cb3-5"><a></a></span>
+<span id="cb3-6"><a></a>ui <span class="ot">&lt;-</span> <span class="fu">page_fluid</span>(</span>
+<span id="cb3-7"><a></a>  <span class="at">theme =</span> <span class="fu">bs_theme</span>(<span class="at">bg =</span> color_fondo,</span>
+<span id="cb3-8"><a></a>                   <span class="at">fg =</span> color_texto,</span>
+<span id="cb3-9"><a></a>                   <span class="at">primary =</span> color_primario</span>
+<span id="cb3-10"><a></a>  )</span>
+<span id="cb3-11"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div></div>
+<p><br></p>
+<p>Recursos para encontrar colores:</p>
+<ul>
+<li><a href="https://www.w3schools.com/colors/colors_picker.asp">HTML Color Picker</a></li>
+<li><a href="https://pigment.shapefactory.co">pigment.shapefactory.co</a>, paletas de colores</li>
+<li><a href="https://2colors.colorion.co">2colors.colorion.co</a>, pares de colores</li>
+<li><a href="https://www.realtimecolors.com">realtimecolors.com</a>, simulador de interfaz web con paletas de colores</li>
+</ul>
+</section></section>
+<section>
+<section id="compartir" class="title-slide slide level1 center">
+<h1>Compartir</h1>
+
+</section>
+<section id="compartir-1" class="slide level2">
+<h2>Compartir</h2>
+<p><em>Diagnóstico:</em> estado actual de la internet 😕</p>
+<ul>
+<li>Lugares para hacer comunidad: <a href="https://bsky.app">Bluesky</a>, redes sociales</li>
+<li>Participar de <a href="https://stackoverflow.com/collectives/r-language">Stack Overflow</a></li>
+<li>Comunidades de R, grupos RLadies</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>¿Crear tu propia comunidad? 🐣</li>
+</ul>
+</div>
+</section>
+<section id="crear" class="slide level2">
+<h2>Crear</h2>
+<ul>
+<li>Crear repositorios en <a href="https://github.com/bastianolea">GitHub</a> con <code>{usethis}</code> 📦</li>
+<li>Archivos <code>readme.md</code> para documentar y ofrecer contexto</li>
+<li>Subir código <em>suelto</em> a <a href="https://gist.github.com">Gists de GitHub</a> 🗒️</li>
+<li>Compartir código en redes sociales 🤓</li>
+<li>Herramientas para <a href="https://carbon.now.sh">crear</a> <em><a href="https://ray.so">pantallazos</a></em> 📸</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="compartir-códigos-breves">Compartir códigos breves</h3>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:48%;">
+<h4 id="github-gists">GitHub Gists</h4>
+<p>Una forma rápida de subir pedazos de código para poder compartirlo</p>
+<div style="margin:30px;">
+<p><img data-src="img/gist.png" class="borde linea"></p>
+</div>
+</div><div class="column" style="width:4%;">
+
+</div><div class="column" style="width:48%;">
+<h4 id="pantallazos">Pantallazos</h4>
+<p>Usa servicios online como <a href="https://carbon.now.sh">carbon.now.sh</a> o <a href="https://ray.so">ray.so</a> para crear imágenes con código</p>
+<p><img data-src="img/snippet.png" class="borde linea"></p>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h3 id="crear-un-repositorio-en-github">Crear un repositorio en GitHub</h3>
+<p>Crear un repositorio local para tu código:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span>
+<span id="cb4-2"><a></a></span>
+<span id="cb4-3"><a></a>usethis<span class="sc">::</span><span class="fu">use_git</span>() <span class="co"># crear repositorio local</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><br></p>
+<p>Configurar GitHub:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>() <span class="co"># crear token de tu cuenta</span></span>
+<span id="cb5-2"><a></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>() <span class="co"># guardar token para autorizar tu pc</span></span>
+<span id="cb5-3"><a></a>usethis<span class="sc">::</span><span class="fu">use_git_config</span>(<span class="at">user.name =</span> <span class="st">"usuario"</span>, <span class="at">user.email =</span> <span class="st">"correo"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Subir tu repositorio local a GitHub, creando un <em>espejo</em> de tu código en el repositorio remoto:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>usethis<span class="sc">::</span><span class="fu">use_github</span>() <span class="co"># subir repo local a github</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><br></p>
+<p>Revisa el <a href="https://bastianolea.rbind.io/blog/r_introduccion/tutorial_github/">tutorial completo aquí!</a></p>
+</section>
+<section class="slide level2">
+
+<h3 id="crear-un-archivo-readme.md">Crear un archivo <code>readme.md</code></h3>
+<p>Crea un archivo de texto <em>Markdown</em> (extensión <code>.md</code>) para explicar al mundo de qué se trata tu repositorio!</p>
+<p><em>Titulares:</em></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a></a><span class="fu"># Título 1</span></span>
+<span id="cb7-2"><a></a><span class="fu">## Título 2</span></span>
+<span id="cb7-3"><a></a><span class="fu">### Título 3, etc.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><em>Estilos de texto:</em></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a></a>**negrita**</span>
+<span id="cb8-2"><a></a>*itálica* o _itálica_</span>
+<span id="cb8-3"><a></a><span class="dt">&lt;</span><span class="kw">u</span><span class="dt">&gt;</span>subrayado<span class="dt">&lt;/</span><span class="kw">u</span><span class="dt">&gt;</span></span>
+<span id="cb8-4"><a></a>~~tachado~~</span>
+<span id="cb8-5"><a></a><span class="in">`código`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><em>Imágenes:</em></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="sc">!</span>[](mapache.jpeg)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>En cierta forma es como una página web muy básica 🥺</p>
+</section>
+<section id="crear-1" class="slide level2">
+<h2>Crear</h2>
+<p>Crear un lugar, volverse <em>encontrable</em></p>
+<ul>
+<li class="fragment"><a href="https://bastianolea.rbind.io/blog/quarto_reportes/">Crear documentos Quarto</a> para compartir resultados hechos con R 📄</li>
+<li class="fragment"><a href="https://bastianolea.rbind.io/blog/tutorial_quarto_github_pages/#documento-quarto-en-github-pages">Subir documentos Quarto a GitHub pages</a>, tu propia página web estática para tu proyecto 🚀</li>
+<li class="fragment"><a href="https://bastianolea.rbind.io/blog/tutorial_quarto_github_pages/#blogs-quarto-en-github-pages">Crear un blog con Quarto</a>, el paso siguiente para construir tu presencia en la web 🤩</li>
+<li class="fragment"><a href="https://hugo-apero.netlify.app%20https://hugo-apero-docs.netlify.app">Blog Hugo</a>, una alternativa más rápida pero menos personalizable 🌷</li>
+<li class="fragment"><a href="https://support.rbind.io/about/">Dominio Rbind.io</a> para darle el toquecito neRd 🧐</li>
+<li class="fragment"><a href="https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/">Crea aplicaciones web interactivas con Shiny</a> y <a href="https://www.shinyapps.io">súbelas a la web</a> rápido y gratis 🪐</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="quarto">Quarto</h3>
+<p>Crea documentos que mezclen texto, código y gráficos desde R.</p>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><em>Vista desde RStudio</em> <img data-src="img/quarto_2.png" class="borde linea"></p>
+</div><div class="column" style="width:4%;">
+
+</div><div class="column" style="width:48%;">
+<p><em>Ejemplo de un reporte</em> <img data-src="img/quarto_ejemplo1.png" class="borde linea"></p>
+</div></div>
+<p>Revisa el <a href="https://bastianolea.rbind.io/blog/quarto_reportes/">tutorial de Quarto aquí!</a></p>
+</section>
+<section class="slide level2">
+
+<h3 id="github-pages">GitHub Pages</h3>
+<ol type="1">
+<li>Subir documento Quarto a un repositorio GitHub</li>
+<li>Crear un archivo <code>_quarto.yml</code>:</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb10-2"><a></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> docs</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="3" type="1">
+<li>Creamos un archivo vacío llamado <code>.nojekyll</code></li>
+<li>Subir cambios del repositorio local al <strong>repositorio remoto</strong> en GitHub</li>
+</ol>
+</section>
+<section class="slide level2">
+
+<h3 id="github-pages-1">GitHub Pages</h3>
+<ol start="5" type="1">
+<li>Entra a la pestaña <em>Settings</em> del repositorio remoto:</li>
+</ol>
+
+<img data-src="img/quarto_5.png" class="borde linea r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="github-pages-2">GitHub Pages</h3>
+<ol start="6" type="1">
+<li>Entra a <em>Pages</em>, elige la rama y elige <code>/docs</code></li>
+</ol>
+
+<img data-src="img/quarto_6.png" class="grande borde linea r-stretch"><p>Revisa el <a href="https://bastianolea.rbind.io/blog/tutorial_quarto_github_pages/#documento-quarto-en-github-pages">tutorial completo aquí!</a> <br></p>
+</section>
+<section class="slide level2">
+
+<h3 id="blog-quarto">Blog Quarto</h3>
+<div class="columns">
+<div class="column" style="width:50;">
+<ol type="1">
+<li>Crear un nuevo proyecto desde RStudio usando <strong>Quarto Blog</strong>:</li>
+</ol>
+<p><img data-src="img/blog_1.png" class="borde linea"></p>
+</div><div class="column" style="width:50;">
+<ol start="2" type="1">
+<li>Listo! Se crea un blog Quarto, puedes agregar publicaciones en <code>posts</code> <img data-src="img/blog_2.png" class="borde linea"></li>
+</ol>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h3 id="blog-quarto-1">Blog Quarto</h3>
+<p>Para subirlo a GitHub Pages es similar a las instrucciones anteriores:</p>
+<ol type="1">
+<li>En <code>_quarto.yml</code> agregamos <code>output-dir: docs</code> debajo de <code>project:</code>.</li>
+<li>En el proyecto, creamos un nuevo archivo vacío que se llame <code>.nojekyll</code></li>
+<li>Le damos <em>Render</em> al documento <code>index.qmd</code> o en la pestaña Terminal ejecutamos <code>quarto render</code></li>
+<li>Creamos un repositorio git con <code>usethis::use_git()</code></li>
+<li>Subimos el repositorio a GitHub con <code>usethis::use_github()</code></li>
+<li>En GitHub, entramos a <em>Settings</em>, luego a <em>Pages</em>, y configuramos el repositorio para que genere la página desde <code>/docs</code></li>
+</ol>
+<p>Elige un <a href="https://quarto.org/docs/output-formats/html-themes.html">tema desde la documentacion</a> y aplícalo en <code>_quarto.yml</code>.</p>
+<p>Revisa el <a href="https://bastianolea.rbind.io/blog/tutorial_quarto_github_pages/#blogs-quarto-en-github-pages">tutorial completo aquí!</a></p>
+</section>
+<section class="slide level2">
+
+<h3 id="blog-hugo">Blog Hugo</h3>
+<div class="columns">
+<div class="column" style="width:50;">
+<p><img data-src="img/hugo_0.png" class="grande borde linea"></p>
+</div><div class="column" style="width:50;">
+<p>Hugo es una plataforma para crear blogs en base a Markdown y el lenguaje de programación Go. Gracias al tema <a href="https://hugo-apero-docs.netlify.app">Hugo Apéro</a> se puede crear un blog elegante y funcional desde R en pocos pasos.</p>
+<p>Instalar <code>{blogdown}</code> e instalar Hugo:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">install.packages</span>(<span class="st">"blogdown"</span>)</span>
+<span id="cb11-2"><a></a>blogdown<span class="sc">::</span><span class="fu">install_hugo</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div></div>
+<p>Instrucciones detalladas <a href="https://hugo-apero-docs.netlify.app">disponibles en este blog.</a></p>
+</section>
+<section class="slide level2">
+
+<h3 id="blog-hugo-1">Blog Hugo</h3>
+<p>Creamos el blog con la siguiente función:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">library</span>(blogdown)</span>
+<span id="cb12-2"><a></a><span class="fu">new_site</span>(<span class="at">theme =</span> <span class="st">"hugo-apero/hugo-apero"</span>, </span>
+<span id="cb12-3"><a></a>         <span class="at">format =</span> <span class="st">"toml"</span>,</span>
+<span id="cb12-4"><a></a>         <span class="at">sample =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb12-5"><a></a>         <span class="at">empty_dirs =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Para ver el sitio ejecutamos <code>blogdown::serve_site()</code></p>
+<p>Tenemos la función <code>blogdown::new_post()</code> crear un nuevo post:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>blogdown<span class="sc">::</span><span class="fu">new_post</span>(<span class="at">title =</span> <span class="st">"Mi primer post en Hugo"</span>, </span>
+<span id="cb13-2"><a></a>                   <span class="at">subdir =</span> <span class="st">"blog/"</span>,</span>
+<span id="cb13-3"><a></a>                   <span class="at">file =</span> <span class="st">"blog/primero/index.md"</span>,</span>
+<span id="cb13-4"><a></a>                   <span class="at">author =</span> <span class="st">"Bastián Olea Herrera"</span>,</span>
+<span id="cb13-5"><a></a>                   <span class="at">tags =</span> <span class="fu">c</span>(<span class="st">"ggplot2"</span>, <span class="st">"gráficos"</span>, <span class="st">"curiosidades"</span>)</span>
+<span id="cb13-6"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="blog-hugo-2">Blog Hugo</h3>
+<p>Instrucciones para <a href="https://hugo-apero-docs.netlify.app/start/deploy/">subir el blog a internet</a>:</p>
+<ol type="1">
+<li>Creamos un repositorio git con <code>usethis::use_git()</code></li>
+<li>Subimos el repositorio a GitHub con <code>usethis::use_github()</code></li>
+<li>Entrar a <a href="https://app.netlify.com/">Netlify</a> y el <em>Projects</em>, seleccionar <em>Add new project</em></li>
+<li>Elegir el repositorio de GitHub que creamos, dejar todo como está y poner <em>Deploy Site</em></li>
+<li>En <code>config.toml</code>, cambiar <code>baseURL</code> por la dirección del sitio subido (del paso anterior). Subir este cambio a GitHub.</li>
+<li>Revisar con <code>blogdown::config_netlify()</code> y luego <code>blogdown::check_netlify()</code></li>
+</ol>
+</section>
+<section class="slide level2">
+
+<h3 id="blog-hugo-3">Blog Hugo</h3>
+<p>Como Hugo usa Markdown y no Quarto, si queremos crear documentos <code>.qmd</code> que usen los resultados del código de R, debemos agregar lo siguiente al encabezado de cada post:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>format<span class="sc">:</span></span>
+<span id="cb14-2"><a></a>  hugo<span class="sc">-</span>md<span class="sc">:</span></span>
+<span id="cb14-3"><a></a>  output<span class="sc">-</span>file<span class="sc">:</span> <span class="st">"index"</span></span>
+<span id="cb14-4"><a></a>output<span class="sc">-</span>ext<span class="sc">:</span> <span class="st">"md"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="shiny">Shiny</h3>
+<div class="columns">
+<div class="column" style="width:50;">
+<p>Para crear una aplicación Shiny, creamos un nuevo proyecto y elegimos <em>Shiny Application</em>.</p>
+<p><img data-src="img/shiny_0.png" class="borde linea"></p>
+<p>Revisa un <a href="https://bastianolea.rbind.io/blog/r_introduccion/tutorial_shiny_1/">mini tutorial aquí.</a></p>
+</div><div class="column" style="width:50;">
+<p>Desde el mismo panel de RStudio puedes publicar tu aplicación a ShinyApps.io con el botón Publish.</p>
+<p><img data-src="img/tutorial_shinyapps_7.png" class="borde linea"></p>
+<p>Guía para subir tu app <a href="https://bastianolea.rbind.io/blog/r_introduccion/tutorial_shinyapps/">en este tutorial!</a></p>
+</div></div>
+</section>
+<section id="consejos" class="slide level2">
+<h2>Consejos</h2>
+<ul>
+<li>Crea cosas <span class="fragment">que te sirvan</span><span class="fragment">, que te conecten</span><span class="fragment">, y que sean socialmente relevantes</span></li>
+<li>Escribe <em>bocetos</em> ✍🏼</li>
+<li>Escribe todo lo que aprendes! 📒</li>
+<li>Trata de dar de vuelta lo que has recibido 💖</li>
+</ul>
+</section></section>
+<section id="gracias" class="title-slide slide level1 center">
+<h1>Gracias <span style="font-size: 110%; color: #9069C0;">♥</span></h1>
+<p>Puedes escribirme cualquier duda o comentario <a href="https://bastianolea.rbind.io/contact/">por aquí</a></p>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>Bastián Olea Herrera — <a href="https://bastianolea.rbind.io">https://bastianolea.rbind.io</a></p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

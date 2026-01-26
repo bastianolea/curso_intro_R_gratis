@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "taller.html#temario",
+    "href": "taller.html#temario",
+    "title": "Compartir y colaborar desde el cruce entre las ciencias de datos y sociales",
+    "section": "Temario",
+    "text": "Temario\n\nMi experiencia con el análisis de datos desde la sociología\nRevisar algunos de mis proyectos de análisis de datos con R\nPrincipios para guiarnos:\n\n\n\nCrear\nDiferenciarse\nCompartir\n\n\n\n\nConsejos prácticos para lograrlo ♥"
+  },
+  {
+    "objectID": "taller.html#portafolio",
+    "href": "taller.html#portafolio",
+    "title": "Compartir y colaborar desde el cruce entre las ciencias de datos y sociales",
+    "section": "Portafolio",
+    "text": "Portafolio\nAplicaciones desarrolladas en R y {shiny} centradas en visualización de datos públicos"
+  },
+  {
+    "objectID": "taller.html#aplicaciones",
+    "href": "taller.html#aplicaciones",
+    "title": "Compartir y colaborar desde el cruce entre las ciencias de datos y sociales",
+    "section": "Aplicaciones",
+    "text": "Aplicaciones\nPágina web para presentar mis aplicaciones.\n\n\n\n\n\n\nPágina creada en R con Quarto y hosteada en GitHub Pages."
+  },
+  {
+    "objectID": "taller.html#sitio-web",
+    "href": "taller.html#sitio-web",
+    "title": "Compartir y colaborar desde el cruce entre las ciencias de datos y sociales",
+    "section": "Sitio web",
+    "text": "Sitio web\nhttps://bastianolea.rbind.io\nSitio web sobre contenido de R, principalmente guías, tutoriales y recomendaciones"
+  },
+  {
+    "objectID": "taller.html#blog-de-r",
+    "href": "taller.html#blog-de-r",
+    "title": "Compartir y colaborar desde el cruce entre las ciencias de datos y sociales",
+    "section": "Blog de R",
+    "text": "Blog de R\nhttps://bastianolea.rbind.io\nBlog donde puedo compartir cosas que aprendo, consejos para los demás, y guías para invitar a que más gente use estas herramientas."
+  },
+  {
+    "objectID": "taller.html#repositorio-de-datos",
+    "href": "taller.html#repositorio-de-datos",
+    "title": "Compartir y colaborar desde el cruce entre las ciencias de datos y sociales",
+    "section": "Repositorio de datos",
+    "text": "Repositorio de datos\n\n\n\n\n\nOtra página web donde voy manteniendo un repositorio de datos sociales que he usado para otros proyectos.\nLa idea es recolectar todo en un mismo lugar para facilitar el acceso a datos.\nCada proyecto contiene datos limpios/procesados, código abierto para procesar y explorar los datos, y ejemplos de visualización asociados.\n\n\nEsta página también fue creada en R con Quarto, principalmente con una tabla hecha con el paquete {gt}, y hosteada en GitHub Pages."
+  },
+  {
+    "objectID": "taller.html#creación-1",
+    "href": "taller.html#creación-1",
+    "title": "Compartir y colaborar desde el cruce entre las ciencias de datos y sociales",
+    "section": "Creación",
+    "text": "Creación\n\nDesarrollar temas de su experticia, campo o disciplina 🔬\nAbordar temas de relevancia social  ✊🏼\nHacer públicos estudios o investigaciones académicas 📝\nExplorar repositorios de datos públicos\nReutilización de datos públicos ♻️\nParticipar de TidyTuesday 🌎\nLatin R, presentar trabajos hasta el 25 de agosto\n\n\nSiempre va a haber gente interesada! ☺️"
+  },
+  {
+    "objectID": "taller.html#ejemplos",
+    "href": "taller.html#ejemplos",
+    "title": "Compartir y colaborar desde el cruce entre las ciencias de datos y sociales",
+    "section": "Ejemplos",
+    "text": "Ejemplos\n\n\nPortal de reutilización del sitio de Datos Abiertos del Gobierno de Chile\n\n\nVisualizador de datos de proyecciones de población del Censo, Chile"
+  },
+  {
+    "objectID": "taller.html#diferenciación-1",
+    "href": "taller.html#diferenciación-1",
+    "title": "Compartir y colaborar desde el cruce entre las ciencias de datos y sociales",
+    "section": "Diferenciación",
+    "text": "Diferenciación\n\nAbordar temáticas de forma inclusiva a todo público\nPreocuparse por la apariencia de los productos!\nGráficos {ggplot2} con temas de colores con {thematic} y tipografías con {showtext}\nAplicaciones {shiny} con temas de colores con {bslib}\nAtención a las tipografías: pares tipográficos ️✒️💎\nSelección de paletas de colores llamativas y con personalidad 💅🏼✨"
+  },
+  {
+    "objectID": "taller.html#compartir-1",
+    "href": "taller.html#compartir-1",
+    "title": "Compartir y colaborar desde el cruce entre las ciencias de datos y sociales",
+    "section": "Compartir",
+    "text": "Compartir\nDiagnóstico: estado actual de la internet 😕\n\nLugares para hacer comunidad: Bluesky, redes sociales\nParticipar de Stack Overflow\nComunidades de R, grupos RLadies\n\n\n\n¿Crear tu propia comunidad? 🐣"
+  },
+  {
+    "objectID": "taller.html#crear",
+    "href": "taller.html#crear",
+    "title": "Compartir y colaborar desde el cruce entre las ciencias de datos y sociales",
+    "section": "Crear",
+    "text": "Crear\n\nCrear repositorios en GitHub con {usethis} 📦\nArchivos readme.md para documentar y ofrecer contexto\nSubir código suelto a Gists de GitHub 🗒️\nCompartir código en redes sociales 🤓\nHerramientas para crear pantallazos 📸"
+  },
+  {
+    "objectID": "taller.html#crear-1",
+    "href": "taller.html#crear-1",
+    "title": "Compartir y colaborar desde el cruce entre las ciencias de datos y sociales",
+    "section": "Crear",
+    "text": "Crear\nCrear un lugar, volverse encontrable\n\nCrear documentos Quarto para compartir resultados hechos con R 📄\nSubir documentos Quarto a GitHub pages, tu propia página web estática para tu proyecto 🚀\nCrear un blog con Quarto, el paso siguiente para construir tu presencia en la web 🤩\nBlog Hugo, una alternativa más rápida pero menos personalizable 🌷\nDominio Rbind.io para darle el toquecito neRd 🧐\nCrea aplicaciones web interactivas con Shiny y súbelas a la web rápido y gratis 🪐"
+  },
+  {
+    "objectID": "taller.html#consejos",
+    "href": "taller.html#consejos",
+    "title": "Compartir y colaborar desde el cruce entre las ciencias de datos y sociales",
+    "section": "Consejos",
+    "text": "Consejos\n\nCrea cosas que te sirvan, que te conecten, y que sean socialmente relevantes\nEscribe bocetos ✍🏼\nEscribe todo lo que aprendes! 📒\nTrata de dar de vuelta lo que has recibido 💖"
+  }
+]
