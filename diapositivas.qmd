@@ -1,0 +1,17 @@
+---
+title: "Introducción al análisis de datos con R"
+subtitle: "Curso dirigido a Ciencias Sociales y Humanidades"
+author: "Bastián Olea Herrera"
+format: 
+  revealjs:
+    theme: [default, estilos.scss]
+    highlight-style: "github-dark"
+    footer: "Bastián Olea Herrera — [https://bastianolea.rbind.io](https://bastianolea.rbind.io)"
+execute: 
+  echo: true
+  eval: true
+editor_options: 
+  chunk_output_type: console
+---
+
+_En construcción_
