@@ -15,3 +15,98 @@ editor_options:
 ---
 
 _En construcción_
+
+
+----
+
+## ¿Qué es R?
+
+:::: {.columns}
+
+::: {.column width="70%"}
+R es un lenguaje de programación enfocado al **análisis de datos**, las **estadísticas** y la **visualización de datos**.
+:::
+
+::: {.column width="30%"}
+![](otros/logo_r.png){width=100px}
+:::
+::::
+
+. . .
+
+### ¿Para qué sirve?
+
+::: {.incremental}
+- Lógica distinta: **instrucciones** en vez de **acciones** ⚙️
+- Repetir, mejorar, adaptar y reutilizar lo que ya has hecho ♻️
+- Automatizar tareas repetitivas 🤖
+- Expandir tus resultados 🚀
+:::
+
+
+----
+
+### Diferencia entre _hacer_ y programar
+
+::::: {.columns}
+
+:::: {.column}
+[Hacer]{.subtitulo}
+
+::: {.incremental}
+- Hago **A**
+- Hago **B**
+- Hago **C**
+- _Me equivoqué en **B**_ 😣
+- Vuelvo a **A** 🙄
+- Hago **B**
+- Hago **C**
+::: 
+::::
+
+:::: {.column}
+[Programar]{.subtitulo}
+
+::: {.incremental}
+- Haga **A**
+- Haga **B**
+- Haga **C**
+- _Me equivoqué en **B**_ 🤨
+- Cambio **B** 😌
+- Re-ejecuto **A**, **B** y **C**
+::: 
+::::
+:::::
+
+----
+
+## ¿Por qué usar R?
+
+::: {.cuadro} 
+[Gratuito]{.subtitulo}
+
+R es un lenguaje de programación abierto y gratuito, y es parte de la comunidad del _software libre_, así que nunca tendrás que pagar nada!
+:::
+
+. . .
+
+::: {.cuadro} 
+[Amigable]{.subtitulo}
+
+R fue creado para personas de distintas disciplinas, y al centrarse en los datos resulta [más intuitivo](https://bastianolea.rbind.io/blog/r_introduccion/por_que_r/#usabilidad) que otros lenguajes.
+:::
+
+. . .
+
+::: {.cuadro} 
+[Reproducible]{.subtitulo}
+
+La gracia de R es [guardar todos los pasos de tu análisis](https://bastianolea.rbind.io/blog/2025-11-13/), lo que facilita corregirlos, [reutilizarlos](https://bastianolea.rbind.io/blog/r_introduccion/por_que_r/#procesos-reutilizables) para nuevos casos, y compartirlo con otros.
+:::
+
+
+----
+
+::: aside
+Some additional commentary of more peripheral interest.
+:::

@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "diapositivas.html#qué-es-r",
+    "href": "diapositivas.html#qué-es-r",
+    "title": "Introducción al análisis de datos con R",
+    "section": "¿Qué es R?",
+    "text": "¿Qué es R?\n\n\nR es un lenguaje de programación enfocado al análisis de datos, las estadísticas y la visualización de datos.\n\n\n\n\n¿Para qué sirve?\n\nLógica distinta: instrucciones en vez de acciones ⚙️\nRepetir, mejorar, adaptar y reutilizar lo que ya has hecho ♻️\nAutomatizar tareas repetitivas 🤖\nExpandir tus resultados 🚀"
+  },
+  {
+    "objectID": "diapositivas.html#por-qué-usar-r",
+    "href": "diapositivas.html#por-qué-usar-r",
+    "title": "Introducción al análisis de datos con R",
+    "section": "¿Por qué usar R?",
+    "text": "¿Por qué usar R?\n\nGratuito\nR es un lenguaje de programación abierto y gratuito, y es parte de la comunidad del software libre, así que nunca tendrás que pagar nada!\n\n\n\nAmigable\nR fue creado para personas de distintas disciplinas, y al centrarse en los datos resulta más intuitivo que otros lenguajes.\n\n\n\n\nReproducible\nLa gracia de R es guardar todos los pasos de tu análisis, lo que facilita corregirlos, reutilizarlos para nuevos casos, y compartirlo con otros."
+  }
+]
