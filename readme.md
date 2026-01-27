@@ -12,12 +12,17 @@ Su gracia es que es un lenguaje usado por personas de múltiples disciplinas, y 
 
 Aprende desde cero a usar este lenguaje y complementa tu carrera con herramientas de programación que te abrirán muchas posibilidades.
 
+[Más información en este post](https://bastianolea.rbind.io/blog/curso_gratis_r_intro_1/)
 
-https://bastianolea.rbind.io/blog/curso_gratis_r_intro_1/
 
+## Diapositivas
+
+https://bastianolea.github.io/curso_intro_R_gratis/
+
+
+## Streaming
 
 https://www.youtube.com/watch?v=A9wtPBEaVvY
-
 
 
 ## Código de conducta
