@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-6814ac7cabd52937f39d4de2604555fe.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-a19466e56efee3341b3d8d7a8da126da.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -146,12 +146,13 @@ Bastián Olea Herrera
 <section id="qué-es-r" class="slide level2">
 <h2>¿Qué es R?</h2>
 <div class="columns">
-<div class="column" style="width:70%;">
+<div class="column" style="width:55%;">
 <p>R es un lenguaje de programación enfocado al <strong>análisis de datos</strong>, las <strong>estadísticas</strong> y la <strong>visualización de datos</strong>.</p>
-</div><div class="column" style="width:30%;">
-<p><img data-src="otros/logo_r.png" width="100"></p>
+</div><div class="column" style="width:45%;">
+<p><img data-src="otros/logo_r.png" class="rosa" style="height: 180px; margin-top:-30px;"></p>
 </div></div>
 <div class="fragment">
+<p><br></p>
 <h3 id="para-qué-sirve">¿Para qué sirve?</h3>
 <ul>
 <li class="fragment">Lógica distinta: <strong>instrucciones</strong> en vez de <strong>acciones</strong> ⚙️</li>
@@ -207,14 +208,98 @@ Bastián Olea Herrera
 </div>
 </div>
 </section>
-<section class="slide level2">
-
-
-
+<section id="diferencia-entre-r-y-rstudio" class="slide level2">
+<h2>Diferencia entre R y RStudio</h2>
+<div class="columns">
+<div class="column">
+<h4 id="r">R</h4>
+<p><img data-src="otros/logo_r.png" class="rosa" style="height: 128px;"></p>
+<ul>
+<li>Lenguaje de programación</li>
+<li>Lanzado en 1993</li>
+<li>Usado por línea de comandos</li>
+<li>Desarrollado por R Core Team</li>
+<li>Basado en el lenguaje S (1976)</li>
+<li>Software libre</li>
+</ul>
+</div><div class="column">
+<h4 id="rstudio">RStudio</h4>
+<p><img data-src="otros/logo_rstudio.png" class="rosa" style="height: 128px;"></p>
+<ul>
+<li>Entorno de desarrollo integrado (IDE) enfocado en R</li>
+<li>Lanzado en 2011</li>
+<li>Interfaz gráfica (ventanas y botones)</li>
+<li>Desarrollado por Posit (ex RStudio)</li>
+<li>Software libre</li>
+</ul>
+</div></div>
 
 <aside><div>
-<p>Some additional commentary of more peripheral interest.</p>
+<p><em>Por favor digan que “aprendieron R” y no RStudio</em></p>
 </div></aside></section>
+<section id="conceptos-clave" class="slide level2">
+<h2>Conceptos clave</h2>
+<div class="fragment">
+<p><img data-src="otros/icono_script.png" class="izq" style="margin: 10px; width: 110px;"></p>
+<h4 id="script">Script</h4>
+<p>Archivo de texto .R en el que escribimos nuestro código, en pasos, y siguiendo un orden lógico.</p>
+<p><br></p>
+</div>
+<div class="fragment">
+<p><img data-src="otros/icono_consola.png" class="izq" style="margin-top: 10px; width: 130px;"></p>
+<h4 id="consola">Consola</h4>
+<p>Es la forma directa de interactuar con R, un comando a la vez, con resultados efímeros.</p>
+<p><br></p>
+</div>
+<div class="fragment">
+<p><img data-src="otros/icono_project.png" class="izq" style="width: 130px;"></p>
+<h4 id="proyecto">Proyecto</h4>
+<p>Archivo .Rproj que marca nuestro espacio de trabajo: una carpeta específica que reúne todas las piezas de nuestro análisis.</p>
+</div>
+</section>
+<section id="rstudio-1" class="slide level2">
+<h2>RStudio</h2>
+
+<img data-src="otros/rstudio.png" class="centro r-stretch" style="width: 800px;"><p><span class="circulo-grande absolute" style="top: 30%; left: 5%; ">1</span></p>
+<p><span class="circulo-grande absolute" style="top: 70%; left: 5%; ">2</span></p>
+<p><span class="circulo-grande absolute" style="top: 30%; right: 5%; ">3</span></p>
+<p><span class="circulo-grande absolute" style="top: 70%; right: 5%; ">4</span></p>
+</section>
+<section class="slide level2">
+
+<h4 id="conceptos">Conceptos</h4>
+<div class="fragment pad">
+<p><span class="circulo">1</span> <strong>Panel de scripts:</strong> los archivos de texto con nuestro código. Podemos tener varias pestañas. Ejecutamos el código poniendo el cursor en la línea y presionando <code>control + enter</code>, o el botón <em>Run</em>.</p>
+</div>
+<div class="fragment pad">
+<p><span class="circulo">2</span> <strong>Panel de consola:</strong> en la consola se imprimen los resultados de R a partir del código que ejecutamos en los scripts. También podemos ejecutar código directamente en ella escribiendo y presionando <code>enter</code>.</p>
+</div>
+<div class="fragment pad">
+<p><span class="circulo">3</span> <strong>Panel de entorno:</strong> acá veremos los objetos que vayamos creando, que pueden ser números, texto, tablas de datos, funciones, gráficos y otros.</p>
+</div>
+<div class="fragment pad">
+<p><span class="circulo">4</span> <strong>Panel de archivos:</strong> en este panel podemos navegar los archivos y carpetas de nuestro proyecto y/o computador.</p>
+</div>
+
+<aside><div>
+<p><em>Todos estos paneles son personalizables!</em></p>
+</div></aside></section>
+<section class="slide level2">
+
+<h3 id="consola-y-scripts">Consola y scripts</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Todos los <strong>comandos</strong> se ejecutan por medio de la consola</li>
+<li>Pero al ejecutar código en la consola, el código no se guarda!</li>
+<li>Para <strong>guardar</strong> el código, escribimos en <strong>scripts</strong></li>
+<li>Escribimos las <strong>instrucciones</strong> en un script, y RStudio se encarga de pasarlos a la consola y ejecutarlos cuando se lo pidamos 💡</li>
+</ul>
+</div></div>
+<p><img data-src="otros/rstudio_script.png" class="absolute" style="top: 5%; right: -20%; "></p>
+
+
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

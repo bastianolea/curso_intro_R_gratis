@@ -23,16 +23,18 @@ _En construcción_
 
 :::: {.columns}
 
-::: {.column width="70%"}
+::: {.column width="55%"}
 R es un lenguaje de programación enfocado al **análisis de datos**, las **estadísticas** y la **visualización de datos**.
 :::
 
-::: {.column width="30%"}
-![](otros/logo_r.png){width=100px}
+::: {.column width="45%"}
+![](otros/logo_r.png){.rosa style="height: 180px; margin-top:-30px;"}
 :::
 ::::
 
 . . .
+
+<br>
 
 ### ¿Para qué sirve?
 
@@ -107,6 +109,128 @@ La gracia de R es [guardar todos los pasos de tu análisis](https://bastianolea.
 
 ----
 
+
+## Diferencia entre R y RStudio
+
+
+
+::::: {.columns}
+
+:::: {.column}
+#### R
+![](otros/logo_r.png){.rosa style="height: 128px;"}
+
+- Lenguaje de programación
+- Lanzado en 1993
+- Usado por línea de comandos
+- Desarrollado por R Core Team
+- Basado en el lenguaje S (1976)
+- Software libre
+::::
+
+:::: {.column}
+#### RStudio
+
+![](otros/logo_rstudio.png){.rosa style="height: 128px;"}
+
+- Entorno de desarrollo integrado (IDE) enfocado en R
+- Lanzado en 2011
+- Interfaz gráfica (ventanas y botones)
+- Desarrollado por Posit (ex RStudio)
+- Software libre
+::::
+:::::
+
+
 ::: aside
-Some additional commentary of more peripheral interest.
+_Por favor digan que "aprendieron R" y no RStudio_
 :::
+
+
+----
+
+## Conceptos clave
+
+::: {.fragment}
+![](otros/icono_script.png){.izq style="margin: 10px; width: 110px;"}
+
+#### Script
+
+Archivo de texto .R en el que escribimos nuestro código, en pasos, y siguiendo un orden lógico.
+
+<br>
+:::
+
+::: {.fragment}
+![](otros/icono_consola.png){.izq style="margin-top: 10px; width: 130px;"}
+
+#### Consola
+
+Es la forma directa de interactuar con R, un comando a la vez, con resultados efímeros.
+
+<br>
+:::
+
+::: {.fragment}
+![](otros/icono_project.png){.izq style="width: 130px;"}
+
+#### Proyecto
+
+Archivo .Rproj que marca nuestro espacio de trabajo: una carpeta específica que reúne todas las piezas de nuestro análisis.
+:::
+
+
+----
+
+## RStudio
+
+![](otros/rstudio.png){.centro style="width: 800px;"}
+
+[1]{.circulo-grande .absolute top=30% left=5%}
+
+[2]{.circulo-grande .absolute top=70% left=5%}
+
+[3]{.circulo-grande .absolute top=30% right=5%}
+
+[4]{.circulo-grande .absolute top=70% right=5%}
+
+----
+
+
+#### Conceptos
+
+::: {.fragment .pad}
+[1]{.circulo} **Panel de scripts:** los archivos de texto con nuestro código. Podemos tener varias pestañas. Ejecutamos el código poniendo el cursor en la línea y presionando `control + enter`, o el botón _Run_.
+:::
+
+::: {.fragment .pad}
+[2]{.circulo} **Panel de consola:** en la consola se imprimen los resultados de R a partir del código que ejecutamos en los scripts. También podemos ejecutar código directamente en ella escribiendo y presionando `enter`.
+:::
+
+::: {.fragment .pad}
+[3]{.circulo} **Panel de entorno:** acá veremos los objetos que vayamos creando, que pueden ser números, texto, tablas de datos, funciones, gráficos y otros.
+:::
+
+::: {.fragment .pad}
+[4]{.circulo} **Panel de archivos:** en este panel podemos navegar los archivos y carpetas de nuestro proyecto y/o computador.
+:::
+
+::: aside
+_Todos estos paneles son personalizables!_
+:::
+
+----
+
+### Consola y scripts
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- Todos los **comandos** se ejecutan por medio de la consola
+- Pero al ejecutar código en la consola, el código no se guarda!
+- Para **guardar** el código, escribimos en **scripts**
+- Escribimos las **instrucciones** en un script, y RStudio se encarga de pasarlos a la consola y ejecutarlos cuando se lo pidamos 💡
+:::
+::::
+
+![](otros/rstudio_script.png){.absolute top=5% right=-20%}

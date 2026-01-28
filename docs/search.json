@@ -4,7 +4,7 @@
     "href": "diapositivas.html#qué-es-r",
     "title": "Introducción al análisis de datos con R",
     "section": "¿Qué es R?",
-    "text": "¿Qué es R?\n\n\nR es un lenguaje de programación enfocado al análisis de datos, las estadísticas y la visualización de datos.\n\n\n\n\n¿Para qué sirve?\n\nLógica distinta: instrucciones en vez de acciones ⚙️\nRepetir, mejorar, adaptar y reutilizar lo que ya has hecho ♻️\nAutomatizar tareas repetitivas 🤖\nExpandir tus resultados 🚀"
+    "text": "¿Qué es R?\n\n\nR es un lenguaje de programación enfocado al análisis de datos, las estadísticas y la visualización de datos.\n\n\n\n\n\n¿Para qué sirve?\n\nLógica distinta: instrucciones en vez de acciones ⚙️\nRepetir, mejorar, adaptar y reutilizar lo que ya has hecho ♻️\nAutomatizar tareas repetitivas 🤖\nExpandir tus resultados 🚀"
   },
   {
     "objectID": "diapositivas.html#por-qué-usar-r",
@@ -12,5 +12,40 @@
     "title": "Introducción al análisis de datos con R",
     "section": "¿Por qué usar R?",
     "text": "¿Por qué usar R?\n\nGratuito\nR es un lenguaje de programación abierto y gratuito, y es parte de la comunidad del software libre, así que nunca tendrás que pagar nada!\n\n\n\nAmigable\nR fue creado para personas de distintas disciplinas, y al centrarse en los datos resulta más intuitivo que otros lenguajes.\n\n\n\n\nReproducible\nLa gracia de R es guardar todos los pasos de tu análisis, lo que facilita corregirlos, reutilizarlos para nuevos casos, y compartirlo con otros."
+  },
+  {
+    "objectID": "diapositivas.html#diferencia-entre-r-y-rstudio",
+    "href": "diapositivas.html#diferencia-entre-r-y-rstudio",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Diferencia entre R y RStudio",
+    "text": "Diferencia entre R y RStudio\n\n\nR\n\n\nLenguaje de programación\nLanzado en 1993\nUsado por línea de comandos\nDesarrollado por R Core Team\nBasado en el lenguaje S (1976)\nSoftware libre\n\n\nRStudio\n\n\nEntorno de desarrollo integrado (IDE) enfocado en R\nLanzado en 2011\nInterfaz gráfica (ventanas y botones)\nDesarrollado por Posit (ex RStudio)\nSoftware libre\n\n\n\n\nPor favor digan que “aprendieron R” y no RStudio"
+  },
+  {
+    "objectID": "diapositivas.html#conceptos-clave",
+    "href": "diapositivas.html#conceptos-clave",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Conceptos clave",
+    "text": "Conceptos clave\n\n\nScript\nArchivo de texto .R en el que escribimos nuestro código, en pasos, y siguiendo un orden lógico.\n\n\n\n\nConsola\nEs la forma directa de interactuar con R, un comando a la vez, con resultados efímeros.\n\n\n\n\nProyecto\nArchivo .Rproj que marca nuestro espacio de trabajo: una carpeta específica que reúne todas las piezas de nuestro análisis."
+  },
+  {
+    "objectID": "diapositivas.html#rstudio-1",
+    "href": "diapositivas.html#rstudio-1",
+    "title": "Introducción al análisis de datos con R",
+    "section": "RStudio",
+    "text": "RStudio\n\n1\n2\n3\n4"
+  },
+  {
+    "objectID": "diapositivas.html#section",
+    "href": "diapositivas.html#section",
+    "title": "Introducción al análisis de datos con R",
+    "section": "1",
+    "text": "1\nConceptos\n\n1 Panel de scripts: los archivos de texto con nuestro código. Podemos tener varias pestañas. Ejecutamos el código poniendo el cursor en la línea y presionando control + enter, o el botón Run.\n\n\n2 Panel de consola: en la consola se imprimen los resultados de R a partir del código que ejecutamos en los scripts. También podemos ejecutar código directamente en ella escribiendo y presionando enter.\n\n\n3 Panel de entorno: acá veremos los objetos que vayamos creando, que pueden ser números, texto, tablas de datos, funciones, gráficos y otros.\n\n\n4 Panel de archivos: en este panel podemos navegar los archivos y carpetas de nuestro proyecto y/o computador."
+  },
+  {
+    "objectID": "diapositivas.html#consola-y-scripts",
+    "href": "diapositivas.html#consola-y-scripts",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Consola y scripts",
+    "text": "Consola y scripts\n\nTodos los comandos se ejecutan por medio de la consola\nPero al ejecutar código en la consola, el código no se guarda!\nPara guardar el código, escribimos en scripts\nEscribimos las instrucciones en un script, y RStudio se encarga de pasarlos a la consola y ejecutarlos cuando se lo pidamos 💡"
   }
 ]

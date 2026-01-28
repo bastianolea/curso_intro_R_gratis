@@ -21,7 +21,7 @@ $body-bg: #23102A !default;
 $body-color: #C8B2E2 !default;
 $link-color: #9F69C7 !default;
 $link-color-hover: #8554E8 !default;
-$selection-bg: #31193F !default;
+$selection-bg: #553A74 !default;
 
 // inline code
 $code-bg:  #553A74 !default;
@@ -51,7 +51,7 @@ h1 {
 }
 
 strong {
-  color: #9069C0 !important;
+  color: #9F69C7 !important;
 }
 
 .footer {
@@ -82,6 +82,12 @@ strong {
   font-size: 120%;
   font-weight: bold;
   color: $link-color;
+}
+
+h4 {
+  font-size: 120% !important;
+  font-weight: bold !important;
+  color: $link-color !important;
 }
 
 // images
@@ -160,17 +166,67 @@ strong {
   padding-left: 6px; 
 }
 
-ul li {
+.reveal ul li {
   position: relative; 
   padding-left: 30px; 
   margin-bottom: 6px;
 }
 
-ul li::before {
+.reveal ul li::before {
   content: '▶'; 
   position: absolute;
   left: 0;
   color: #9F69CA;
   font-size: 20px;
   line-height: 2;
+}
+
+
+.rosa {
+  filter: saturate(200%) brightness(90%);
+}
+
+.izq {
+ float: left !important;
+ padding-right: 16px;
+}
+
+.ancho-medio {
+  width: 120px !important;
+}
+
+
+.circulo {
+  background-color: $link-color;
+  color: $body-bg !important; 
+  font-weight: bold;
+  width: 30px; height: 30px;
+  line-height: 30px;
+  font-size: 95%;
+  padding-bottom: 0px;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  margin-right: 4px;
+  vertical-align: 0.1em;
+}
+
+.circulo-grande {
+  background-color: $link-color;
+  color: $body-bg !important; 
+  font-weight: bold;
+  width: 50px; height: 50px;
+  line-height: 50px;
+  font-size: 120%;
+  padding-bottom: 0px;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  margin-right: 4px;
+  vertical-align: 0.1em;
+}
+
+.pad {
+  padding-top: 8px !important; 
+  padding-bottom: 8px !important; 
 }
