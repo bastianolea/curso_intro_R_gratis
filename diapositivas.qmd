@@ -48,6 +48,36 @@ R es un lenguaje de programación enfocado al **análisis de datos**, las **esta
 
 ----
 
+
+### ¿Por qué usar R?
+
+::: {.cuadro} 
+[Gratuito]{.subtitulo}
+
+R es un lenguaje de programación abierto y gratuito, y es parte de la comunidad del _software libre_, así que nunca tendrás que pagar nada!
+:::
+
+. . .
+
+::: {.cuadro} 
+[Amigable]{.subtitulo}
+
+R fue creado para personas de distintas disciplinas, y al centrarse en los datos resulta [más intuitivo](https://bastianolea.rbind.io/blog/r_introduccion/por_que_r/#usabilidad) que otros lenguajes.
+:::
+
+. . .
+
+::: {.cuadro} 
+[Reproducible]{.subtitulo}
+
+La gracia de R es [guardar todos los pasos de tu análisis](https://bastianolea.rbind.io/blog/2025-11-13/), lo que facilita corregirlos, [reutilizarlos](https://bastianolea.rbind.io/blog/r_introduccion/por_que_r/#procesos-reutilizables) para nuevos casos, y compartirlo con otros.
+:::
+
+
+----
+
+
+
 ### Diferencia entre _hacer_ y programar
 
 ::::: {.columns}
@@ -80,37 +110,26 @@ R es un lenguaje de programación enfocado al **análisis de datos**, las **esta
 ::::
 :::::
 
+
 ----
 
-## ¿Por qué usar R?
 
-::: {.cuadro} 
-[Gratuito]{.subtitulo}
+### ¿Qué se puede hacer con R?
 
-R es un lenguaje de programación abierto y gratuito, y es parte de la comunidad del _software libre_, así que nunca tendrás que pagar nada!
-:::
+<img class="r-stretch" 
+src="otros/shiny_apps.jpg" 
+style="border-radius: 8px; border: solid 1px #442A54; margin-bottom: 20px;"/>
 
-. . .
-
-::: {.cuadro} 
-[Amigable]{.subtitulo}
-
-R fue creado para personas de distintas disciplinas, y al centrarse en los datos resulta [más intuitivo](https://bastianolea.rbind.io/blog/r_introduccion/por_que_r/#usabilidad) que otros lenguajes.
-:::
-
-. . .
-
-::: {.cuadro} 
-[Reproducible]{.subtitulo}
-
-La gracia de R es [guardar todos los pasos de tu análisis](https://bastianolea.rbind.io/blog/2025-11-13/), lo que facilita corregirlos, [reutilizarlos](https://bastianolea.rbind.io/blog/r_introduccion/por_que_r/#procesos-reutilizables) para nuevos casos, y compartirlo con otros.
-:::
+<div style="text-align: center; font-size: 90%;">
+Muestra de algunas [aplicaciones](https://bastianolea.github.io/shiny_apps/), [gráficos](https://bastianolea.rbind.io/tags/gráficos/), [tablas](https://bastianolea.rbind.io/tags/tablas/), y [mapas](https://bastianolea.rbind.io/tags/mapas/) hechos con R. También algunos [trabajos](https://bastianolea.rbind.io/blog/portafolio_trabajos_r/) que he hecho.
+</div>
 
 
 ----
 
 
-## Diferencia entre R y RStudio
+
+### Diferencia entre R y RStudio
 
 
 
@@ -225,7 +244,7 @@ _Todos estos paneles son personalizables!_
 
 :::: {.columns}
 
-::: {.column width="50%"}
+::: {.column}
 - Todos los **comandos** se ejecutan por medio de la consola
 - Pero al ejecutar código en la consola, el código no se guarda!
 - Para **guardar** el código, escribimos en **scripts**
@@ -234,3 +253,315 @@ _Todos estos paneles son personalizables!_
 ::::
 
 ![](otros/rstudio_script.png){.absolute top=5% right=-20%}
+
+----
+
+## Operaciones básicas
+
+::::: {.columns}
+
+:::: {.column style="padding-right:28px;"}
+
+- Podemos realizar cualquier operación matemática en R.
+- Para **ejecutar** un comando, pon el cursor de texto en la línea o expresión que desees ejecutar, o selecciónala, y presiona el botón _Run_, o las teclas `control + enter`.
+  - Lo importante es que el cursor de texto `|` esté en cualquier lugar de la línea.
+- El **resultado** de todas las operaciones aparece en la **consola**.
+
+::::
+
+:::: {.column width="40%"}
+
+::: {.pad}
+```{r}
+2 + 2 #suma
+```
+:::
+::: {.pad}
+```{r}
+50 * 100 #multiplicación
+```
+:::
+::: {.pad}
+```{r}
+4556 - 1000 #resta
+```
+:::
+::: {.pad}
+```{r}
+6565 / 89 #división
+```
+:::
+::: {.pad}
+```{r}
+10^4 #potencias
+```
+:::
+
+::::
+:::::
+
+
+----
+
+### Comentarios
+
+- Los comentarios nos permiten poner texto en cualquier parte del script sin que afecte los cálculos.
+- También podemos poner un comentario al final de una línea sin que afecte el código
+
+```{r}
+#| eval: false
+1 + 1 + 1 + 1
+# comentario: quizás esto debería
+# ser de otra forma, porque
+# la verdad quedó bien mal...
+
+1 * 4 # así queda mucho mejor
+```
+
+
+----
+
+
+## Tipos de datos
+
+Lo que podemos hacer siempre va a depender del **tipo** de cada objeto. 
+
+En R existen varios tipos:
+
+::: {.pad}
+**Numéricos**
+```{r}
+#| eval: false
+#| code-line-numbers: false
+1  2  3  4  5.1  5.2  5.333
+```
+Pueden ser decimales (_doubles_) o enteros (_integers_)
+::: 
+
+::: {.pad}
+**Caracter** (texto)
+```{r}
+#| eval: false
+#| code-line-numbers: false
+"ésta es una cadena de texto"
+```
+::: 
+
+::: {.pad}
+**Lógicos** (verdadero o falso)
+```{r}
+#| eval: false
+#| code-line-numbers: false
+TRUE FALSE TRUE
+```
+::: 
+
+
+----
+
+## Objetos
+
+Se le llama **objeto** a cualquier dato, variable, o elemento que tengas en R.
+
+Podemos guardar _todo_ como un objeto.
+
+. . . 
+
+Para **crear** un objeto, simplemente le damos un nombre y le _asignamos_ un contenido.
+
+::: {style="max-width: 300px; margin: auto;"}
+**nombre** [←]{style="font-size: 130%;"} _contenido_
+:::
+
+<br>
+
+. . . 
+
+:::: {.columns}
+::: {.column .just-der }
+Para asignar algo a un objeto, usamos el operador `<-`
+:::
+
+::: {.column}
+```{r style="margin-left: 28px; margin-top:20px;"}
+#| code-line-numbers: false
+cifra <- 4
+```
+:::
+::::
+
+<br>
+
+. . . 
+
+:::: {.columns}
+::: {.column .just-der}
+El objeto `cifra` se crea cuando declaramos que va a contener un `4`
+:::
+
+::: {.column}
+```{r style="margin-left: 28px; margin-top:20px;"}
+#| code-line-numbers: false
+cifra
+```
+:::
+::::
+
+
+----
+
+
+:::: {.columns}
+
+::: {.column}
+Al asignar algo, **creamos** o **modificamos** un objeto con el valor que le estamos asignando.
+
+Al ejecutar un objeto, obtenemos su valor.
+:::
+
+::: {.column}
+```{r}
+edad <- 32
+edad
+```
+
+```{r}
+animal = "gato"
+animal
+```
+:::
+::::
+
+<br>
+
+:::: {.columns}
+
+::: {.column width=40%}
+
+<div style="padding-right:12px;">
+Podemos usar el objeto creado para lo que queramos.
+
+Crear objetos es como **asignar variables**, y podemos usar estas variables para llevar a cabo operaciones!
+</div>
+
+:::
+
+::: {.column width=60%}
+
+:::: {.columns}
+
+::: {.column width=49%}
+```{r}
+edad <- 32
+año <- 2026
+año - edad
+```
+:::
+
+::: {.column width=49%}
+```{r}
+perros = 2
+gatos = 3
+perros + gatos
+```
+:::
+::::
+
+```{r}
+presupuesto = 100000
+pizza = 15000
+presupuesto - pizza * 10
+```
+:::
+::::
+
+
+----
+
+## Comparaciones
+
+Podemos usar cifras u objetos para compararlas entre sí: la respuesta será `TRUE` (verdadero) o `FALSE` (falso).
+
+::: {.pad style="max-width: 400px;"}
+```{r}
+edad >= 18
+```
+
+```{r}
+minimo <- 35
+edad > minimo
+``` 
+
+```{r}
+año == 2024
+``` 
+
+```{r}
+año != 2024
+```
+:::
+
+Las comparaciones son el principio que luego nos permitirá filtrar datos, crear variables, y más!
+
+----
+
+
+## Vectores
+
+Los vectores son **secuencias** de elementos.
+
+- Estos elementos son de un **mismo tipo**: numérico, carácter o lógico.
+- Son la forma más básica de registrar e interactuar con varios datos a la vez.
+
+```{r}
+c(1, 2, 3, 4, 5, 6)
+c("a", "b", "c", "d")
+c(TRUE, FALSE, FALSE)
+c(0.2, 0.1, -0.0, -0.1)
+```
+
+----
+
+También podemos realizar comparaciones sobre los valores de un vector
+
+```{r}
+edades <- c(54, 34, 65, 21, 32)
+edades > 40
+```
+
+
+
+----
+
+## Funciones
+
+- Las **funciones** son pequeños programas que permiten realizar distintas operaciones.
+- Las funciones tienen **argumentos**, que son los inputs que recibe la función.
+  - Usualmente el primer argumento son los _datos_ sobre los que se va a operar.
+
+
+
+```{r}
+#| code-line-numbers: false
+#| eval: false
+mean() # calcular promedio
+median() # calcular mediana
+sum() # sumar elementos
+min() # valor mínimo
+max() # valor máximo
+typeof() # tipo del objeto
+is.na() # evaluar si es missing
+as.numeric() # convertir a numérico
+```
+
+::: aside
+Si no sabemos cómo usar una función, podemos buscar su nombre en el panel **Ayuda** de RStudio, o escribir el nombre de la función precedido de un signo de interrogación: `?funcion`
+:::
+
+----
+
+::: {.absolute top=40% style="text-align: center;"}
+
+Si tienes dudas o quieres seguir por tu cuenta, [visita este sitio con recursos para aprender R.](https://bastianolea.github.io/aprende_r/)
+
+:::
