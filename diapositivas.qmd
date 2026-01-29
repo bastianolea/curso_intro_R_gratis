@@ -56,7 +56,6 @@ Puedes encontrar más contenidos para [aprender R en este sitio](https://bastian
 ----
 
 
-
 ## ¿Qué es R?
 
 :::: {.columns}
@@ -253,7 +252,7 @@ Archivo .Rproj que marca nuestro espacio de trabajo: una carpeta específica que
 
 ## RStudio
 
-::: {.boton .absolute top=0% right=0%}
+::: {.boton .absolute top=-1% right=0%}
 [{{< fa circle-arrow-down >}} Descargar RStudio](https://posit.co/download/rstudio-desktop/)
 :::
 
@@ -282,27 +281,24 @@ Archivo .Rproj que marca nuestro espacio de trabajo: una carpeta específica que
 ----
 
 
-#### Conceptos
+### Conceptos
 
 ::: {.fragment .pad}
 [1]{.circulo} **Panel de scripts:** los archivos de texto con nuestro código. Podemos tener varias pestañas. Ejecutamos el código poniendo el cursor en la línea y presionando `control + enter`, o el botón _Run_.
 :::
 
 ::: {.fragment .pad}
-[2]{.circulo} **Panel de consola:** en la consola se imprimen los resultados de R a partir del código que ejecutamos en los scripts. También podemos ejecutar código directamente en ella escribiendo y presionando `enter`.
+[2]{.circulo} **Panel de consola:** en la consola se imprimen los **resultados** del código que ejecutamos. También podemos ejecutar código directamente en ella escribiendo y presionando `enter`.
 :::
 
 ::: {.fragment .pad}
-[3]{.circulo} **Panel de entorno:** acá veremos los objetos que vayamos creando, que pueden ser números, texto, tablas de datos, funciones, gráficos y otros.
+[3]{.circulo} **Panel de entorno:** acá veremos los **objetos** que vayamos creando o cargando, que pueden ser números, texto, tablas de datos, funciones, gráficos y otros.
 :::
 
 ::: {.fragment .pad}
-[4]{.circulo} **Panel de archivos:** en este panel podemos navegar los archivos y carpetas de nuestro proyecto y/o computador.
+[4]{.circulo} **Panel de archivos:** en este panel podemos navegar los archivos y carpetas de nuestro proyecto y/o computador. La idea es que _todo_ esté dentro del proyecto!
 :::
 
-::: aside
-_Todos estos paneles son personalizables!_
-:::
 
 ----
 
@@ -638,11 +634,20 @@ c(0.2, 0.1, -0.0, -0.1)
 
 ----
 
-También podemos realizar comparaciones sobre los valores de un vector
+También podemos realizar **comparaciones** sobre los valores de un vector:
 
 ```{r}
 edades <- c(54, 34, 65, 21, 32)
 edades > 40
+```
+
+<br> 
+
+O cualquier **operación** sobre sus elementos:
+```{r}
+año <- 2026
+años <- año - edades
+años
 ```
 
 

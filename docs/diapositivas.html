@@ -372,7 +372,7 @@ Bastián Olea Herrera
 </section>
 <section id="rstudio-1" class="slide level2">
 <h2>RStudio</h2>
-<div class="boton absolute" style="top: 0%; right: 0%; ">
+<div class="boton absolute" style="top: -1%; right: 0%; ">
 <p><a href="https://posit.co/download/rstudio-desktop/"><i class="fa-solid fa-circle-arrow-down" aria-label="circle-arrow-down"></i> Descargar RStudio</a></p>
 </div>
 
@@ -391,23 +391,20 @@ Bastián Olea Herrera
 </section>
 <section class="slide level2">
 
-<h4 id="conceptos">Conceptos</h4>
+<h3 id="conceptos">Conceptos</h3>
 <div class="fragment pad">
 <p><span class="circulo">1</span> <strong>Panel de scripts:</strong> los archivos de texto con nuestro código. Podemos tener varias pestañas. Ejecutamos el código poniendo el cursor en la línea y presionando <code>control + enter</code>, o el botón <em>Run</em>.</p>
 </div>
 <div class="fragment pad">
-<p><span class="circulo">2</span> <strong>Panel de consola:</strong> en la consola se imprimen los resultados de R a partir del código que ejecutamos en los scripts. También podemos ejecutar código directamente en ella escribiendo y presionando <code>enter</code>.</p>
+<p><span class="circulo">2</span> <strong>Panel de consola:</strong> en la consola se imprimen los <strong>resultados</strong> del código que ejecutamos. También podemos ejecutar código directamente en ella escribiendo y presionando <code>enter</code>.</p>
 </div>
 <div class="fragment pad">
-<p><span class="circulo">3</span> <strong>Panel de entorno:</strong> acá veremos los objetos que vayamos creando, que pueden ser números, texto, tablas de datos, funciones, gráficos y otros.</p>
+<p><span class="circulo">3</span> <strong>Panel de entorno:</strong> acá veremos los <strong>objetos</strong> que vayamos creando o cargando, que pueden ser números, texto, tablas de datos, funciones, gráficos y otros.</p>
 </div>
 <div class="fragment pad">
-<p><span class="circulo">4</span> <strong>Panel de archivos:</strong> en este panel podemos navegar los archivos y carpetas de nuestro proyecto y/o computador.</p>
+<p><span class="circulo">4</span> <strong>Panel de archivos:</strong> en este panel podemos navegar los archivos y carpetas de nuestro proyecto y/o computador. La idea es que <em>todo</em> esté dentro del proyecto!</p>
 </div>
-
-<aside><div>
-<p><em>Todos estos paneles son personalizables!</em></p>
-</div></aside></section>
+</section>
 <section class="slide level2">
 
 <h3 id="consola-y-scripts">Consola y scripts</h3>
@@ -709,12 +706,22 @@ Bastián Olea Herrera
 </section>
 <section class="slide level2">
 
-<p>También podemos realizar comparaciones sobre los valores de un vector</p>
+<p>También podemos realizar <strong>comparaciones</strong> sobre los valores de un vector:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a>edades <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">54</span>, <span class="dv">34</span>, <span class="dv">65</span>, <span class="dv">21</span>, <span class="dv">32</span>)</span>
 <span id="cb44-2"><a></a>edades <span class="sc">&gt;</span> <span class="dv">40</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  TRUE FALSE  TRUE FALSE FALSE</code></pre>
+</div>
+</div>
+<p><br></p>
+<p>O cualquier <strong>operación</strong> sobre sus elementos:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a>año <span class="ot">&lt;-</span> <span class="dv">2026</span></span>
+<span id="cb46-2"><a></a>años <span class="ot">&lt;-</span> año <span class="sc">-</span> edades</span>
+<span id="cb46-3"><a></a>años</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1972 1992 1961 2005 1994</code></pre>
 </div>
 </div>
 </section>
@@ -728,14 +735,14 @@ Bastián Olea Herrera
 </ul></li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>() <span class="co"># calcular promedio</span></span>
-<span id="cb46-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>() <span class="co"># calcular mediana</span></span>
-<span id="cb46-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>() <span class="co"># sumar elementos</span></span>
-<span id="cb46-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>() <span class="co"># valor mínimo</span></span>
-<span id="cb46-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>() <span class="co"># valor máximo</span></span>
-<span id="cb46-6"><a aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>() <span class="co"># tipo del objeto</span></span>
-<span id="cb46-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">is.na</span>() <span class="co"># evaluar si es missing</span></span>
-<span id="cb46-8"><a aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>() <span class="co"># convertir a numérico</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>() <span class="co"># calcular promedio</span></span>
+<span id="cb48-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>() <span class="co"># calcular mediana</span></span>
+<span id="cb48-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>() <span class="co"># sumar elementos</span></span>
+<span id="cb48-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>() <span class="co"># valor mínimo</span></span>
+<span id="cb48-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>() <span class="co"># valor máximo</span></span>
+<span id="cb48-6"><a aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>() <span class="co"># tipo del objeto</span></span>
+<span id="cb48-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">is.na</span>() <span class="co"># evaluar si es missing</span></span>
+<span id="cb48-8"><a aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>() <span class="co"># convertir a numérico</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 <aside><div>
@@ -745,9 +752,9 @@ Bastián Olea Herrera
 
 <p>Las funciones también pueden operar sobre vectores de datos.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a></a>población <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">120</span>, <span class="dv">340</span>, <span class="dv">560</span>, <span class="dv">230</span>, <span class="dv">450</span>)</span>
-<span id="cb47-2"><a></a>prom_pob <span class="ot">&lt;-</span> <span class="fu">mean</span>(población)</span>
-<span id="cb47-3"><a></a>prom_pob</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a>población <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">120</span>, <span class="dv">340</span>, <span class="dv">560</span>, <span class="dv">230</span>, <span class="dv">450</span>)</span>
+<span id="cb49-2"><a></a>prom_pob <span class="ot">&lt;-</span> <span class="fu">mean</span>(población)</span>
+<span id="cb49-3"><a></a>prom_pob</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 340</code></pre>
 </div>
