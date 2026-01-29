@@ -4,7 +4,7 @@
     "href": "diapositivas.html#qué-es-r",
     "title": "Introducción al análisis de datos con R",
     "section": "¿Qué es R?",
-    "text": "¿Qué es R?\n\n\nR es un lenguaje de programación enfocado al análisis de datos, las estadísticas y la visualización de datos.\n\n\n\n\n\n¿Para qué sirve?\n\nLógica distinta: instrucciones en vez de acciones ⚙️\nRepetir, mejorar, adaptar y reutilizar lo que ya has hecho ♻️\nAutomatizar tareas repetitivas 🤖\nExpandir tus resultados 🚀"
+    "text": "¿Qué es R?\n\n\nR es un lenguaje de programación enfocado al análisis de datos, las estadísticas y la visualización de datos.\n\n\n\n\n Descargar R\n\n\n\n¿Para qué sirve?\n\nLógica distinta: instrucciones en vez de acciones ⚙️\nRepetir, mejorar, adaptar y reutilizar lo que ya has hecho ♻️\nAutomatizar tareas repetitivas 🤖\nExpandir tus resultados 🚀"
   },
   {
     "objectID": "diapositivas.html#por-qué-usar-r",
@@ -32,7 +32,7 @@
     "href": "diapositivas.html#rstudio-1",
     "title": "Introducción al análisis de datos con R",
     "section": "RStudio",
-    "text": "RStudio\n\n1\n2\n3\n4"
+    "text": "RStudio\n\n Descargar RStudio\n\n\n\n1 Scripts\n\n\n2 Consola\n\n\n3 Entorno\n\n\n4 Archivos"
   },
   {
     "objectID": "diapositivas.html#section",
@@ -103,5 +103,26 @@
     "title": "Introducción al análisis de datos con R",
     "section": "¿Qué se puede hacer?",
     "text": "¿Qué se puede hacer?\n\n\nMuestra de algunas aplicaciones, gráficos, tablas, y mapas hechos con R. También algunos trabajos que he hecho."
+  },
+  {
+    "objectID": "diapositivas.html#introducción",
+    "href": "diapositivas.html#introducción",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Introducción",
+    "text": "Introducción\n\n Curso\n\n\n Código\n\n\n Streaming"
+  },
+  {
+    "objectID": "diapositivas.html#inicio",
+    "href": "diapositivas.html#inicio",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Inicio",
+    "text": "Inicio\nBastián Olea Herrera\nbastianolea.rbind.io\n\nEncuentra todo sobre el curso en este post de mi blog.\n\n\n\n Curso\n\n\n Código\n\n\n Streaming\n\n\n Diapositivas\n\n\n Contacto\n\n\n\nPuedes encontrar más contenidos para aprender R en este sitio, y más cosas de R en mi sitio web."
+  },
+  {
+    "objectID": "diapositivas.html#botones-2",
+    "href": "diapositivas.html#botones-2",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Botones 2",
+    "text": "Botones 2\n\n\n\n\nCrear un nuevo script de R\n\n\n\n\n\nBotón para ejecutar código (o usar control + enter)\n\n\n\n\n Botón para ejecutar todo el script\n\n\n\n\n Configurar paneles de RStudio\n\n\n\n\n Cambiar de proyecto o crear uno nuevo"
   }
 ]

@@ -5,6 +5,7 @@ author: "Bastián Olea Herrera"
 format: 
   revealjs:
     theme: [default, estilos.scss]
+    transition: slide
     highlight-style: "github-dark"
     footer: "Bastián Olea Herrera — [https://bastianolea.rbind.io](https://bastianolea.rbind.io)"
 execute: 
@@ -14,10 +15,47 @@ editor_options:
   chunk_output_type: console
 ---
 
-_En construcción_
 
+
+## Inicio
+
+[Bastián Olea Herrera]{.subtitulo}
+
+[bastianolea.rbind.io](https://bastianolea.rbind.io)
+
+:::: {.pad}
+Encuentra todo sobre el curso [en este post](https://bastianolea.rbind.io/blog/curso_gratis_r_intro_1/) de mi blog.
+::::
+
+:::: {.pad style="max-width: 50%;"}
+::: {.boton}
+[{{< fa book-open >}} Curso](https://bastianolea.rbind.io/blog/curso_gratis_r_intro_1/)
+:::
+
+::: {.boton}
+[{{< fa file-code >}} Código](https://github.com/bastianolea/curso_intro_R_gratis)
+:::
+
+::: {.boton}
+[{{< fa video >}} Streaming](https://youtube.com/live/A9wtPBEaVvY)
+:::
+
+::: {.boton}
+[{{< fa chalkboard-user >}} Diapositivas](https://bastianolea.github.io/curso_intro_R_gratis)
+:::
+
+::: {.boton}
+[{{< fa envelope >}} Contacto](https://bastianolea.rbind.io/contacto/)
+:::
+::::
+
+:::: {.pad}
+Puedes encontrar más contenidos para [aprender R en este sitio](https://bastianolea.github.io/aprende_r/), y más cosas de R [en mi sitio web](https://bastianolea.rbind.io).
+::::
 
 ----
+
+
 
 ## ¿Qué es R?
 
@@ -32,10 +70,13 @@ R es un lenguaje de programación enfocado al **análisis de datos**, las **esta
 :::
 ::::
 
-. . .
+::: {.boton}
+[{{< fa circle-arrow-down >}} Descargar R](https://cran.r-project.org/)
+:::
 
 <br>
 
+:::: {.fragment}
 ### ¿Para qué sirve?
 
 ::: {.incremental}
@@ -44,35 +85,36 @@ R es un lenguaje de programación enfocado al **análisis de datos**, las **esta
 - Automatizar tareas repetitivas 🤖
 - Expandir tus resultados 🚀
 :::
-
+::::
 
 ----
 
 
 ### ¿Por qué usar R?
 
+:::: {.fragment}
 ::: {.cuadro} 
 [Gratuito]{.subtitulo}
 
 R es un lenguaje de programación abierto y gratuito, y es parte de la comunidad del _software libre_, así que nunca tendrás que pagar nada!
 :::
+::::
 
-. . .
-
+:::: {.fragment}
 ::: {.cuadro} 
 [Amigable]{.subtitulo}
 
 R fue creado para personas de distintas disciplinas, y al centrarse en los datos resulta [más intuitivo](https://bastianolea.rbind.io/blog/r_introduccion/por_que_r/#usabilidad) que otros lenguajes.
 :::
+::::
 
-. . .
-
+:::: {.fragment}
 ::: {.cuadro} 
 [Reproducible]{.subtitulo}
 
 La gracia de R es [guardar todos los pasos de tu análisis](https://bastianolea.rbind.io/blog/2025-11-13/), lo que facilita corregirlos, [reutilizarlos](https://bastianolea.rbind.io/blog/r_introduccion/por_que_r/#procesos-reutilizables) para nuevos casos, y compartirlo con otros.
 :::
-
+::::
 
 ----
 
@@ -133,9 +175,11 @@ Muestra de algunas [aplicaciones](https://bastianolea.github.io/shiny_apps/), [g
 
 
 
+
 ::::: {.columns}
 
 :::: {.column}
+::: {.fragment}
 #### R
 ![](otros/logo_r.png){.rosa style="height: 128px;"}
 
@@ -145,9 +189,12 @@ Muestra de algunas [aplicaciones](https://bastianolea.github.io/shiny_apps/), [g
 - Desarrollado por R Core Team
 - Basado en el lenguaje S (1976)
 - Software libre
+:::
 ::::
-
 :::: {.column}
+
+::: {.fragment}
+
 #### RStudio
 
 ![](otros/logo_rstudio.png){.rosa style="height: 128px;"}
@@ -157,13 +204,16 @@ Muestra de algunas [aplicaciones](https://bastianolea.github.io/shiny_apps/), [g
 - Interfaz gráfica (ventanas y botones)
 - Desarrollado por Posit (ex RStudio)
 - Software libre
+:::
 ::::
 :::::
 
 
-::: aside
-_Por favor digan que "aprendieron R" y no RStudio_
+:::: aside
+::: {.fragment}
+_Por favor no digan que "aprendieron RStudio"_ 😣
 :::
+::::
 
 
 ----
@@ -203,15 +253,31 @@ Archivo .Rproj que marca nuestro espacio de trabajo: una carpeta específica que
 
 ## RStudio
 
-![](otros/rstudio.png){.centro style="width: 800px;"}
+::: {.boton .absolute top=0% right=0%}
+[{{< fa circle-arrow-down >}} Descargar RStudio](https://posit.co/download/rstudio-desktop/)
+:::
 
-[1]{.circulo-grande .absolute top=30% left=5%}
+![](otros/rstudio.png){.entrada-fade-in .centro style="width: 800px;"}
 
-[2]{.circulo-grande .absolute top=70% left=5%}
+::: {.fragment}
+[1]{.circulo-grande .absolute top=30% left=4%}
+[Scripts]{.circulo-grande-texto .absolute top=30% left=4%}
+:::
 
-[3]{.circulo-grande .absolute top=30% right=5%}
+::: {.fragment}
+[2]{.circulo-grande .absolute top=70% left=4%}
+[Consola]{.circulo-grande-texto .absolute top=70% left=4%}
+:::
 
-[4]{.circulo-grande .absolute top=70% right=5%}
+::: {.fragment}
+[3]{.circulo-grande .absolute top=30% right=4%}
+[Entorno]{.circulo-grande-texto-der .absolute top=30% right=4%}
+:::
+
+::: {.fragment}
+[4]{.circulo-grande .absolute top=70% right=4%}
+[Archivos]{.circulo-grande-texto-der .absolute top=70% right=4%}
+:::
 
 ----
 
@@ -255,6 +321,56 @@ _Todos estos paneles son personalizables!_
 ![](otros/rstudio_script.png){.absolute top=5% right=-20%}
 
 ----
+
+### Botones 
+
+::::{.r-stack}
+
+::: {.fragment .fondo}
+![](otros/rstudio_boton_0.png){style="width: 700px;"}
+
+::: {.centrar}
+Crear un **nuevo script** de R
+:::
+:::
+
+
+::: {.fragment .fondo}
+![](otros/rstudio_boton_1.png){style="width: 700px;"}
+
+::: {.centrar}
+Botón para **ejecutar código**
+:::
+:::
+
+::: {.fragment .fondo}
+![](otros/rstudio_boton_2.png){style="width: 700px;"}
+
+::: {.centrar}
+Botón para **ejecutar todo el script**
+:::
+:::
+
+::: {.fragment .fondo}
+![](otros/rstudio_boton_3.png){style="width: 700px;"}
+
+::: {.centrar}
+Configurar paneles de RStudio
+:::
+:::
+
+::: {.fragment .fondo}
+![](otros/rstudio_boton_4.png){style="width: 700px;"}
+
+::: {.centrar}
+Cambiar de **proyecto** o crear uno nuevo
+:::
+:::
+
+::::
+
+----
+
 
 ## Operaciones básicas
 
@@ -560,8 +676,39 @@ Si no sabemos cómo usar una función, podemos buscar su nombre en el panel **Ay
 
 ----
 
+
+Las funciones también pueden operar sobre vectores de datos.
+
+```{r}
+población <- c(120, 340, 560, 230, 450)
+prom_pob <- mean(población)
+prom_pob
+```
+
+
+Es decir que la **operación** que hace la función se aplica **a cada elemento** del vector.
+
+Pensemos las **funciones** como nuestras **acciones**, y los **vectores** como las columnas o **variables** de nuestras bases de datos.
+
+----
+
+
 ::: {.absolute top=40% style="text-align: center;"}
 
 Si tienes dudas o quieres seguir por tu cuenta, [visita este sitio con recursos para aprender R.](https://bastianolea.github.io/aprende_r/)
 
 :::
+
+
+::: {.boton}
+[{{< fa book-open >}} Curso](https://bastianolea.rbind.io/clases/curso_gratis_r_intro_1/)
+:::
+
+::: {.boton}
+[{{< fa file-code >}} Código](https://github.com/bastianolea/curso_intro_R_gratis)
+:::
+
+::: {.boton}
+[{{< fa video >}} Streaming](https://youtube.com/live/A9wtPBEaVvY)
+:::
+

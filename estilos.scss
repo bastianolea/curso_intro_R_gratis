@@ -130,8 +130,8 @@ h4 {
 }
 
 .centrar {
-  margin-top: auto !important;
-  margin-bottom: auto !important;
+  margin: auto; 
+  text-align: center;
 }
 
 .grande
@@ -235,6 +235,19 @@ h4 {
   vertical-align: 0.1em;
 }
 
+.circulo-grande-texto {
+  font-size: 90%;
+  margin-top: 60px;
+  margin-left: 25px;
+  transform: translate(-50%, 0%);
+}
+.circulo-grande-texto-der {
+  font-size: 90%;
+  margin-top: 60px;
+  margin-right: 25px;
+  transform: translate(50%, 0%);
+}
+
 .pad {
   padding-top: 8px !important; 
   padding-bottom: 8px !important; 
@@ -243,4 +256,60 @@ h4 {
 
 .just-der {
   text-align: right !important;
+}
+
+
+.boton {
+  background-color: $link-color;
+  color: $body-bg !important; 
+  font-weight: bold;
+  font-size: 100%;
+  padding: 0px 18px;
+  border-radius: 8px;
+  text-align: center;
+  display: inline-block;
+  margin: 8px 4px;
+  
+  a {
+    color: $body-bg !important; 
+    text-decoration: none !important;
+  }
+  
+  p {
+  color: $body-bg !important;
+  }
+  
+  .fa-classic, .fa-regular, .fa-solid, .far, .fas {
+    margin-right: 6px !important;
+  }
+}
+
+
+
+.entrada-fade-in {
+  animation: fadeIn 3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.padding {
+  padding: 20px !important;
+}
+
+.fit-image {
+  width: 100% !important;
+  height: auto !important; /* maintain aspect ratio */
+  max-height: 100% !important; /* ensure it fits vertically */
+  object-fit: contain; /* ensures the whole image is visible within its container */
+}
+
+.fondo {
+  background-color: $body-bg !important;
 }
