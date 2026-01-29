@@ -91,3 +91,24 @@ datos_2 |>
   ) +
   theme_minimal() +
   facet_wrap(~sexo)
+
+
+
+migracion <- read_xlsx("datos/estimaciones-y-proyecciones-de-población-1992-2070_base-2024_tabulados.xlsx",
+                       sheet = 4)
+
+
+migracion |> 
+  slice(1)
+
+library(tidyr)
+
+migracion |> 
+  select(-1) |> 
+  row_to_names(1) |> 
+  rename(variables = 1) |> 
+  filter(variables == "Saldo Migratorio") |> 
+  pivot_longer(cols = where(is.numeric),
+               names_to = "año", 
+               values_to = "migrantes")
+  
