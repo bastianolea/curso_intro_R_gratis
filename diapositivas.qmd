@@ -7,7 +7,7 @@ format:
     theme: [default, estilos.scss]
     transition: slide
     highlight-style: "github-dark"
-    footer: "Bastián Olea Herrera — [https://bastianolea.rbind.io](https://bastianolea.rbind.io)"
+    # footer: "Bastián Olea Herrera — [https://bastianolea.rbind.io](https://bastianolea.rbind.io)"
 execute: 
   echo: true
   eval: true
@@ -65,7 +65,7 @@ R es un lenguaje de programación enfocado al **análisis de datos**, las **esta
 :::
 
 ::: {.column width="45%"}
-![](otros/logo_r.png){.rosa style="height: 180px; margin-top:-30px;"}
+![](imagenes/logo_r.png){.rosa style="height: 180px; margin-top:-30px;"}
 :::
 ::::
 
@@ -158,7 +158,7 @@ La gracia de R es [guardar todos los pasos de tu análisis](https://bastianolea.
 ### ¿Qué se puede hacer con R?
 
 <img class="r-stretch" 
-src="otros/shiny_apps.jpg" 
+src="imagenes/shiny_apps.jpg" 
 style="border-radius: 8px; border: solid 1px #442A54; margin-bottom: 20px;"/>
 
 <div style="text-align: center; font-size: 90%;">
@@ -180,7 +180,7 @@ Muestra de algunas [aplicaciones](https://bastianolea.github.io/shiny_apps/), [g
 :::: {.column}
 ::: {.fragment}
 #### R
-![](otros/logo_r.png){.rosa style="height: 128px;"}
+![](imagenes/logo_r.png){.rosa style="height: 128px;"}
 
 - Lenguaje de programación
 - Lanzado en 1993
@@ -196,7 +196,7 @@ Muestra de algunas [aplicaciones](https://bastianolea.github.io/shiny_apps/), [g
 
 #### RStudio
 
-![](otros/logo_rstudio.png){.rosa style="height: 128px;"}
+![](imagenes/logo_rstudio.png){.rosa style="height: 128px;"}
 
 - Entorno de desarrollo integrado (IDE) enfocado en R
 - Lanzado en 2011
@@ -220,7 +220,7 @@ _Por favor no digan que "aprendieron RStudio"_ 😣
 ## Conceptos clave
 
 ::: {.fragment}
-![](otros/icono_script.png){.izq style="margin: 10px; width: 110px;"}
+![](imagenes/icono_script.png){.izq style="margin: 10px; width: 110px;"}
 
 #### Script
 
@@ -230,7 +230,7 @@ Archivo de texto .R en el que escribimos nuestro código, en pasos, y siguiendo 
 :::
 
 ::: {.fragment}
-![](otros/icono_consola.png){.izq style="margin-top: 10px; width: 130px;"}
+![](imagenes/icono_consola.png){.izq style="margin-top: 10px; width: 130px;"}
 
 #### Consola
 
@@ -240,7 +240,7 @@ Es la forma directa de interactuar con R, un comando a la vez, con resultados ef
 :::
 
 ::: {.fragment}
-![](otros/icono_project.png){.izq style="width: 130px;"}
+![](imagenes/icono_project.png){.izq style="width: 130px;"}
 
 #### Proyecto
 
@@ -256,7 +256,7 @@ Archivo .Rproj que marca nuestro espacio de trabajo: una carpeta específica que
 [{{< fa circle-arrow-down >}} Descargar RStudio](https://posit.co/download/rstudio-desktop/)
 :::
 
-![](otros/rstudio.png){.entrada-fade-in .centro style="width: 800px;"}
+![](imagenes/rstudio.png){.entrada-fade-in .centro style="width: 800px;"}
 
 ::: {.fragment}
 [1]{.circulo-grande .absolute top=30% left=4%}
@@ -314,7 +314,7 @@ Archivo .Rproj que marca nuestro espacio de trabajo: una carpeta específica que
 :::
 ::::
 
-![](otros/rstudio_script.png){.absolute top=5% right=-20%}
+![](imagenes/rstudio_script.png){.absolute top=5% right=-20%}
 
 ----
 
@@ -323,7 +323,7 @@ Archivo .Rproj que marca nuestro espacio de trabajo: una carpeta específica que
 ::::{.r-stack}
 
 ::: {.fragment .fondo}
-![](otros/rstudio_boton_0.png){style="width: 700px;"}
+![](imagenes/rstudio_boton_0.png){style="width: 700px;"}
 
 ::: {.centrar}
 Crear un **nuevo script** de R
@@ -332,7 +332,7 @@ Crear un **nuevo script** de R
 
 
 ::: {.fragment .fondo}
-![](otros/rstudio_boton_1.png){style="width: 700px;"}
+![](imagenes/rstudio_boton_1.png){style="width: 700px;"}
 
 ::: {.centrar}
 Botón para **ejecutar código**
@@ -340,7 +340,7 @@ Botón para **ejecutar código**
 :::
 
 ::: {.fragment .fondo}
-![](otros/rstudio_boton_2.png){style="width: 700px;"}
+![](imagenes/rstudio_boton_2.png){style="width: 700px;"}
 
 ::: {.centrar}
 Botón para **ejecutar todo el script**
@@ -348,7 +348,7 @@ Botón para **ejecutar todo el script**
 :::
 
 ::: {.fragment .fondo}
-![](otros/rstudio_boton_3.png){style="width: 700px;"}
+![](imagenes/rstudio_boton_3.png){style="width: 700px;"}
 
 ::: {.centrar}
 Configurar paneles de RStudio
@@ -356,7 +356,7 @@ Configurar paneles de RStudio
 :::
 
 ::: {.fragment .fondo}
-![](otros/rstudio_boton_4.png){style="width: 700px;"}
+![](imagenes/rstudio_boton_4.png){style="width: 700px;"}
 
 ::: {.centrar}
 Cambiar de **proyecto** o crear uno nuevo
@@ -660,8 +660,6 @@ años
 - Las funciones tienen **argumentos**, que son los inputs que recibe la función.
   - Usualmente el primer argumento son los _datos_ sobre los que se va a operar.
 
-
-
 ```{r}
 #| code-line-numbers: false
 #| eval: false
@@ -681,15 +679,17 @@ Si no sabemos cómo usar una función, podemos buscar su nombre en el panel **Ay
 
 ----
 
+#### Funciones en vectores 
 
-Las funciones también pueden operar sobre vectores de datos.
+Las funciones también pueden operar **sobre vectores** de datos.
 
+::: {.pad}
 ```{r}
 población <- c(120, 340, 560, 230, 450)
 prom_pob <- mean(población)
 prom_pob
 ```
-
+:::
 
 Es decir que la **operación** que hace la función se aplica **a cada elemento** del vector.
 
@@ -697,14 +697,203 @@ Pensemos las **funciones** como nuestras **acciones**, y los **vectores** como l
 
 ----
 
+# Datos {{< fa database >}}
 
-::: {.absolute top=40% style="text-align: center;"}
+Para cargar datos, tenemos que:
 
-Si tienes dudas o quieres seguir por tu cuenta, [visita este sitio con recursos para aprender R.](https://bastianolea.github.io/aprende_r/)
+::: {.incremental}
+- Tener un **archivo** y conocer su **formato** (Excel, Stata, CSV, etc.)
+- [Saber **dónde está** el archivo en nuestro computador]{.fragment .strike}
+- **Guardar** el archivo dentro del proyecto de R 📂
+- Conocer una **función** que lea ese formato de archivos
+:::
+
+## Cargar datos {{< fa file-export >}}
+
+- Las funciones de carga de datos usan como argumento la **ruta** del archivo.
+
+::: {.fragment .pad}
+Cargar un archivo en la misma carperta del proyecto:
+```{r}
+#| eval: false
+#| code-line-numbers: false
+datos <- read.csv("datos.csv")
+```
+:::
+
+::: {.fragment .pad}
+Cargar un archivo en una subcarpeta del proyecto:
+```{r}
+#| eval: false
+#| code-line-numbers: false
+datos <- read.csv("carpeta/datos.csv")
+```
+
+::: {.rosa .centrar .pad}
+{{< fa folder-tree size=3x >}}
+:::
 
 :::
 
 
+
+
+
+## Paquetes
+
+:::: {.columns} 
+
+::: {.column width=40%}
+- **Extensiones** de R que te permiten agregar **nuevas** y **mejores** funcionalidades.
+- Se instalan desde internet
+  - Son creados y mantenidos **por la comunidad**
+  - Se revisan para garantizar su seguridad y estabilidad
+  
+```{r}
+#| eval: false
+#| code-line-numbers: false
+install.packages()
+```
+
+  
+:::
+
+::: {.column width=60%}
+![](imagenes/tidyverse.png)
+:::
+
+::::
+
+----
+
+### Paquetes para carga de datos
+
+::: {.pad}
+- `{readxl}` es uno de los paquetes de lectura de planillas Excel. Para escribir un archivo excel está `{writexl}`
+- `{readr}` lee y escribe datos de múltiples formatos, usualmente de forma más veloz y cómoda
+- `{haven}` permite cargar archivos SPSS, Stata, y SAS
+- `{arrow}` es un formato nuevo de datos, optimizado para grandes volúmenes y velocidad
+:::
+
+::: {.rosa .centrar .pad}
+{{< fa laptop-file size=3x >}}
+:::
+
+----
+
+
+# `{dplyr}`
+
+:::: {.columns}
+::: {.column width=70%}
+- Paquete de exploración, manipulación y transformación de datos
+- Sus funciones se escriben como verbos
+- Las acciones se encadenan con el operador de conexión o _pipe_: `|>`
+:::
+
+::: {.column width=30%}
+![](imagenes/dplyr.png){}
+:::
+::::
+
+----
+
+## Funciones comunes
+
+::: {.incremental}
+- `head()`, `tail()`, `glimpse()`: vistazos a los datos
+- `select()`: seleccionar columnas o variables de una tabla
+- `slice()`: extraer filas de una tabla por su posición o distintos criterios
+- `pull()`: convertir una columna en vector
+- `filter()`: filtrar observaciones en base a condiciones personalizadas
+- `distinct()`: filtrar observaciones repetidas a través de una o más columnas
+- `count()`: conteo de casos
+- `mutate()`: crear columnas
+:::
+
+----
+
+## Conector
+
+El conector o _pipe_ `|>` nos permite encadenar varias funciones de forma más legible. Se escribe con `shift + control + M`
+
+::: {.fragment .pad}
+Aplicar una función normalmente:
+```{r}
+#| eval: false
+#| code-line-numbers: false
+función(objeto) # a la función le pasamos un objeto
+```
+:::
+::: {.fragment .pad}
+Otra forma de hacerlo con `|>` es:
+```{r}
+#| eval: false
+#| code-line-numbers: false
+objeto |> función() # al objeto luego le aplicamos la función
+```
+:::
+::: {.fragment .pad}
+Luego podemos encadenar varias funciones:
+
+```{r}
+#| eval: false
+#| code-line-numbers: false
+objeto |> función() |> función() # al objeto le aplicamos dos funciones
+```
+:::
+::: {.fragment .pad}
+También podemos ordenar las instrucciones hacia abajo:
+```{r}
+#| eval: false
+resultado <- objeto |> 
+  función() |> 
+  función()
+```
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----
+
+
+
+::: {.absolute top=40% style="text-align: center;"}
+**¡Gracias!**
+
+Si tienes dudas o quieres seguir por tu cuenta, [visita este sitio con recursos para aprender R.](https://bastianolea.github.io/aprende_r/)
+:::
+
+:::: {.centrar}
 ::: {.boton}
 [{{< fa book-open >}} Curso](https://bastianolea.rbind.io/clases/curso_gratis_r_intro_1/)
 :::
@@ -716,4 +905,5 @@ Si tienes dudas o quieres seguir por tu cuenta, [visita este sitio con recursos 
 ::: {.boton}
 [{{< fa video >}} Streaming](https://youtube.com/live/A9wtPBEaVvY)
 :::
+::::
 

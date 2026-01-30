@@ -124,5 +124,47 @@
     "title": "Introducción al análisis de datos con R",
     "section": "Botones 2",
     "text": "Botones 2\n\n\n\n\nCrear un nuevo script de R\n\n\n\n\n\nBotón para ejecutar código (o usar control + enter)\n\n\n\n\n Botón para ejecutar todo el script\n\n\n\n\n Configurar paneles de RStudio\n\n\n\n\n Cambiar de proyecto o crear uno nuevo"
+  },
+  {
+    "objectID": "diapositivas.html#paquetes",
+    "href": "diapositivas.html#paquetes",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Paquetes",
+    "text": "Paquetes\n\n\n\nExtensiones de R que te permiten agregar nuevas y mejores funcionalidades.\nSe instalan desde internet\n\nSon creados y mantenidos por la comunidad\nSe revisan para garantizar su seguridad y estabilidad\n\n\n\ninstall.packages()"
+  },
+  {
+    "objectID": "diapositivas.html#dplyr",
+    "href": "diapositivas.html#dplyr",
+    "title": "Introducción al análisis de datos con R",
+    "section": "{dplyr}",
+    "text": "{dplyr}\n\n\n\nPaquete de exploración, manipulación y transformación de datos\nSus funciones se escriben como verbos\nLas acciones se encadenan con el operador de conexión o pipe: |&gt;"
+  },
+  {
+    "objectID": "diapositivas.html#cargar-datos",
+    "href": "diapositivas.html#cargar-datos",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Cargar datos ",
+    "text": "Cargar datos \n\nLas funciones de carga de datos usan como argumento la ruta del archivo.\n\n\nCargar un archivo en la misma carperta del proyecto:\n\ndatos &lt;- read.csv(\"datos.csv\")\n\n\n\nCargar un archivo en una subcarpeta del proyecto:\n\ndatos &lt;- read.csv(\"carpeta/datos.csv\")"
+  },
+  {
+    "objectID": "diapositivas.html#dplyr-1",
+    "href": "diapositivas.html#dplyr-1",
+    "title": "Introducción al análisis de datos con R",
+    "section": "{dplyr}",
+    "text": "{dplyr}\n\nhead(), tail(), glimpse(): vistazos a los datos\nselect(): seleccionar columnas o variables de una tabla\nslice(): extraer filas de una tabla por su posición o distintos criterios\npull(): convertir una columna en vector\nfilter(): filtrar observaciones en base a condiciones personalizadas\ndistinct(): filtrar observaciones repetidas a través de una o más columnas\ncount(): conteo de casos\nmutate(): crear columnas"
+  },
+  {
+    "objectID": "diapositivas.html#funciones-comunes",
+    "href": "diapositivas.html#funciones-comunes",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Funciones comunes",
+    "text": "Funciones comunes\n\nhead(), tail(), glimpse(): vistazos a los datos\nselect(): seleccionar columnas o variables de una tabla\nslice(): extraer filas de una tabla por su posición o distintos criterios\npull(): convertir una columna en vector\nfilter(): filtrar observaciones en base a condiciones personalizadas\ndistinct(): filtrar observaciones repetidas a través de una o más columnas\ncount(): conteo de casos\nmutate(): crear columnas"
+  },
+  {
+    "objectID": "diapositivas.html#conector",
+    "href": "diapositivas.html#conector",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Conector",
+    "text": "Conector\nEl conector o pipe |&gt; nos permite encadenar varias funciones de forma más legible. Se escribe con shift + control + M\n\nAplicar una función normalmente:\n\nfunción(objeto) # a la función le pasamos un objeto\n\n\n\nOtra forma de hacerlo con |&gt; es:\n\nobjeto |&gt; función() # al objeto luego le aplicamos la función\n\n\n\nLuego podemos encadenar varias funciones:\n\nobjeto |&gt; función() |&gt; función() # al objeto le aplicamos dos funciones\n\n\n\nTambién podemos ordenar las instrucciones hacia abajo:\n\nresultado &lt;- objeto |&gt; \n  función() |&gt; \n  función()"
   }
 ]
