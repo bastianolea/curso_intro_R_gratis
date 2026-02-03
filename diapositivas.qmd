@@ -118,8 +118,45 @@ La gracia de R es [guardar todos los pasos de tu análisis](https://bastianolea.
 ----
 
 
+## ¿Qué se puede hacer con R?
 
-### Diferencia entre _hacer_ y programar
+<img class="r-stretch" 
+src="imagenes/shiny_apps.jpg" 
+style="border-radius: 8px; border: solid 1px #442A54; margin-bottom: 20px;"/>
+
+<div style="text-align: center; font-size: 90%;">
+Muestra de algunas [aplicaciones](https://bastianolea.github.io/shiny_apps/), [gráficos](https://bastianolea.rbind.io/tags/gráficos/), [tablas](https://bastianolea.rbind.io/tags/tablas/), y [mapas](https://bastianolea.rbind.io/tags/mapas/) hechos con R. También algunos [trabajos](https://bastianolea.rbind.io/blog/portafolio_trabajos_r/) que he hecho.
+</div>
+
+
+
+----
+
+
+## Diferencia entre _hacer_ y programar
+
+::: {.incremental}
+- Aprender a programar es un **cambio de perspectiva**: pasamos de _hacer_ cosas a _planificar_ cosas 💅🏼
+- Acción 🔧 → instrucción 🧠
+- Trabajamos **desde arriba**, viendo todos sus pasos y componentes 👩🏻‍💻
+- Pasos independientes, reutilizables, mejorables, intercambiables ⚙️
+- El trabajo que hagas puede **servirte** a futuro, a ti y a otrxs ♻️
+- Resultados **replicables** 🏭
+:::
+
+::: {.fragment}
+Veamos algunos casos!
+:::
+
+----
+
+### Caso 1: _arreglar un problema_
+
+::: {.pad}
+Datos → A → B → C → Resultado
+:::
+
+::: {.fragment}
 
 ::::: {.columns}
 
@@ -151,29 +188,126 @@ La gracia de R es [guardar todos los pasos de tu análisis](https://bastianolea.
 ::::
 :::::
 
+:::
 
 ----
 
 
-### ¿Qué se puede hacer con R?
+### Caso 2: _actualización de datos_
 
-<img class="r-stretch" 
-src="imagenes/shiny_apps.jpg" 
-style="border-radius: 8px; border: solid 1px #442A54; margin-bottom: 20px;"/>
+::: {.pad}
+Datos → A → B → C → Resultado
+:::
 
-<div style="text-align: center; font-size: 90%;">
-Muestra de algunas [aplicaciones](https://bastianolea.github.io/shiny_apps/), [gráficos](https://bastianolea.rbind.io/tags/gráficos/), [tablas](https://bastianolea.rbind.io/tags/tablas/), y [mapas](https://bastianolea.rbind.io/tags/mapas/) hechos con R. También algunos [trabajos](https://bastianolea.rbind.io/blog/portafolio_trabajos_r/) que he hecho.
-</div>
 
+
+::::: {.columns}
+
+:::: {.column}
+[Hacer]{.subtitulo}
+
+::: {.incremental}
+- *Actualizar datos*
+- Hago de nuevo **A**
+- Hago de nuevo **B**
+- Hago de nuevo **C**
+:::
+
+::::
+
+:::: {.column}
+[Programar]{.subtitulo}
+
+::: {.incremental}
+- *Actualizar datos*
+- Re-ejecuto **A**, **B** y **C**
+:::
+
+::::
+:::::
 
 ----
 
 
 
-### Diferencia entre R y RStudio
+### Caso 3: _optimizar procesamiento o cambio en metodología_
+
+::: {.pad}
+Datos → A → B → C → Resultado
+:::
+
+::::: {.columns}
+
+:::: {.column}
+[Hacer]{.subtitulo}
+
+::: {.incremental}
+- _Cambio en procesamiento/metodología_
+- Tengo **A**
+- Hago de nuevo **B**
+- Hago de nuevo **C**
+:::
+
+::::
+
+:::: {.column}
+[Programar]{.subtitulo}
+
+::: {.incremental}
+- _Cambio en procesamiento/metodología_
+- Ajusto **A** si es conveniente
+- Aplico cambios en **B**
+- Re-ejecuto **A**, **B** y **C**
+:::
+
+::::
+:::::
+
+----
+
+### Caso 4: _replicar un resultado_
+
+::: {.pad}
+Datos → A → B → C → Resultado
+:::
+
+::::: {.columns}
+
+:::: {.column}
+[Hacer]{.subtitulo}
+
+::: {.incremental}
+- Hago **A** para grupo 1
+- Hago **B** para grupo 1
+- Hago **C** para grupo 1
+- Hago **A** para grupo 2 🤨
+- Hago **B** para grupo 2
+- Hago **C** para grupo 2... 😵
+:::
+
+::::
+
+:::: {.column}
+[Programar]{.subtitulo}
+
+::: {.incremental}
+- Hago **A** para grupo 1
+- Hago **B** para grupo 1
+- Hago **C** para grupo 1
+- Ajusto scripts para que funcionen con más grupos
+- Re-ejecuto **A**, **B** y **C** para grupo 2
+- Re-ejecuto **A**, **B** y **C** para grupo 3
+- O mejor, hago un loop que haga **A**, **B** y **C** para todos los grupos 😌
+:::
+
+::::
+:::::
 
 
+----
 
+
+## Diferencia entre R y RStudio
 
 ::::: {.columns}
 
@@ -304,17 +438,24 @@ Archivo .Rproj que marca nuestro espacio de trabajo: una carpeta específica que
 
 ### Consola y scripts
 
+
+![](imagenes/rstudio_script.png){.absolute top=5% right=-20%}
+
+
+
 :::: {.columns}
 
 ::: {.column}
+
+::: {.incremental}
 - Todos los **comandos** se ejecutan por medio de la consola
 - Pero al ejecutar código en la consola, el código no se guarda!
 - Para **guardar** el código, escribimos en **scripts**
 - Escribimos las **instrucciones** en un script, y RStudio se encarga de pasarlos a la consola y ejecutarlos cuando se lo pidamos 💡
 :::
-::::
 
-![](imagenes/rstudio_script.png){.absolute top=5% right=-20%}
+:::
+::::
 
 ----
 
@@ -374,14 +515,18 @@ Cambiar de **proyecto** o crear uno nuevo
 
 :::: {.column style="padding-right:28px;"}
 
+::: {.incremental}
 - Podemos realizar cualquier operación matemática en R.
 - Para **ejecutar** un comando, pon el cursor de texto en la línea o expresión que desees ejecutar, o selecciónala, y presiona el botón _Run_, o las teclas `control + enter`.
   - Lo importante es que el cursor de texto `|` esté en cualquier lugar de la línea.
 - El **resultado** de todas las operaciones aparece en la **consola**.
+:::
 
 ::::
 
 :::: {.column width="40%"}
+
+::: {.fragment} 
 
 ::: {.pad}
 ```{r}
@@ -408,6 +553,7 @@ Cambiar de **proyecto** o crear uno nuevo
 10^4 #potencias
 ```
 :::
+:::
 
 ::::
 :::::
@@ -417,9 +563,13 @@ Cambiar de **proyecto** o crear uno nuevo
 
 ### Comentarios
 
+::: {.incremental}
 - Los comentarios nos permiten poner texto en cualquier parte del script sin que afecte los cálculos.
 - También podemos poner un comentario al final de una línea sin que afecte el código
+:::
 
+
+::: {.fragment}
 ```{r}
 #| eval: false
 1 + 1 + 1 + 1
@@ -429,7 +579,7 @@ Cambiar de **proyecto** o crear uno nuevo
 
 1 * 4 # así queda mucho mejor
 ```
-
+:::
 
 ----
 
@@ -437,6 +587,8 @@ Cambiar de **proyecto** o crear uno nuevo
 ## Tipos de datos
 
 Lo que podemos hacer siempre va a depender del **tipo** de cada objeto. 
+
+. . .
 
 En R existen varios tipos:
 
@@ -450,6 +602,8 @@ En R existen varios tipos:
 Pueden ser decimales (_doubles_) o enteros (_integers_)
 ::: 
 
+. . .
+
 ::: {.pad}
 **Caracter** (texto)
 ```{r}
@@ -458,6 +612,8 @@ Pueden ser decimales (_doubles_) o enteros (_integers_)
 "ésta es una cadena de texto"
 ```
 ::: 
+
+. . .
 
 ::: {.pad}
 **Lógicos** (verdadero o falso)
@@ -522,6 +678,33 @@ cifra
 
 ----
 
+### Asignación
+
+Con el _operador de **asignación**_ creamos objetos nuevos.
+
+::: {.centrar style="font-size: 200%"}
+`->`
+:::
+
+::: {.fragment}
+Se escribe con: 
+
+::: {.centrar style="color: #563A74; opacity: 40%;"}
+Windows:
+:::
+
+![](imagenes/assignment_shortcut_win.png){.centrar}
+
+::: {.centrar style="color: #563A74; opacity: 40%; margin-top:32px;"}
+Mac:
+:::
+
+![](imagenes/assignment_shortcut_mac.png){.centrar}
+
+:::
+
+----
+
 
 :::: {.columns}
 
@@ -532,20 +715,27 @@ Al ejecutar un objeto, obtenemos su valor.
 :::
 
 ::: {.column}
+
+::: {.fragment}
 ```{r}
 edad <- 32
 edad
 ```
+:::
 
+::: {.fragment}
 ```{r}
 animal = "gato"
 animal
 ```
 :::
+
+:::
 ::::
 
 <br>
 
+::: {.fragment}
 :::: {.columns}
 
 ::: {.column width=40%}
@@ -560,9 +750,10 @@ Crear objetos es como **asignar variables**, y podemos usar estas variables para
 
 ::: {.column width=60%}
 
+
 :::: {.columns}
 
-::: {.column width=49%}
+::: {.fragment .column width=49%}
 ```{r}
 edad <- 32
 año <- 2026
@@ -570,7 +761,7 @@ año - edad
 ```
 :::
 
-::: {.column width=49%}
+::: {.fragment .column width=49%}
 ```{r}
 perros = 2
 gatos = 3
@@ -579,14 +770,17 @@ perros + gatos
 :::
 ::::
 
+::: {.fragment}
 ```{r}
 presupuesto = 100000
 pizza = 15000
 presupuesto - pizza * 10
 ```
 :::
+:::
 ::::
 
+:::
 
 ----
 
@@ -594,24 +788,37 @@ presupuesto - pizza * 10
 
 Podemos usar cifras u objetos para compararlas entre sí: la respuesta será `TRUE` (verdadero) o `FALSE` (falso).
 
-::: {.pad style="max-width: 400px;"}
+. . .
+
+:::: {.pad style="max-width: 400px;"}
+
+::: {.fragment}
 ```{r}
 edad >= 18
 ```
+:::
 
+::: {.fragment}
 ```{r}
 minimo <- 35
 edad > minimo
 ``` 
+:::
 
+::: {.fragment}
 ```{r}
 año == 2024
 ``` 
+:::
 
+::: {.fragment}
 ```{r}
 año != 2024
 ```
 :::
+::::
+
+. . .
 
 Las comparaciones son el principio que luego nos permitirá filtrar datos, crear variables, y más!
 
@@ -620,17 +827,21 @@ Las comparaciones son el principio que luego nos permitirá filtrar datos, crear
 
 ## Vectores
 
-Los vectores son **secuencias** de elementos.
+Los vectores son **secuencias** de elementos. Un objeto que contiene cero o más datos.
 
+::: {.incremental}
 - Estos elementos son de un **mismo tipo**: numérico, carácter o lógico.
 - Son la forma más básica de registrar e interactuar con varios datos a la vez.
+:::
 
+::: {.fragment}
 ```{r}
 c(1, 2, 3, 4, 5, 6)
 c("a", "b", "c", "d")
 c(TRUE, FALSE, FALSE)
 c(0.2, 0.1, -0.0, -0.1)
 ```
+:::
 
 ----
 
@@ -656,10 +867,13 @@ años
 
 ## Funciones
 
+::: {.incremental}
 - Las **funciones** son pequeños programas que permiten realizar distintas operaciones.
 - Las funciones tienen **argumentos**, que son los inputs que recibe la función.
   - Usualmente el primer argumento son los _datos_ sobre los que se va a operar.
+:::
 
+::: {.fragment}
 ```{r}
 #| code-line-numbers: false
 #| eval: false
@@ -672,9 +886,12 @@ typeof() # tipo del objeto
 is.na() # evaluar si es missing
 as.numeric() # convertir a numérico
 ```
+:::
 
 ::: aside
+::: {.fragment}
 Si no sabemos cómo usar una función, podemos buscar su nombre en el panel **Ayuda** de RStudio, o escribir el nombre de la función precedido de un signo de interrogación: `?funcion`
+:::
 :::
 
 ----
@@ -683,7 +900,7 @@ Si no sabemos cómo usar una función, podemos buscar su nombre en el panel **Ay
 
 Las funciones también pueden operar **sobre vectores** de datos.
 
-::: {.pad}
+::: {.pad .fragment}
 ```{r}
 población <- c(120, 340, 560, 230, 450)
 prom_pob <- mean(población)
@@ -691,11 +908,16 @@ prom_pob
 ```
 :::
 
+::: {.fragment}
 Es decir que la **operación** que hace la función se aplica **a cada elemento** del vector.
 
 Pensemos las **funciones** como nuestras **acciones**, y los **vectores** como las columnas o **variables** de nuestras bases de datos.
+:::
 
-----
+
+
+
+
 
 # Datos {{< fa database >}}
 
@@ -743,23 +965,27 @@ datos <- read.csv("carpeta/datos.csv")
 
 :::: {.columns} 
 
+::: {.fragment .column width=60%}
+![](imagenes/tidyverse.png)
+:::
+
 ::: {.column width=40%}
+
+::: {.incremental}
 - **Extensiones** de R que te permiten agregar **nuevas** y **mejores** funcionalidades.
 - Se instalan desde internet
   - Son creados y mantenidos **por la comunidad**
   - Se revisan para garantizar su seguridad y estabilidad
+:::
   
+::: {.fragment}
 ```{r}
 #| eval: false
 #| code-line-numbers: false
 install.packages()
 ```
-
-  
 :::
 
-::: {.column width=60%}
-![](imagenes/tidyverse.png)
 :::
 
 ::::
@@ -768,7 +994,7 @@ install.packages()
 
 ### Paquetes para carga de datos
 
-::: {.pad}
+::: {.pad .incremental}
 - `{readxl}` es uno de los paquetes de lectura de planillas Excel. Para escribir un archivo excel está `{writexl}`
 - `{readr}` lee y escribe datos de múltiples formatos, usualmente de forma más veloz y cómoda
 - `{haven}` permite cargar archivos SPSS, Stata, y SAS
@@ -779,13 +1005,14 @@ install.packages()
 {{< fa laptop-file size=3x >}}
 :::
 
-----
+
+
 
 
 # `{dplyr}`
 
 :::: {.columns}
-::: {.column width=70%}
+::: {.incremental .column width=70%}
 - Paquete de exploración, manipulación y transformación de datos
 - Sus funciones se escriben como verbos
 - Las acciones se encadenan con el operador de conexión o _pipe_: `|>`
@@ -815,8 +1042,35 @@ install.packages()
 
 ## Conector
 
-El conector o _pipe_ `|>` nos permite encadenar varias funciones de forma más legible. Se escribe con `shift + control + M`
+El conector o _pipe_ `|>` (o también `%>%`) nos permite encadenar varias funciones de forma más legible.
 
+::: {.centrar style="font-size: 200%"}
+`|>`  `%>%`
+:::
+
+::: {.fragment}
+Se escribe con: 
+
+::: {.centrar style="color: #563A74; opacity: 40%;"}
+Windows:
+:::
+
+![](imagenes/pipe_shortcut_win.png){.centrar}
+
+::: {.centrar style="color: #563A74; opacity: 40%; margin-top:32px;"}
+Mac:
+:::
+
+![](imagenes/pipe_shortcut_mac.png){.centrar}
+
+:::
+
+
+
+----
+
+
+### Usando el conector
 ::: {.fragment .pad}
 Aplicar una función normalmente:
 ```{r}

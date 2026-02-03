@@ -279,9 +279,34 @@ Bastián Olea Herrera
 </div>
 </div>
 </section>
+<section id="qué-se-puede-hacer-con-r" class="slide level2">
+<h2>¿Qué se puede hacer con R?</h2>
+
+<img class="r-stretch" src="imagenes/shiny_apps.jpg" style="border-radius: 8px; border: solid 1px #442A54; margin-bottom: 20px;"><div style="text-align: center; font-size: 90%;">
+<p>Muestra de algunas <a href="https://bastianolea.github.io/shiny_apps/">aplicaciones</a>, <a href="https://bastianolea.rbind.io/tags/gráficos/">gráficos</a>, <a href="https://bastianolea.rbind.io/tags/tablas/">tablas</a>, y <a href="https://bastianolea.rbind.io/tags/mapas/">mapas</a> hechos con R. También algunos <a href="https://bastianolea.rbind.io/blog/portafolio_trabajos_r/">trabajos</a> que he hecho.</p>
+</div>
+</section>
+<section id="diferencia-entre-hacer-y-programar" class="slide level2">
+<h2>Diferencia entre <em>hacer</em> y programar</h2>
+<ul>
+<li class="fragment">Aprender a programar es un <strong>cambio de perspectiva</strong>: pasamos de <em>hacer</em> cosas a <em>planificar</em> cosas 💅🏼</li>
+<li class="fragment">Acción 🔧 → instrucción 🧠</li>
+<li class="fragment">Trabajamos <strong>desde arriba</strong>, viendo todos sus pasos y componentes 👩🏻‍💻</li>
+<li class="fragment">Pasos independientes, reutilizables, mejorables, intercambiables ⚙️</li>
+<li class="fragment">El trabajo que hagas puede <strong>servirte</strong> a futuro, a ti y a otrxs ♻️</li>
+<li class="fragment">Resultados <strong>replicables</strong> 🏭</li>
+</ul>
+<div class="fragment">
+<p>Veamos algunos casos!</p>
+</div>
+</section>
 <section class="slide level2">
 
-<h3 id="diferencia-entre-hacer-y-programar">Diferencia entre <em>hacer</em> y programar</h3>
+<h3 id="caso-1-arreglar-un-problema">Caso 1: <em>arreglar un problema</em></h3>
+<div class="pad">
+<p>Datos → A → B → C → Resultado</p>
+</div>
+<div class="fragment">
 <div class="columns">
 <div class="column">
 <p><span class="subtitulo">Hacer</span></p>
@@ -305,18 +330,88 @@ Bastián Olea Herrera
 <li class="fragment">Re-ejecuto <strong>A</strong>, <strong>B</strong> y <strong>C</strong></li>
 </ul>
 </div></div>
-</section>
-<section class="slide level2">
-
-<h3 id="qué-se-puede-hacer-con-r">¿Qué se puede hacer con R?</h3>
-
-<img class="r-stretch" src="imagenes/shiny_apps.jpg" style="border-radius: 8px; border: solid 1px #442A54; margin-bottom: 20px;"><div style="text-align: center; font-size: 90%;">
-<p>Muestra de algunas <a href="https://bastianolea.github.io/shiny_apps/">aplicaciones</a>, <a href="https://bastianolea.rbind.io/tags/gráficos/">gráficos</a>, <a href="https://bastianolea.rbind.io/tags/tablas/">tablas</a>, y <a href="https://bastianolea.rbind.io/tags/mapas/">mapas</a> hechos con R. También algunos <a href="https://bastianolea.rbind.io/blog/portafolio_trabajos_r/">trabajos</a> que he hecho.</p>
 </div>
 </section>
 <section class="slide level2">
 
-<h3 id="diferencia-entre-r-y-rstudio">Diferencia entre R y RStudio</h3>
+<h3 id="caso-2-actualización-de-datos">Caso 2: <em>actualización de datos</em></h3>
+<div class="pad">
+<p>Datos → A → B → C → Resultado</p>
+</div>
+<div class="columns">
+<div class="column">
+<p><span class="subtitulo">Hacer</span></p>
+<ul>
+<li class="fragment"><em>Actualizar datos</em></li>
+<li class="fragment">Hago de nuevo <strong>A</strong></li>
+<li class="fragment">Hago de nuevo <strong>B</strong></li>
+<li class="fragment">Hago de nuevo <strong>C</strong></li>
+</ul>
+</div><div class="column">
+<p><span class="subtitulo">Programar</span></p>
+<ul>
+<li class="fragment"><em>Actualizar datos</em></li>
+<li class="fragment">Re-ejecuto <strong>A</strong>, <strong>B</strong> y <strong>C</strong></li>
+</ul>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h3 id="caso-3-optimizar-procesamiento-o-cambio-en-metodología">Caso 3: <em>optimizar procesamiento o cambio en metodología</em></h3>
+<div class="pad">
+<p>Datos → A → B → C → Resultado</p>
+</div>
+<div class="columns">
+<div class="column">
+<p><span class="subtitulo">Hacer</span></p>
+<ul>
+<li class="fragment"><em>Cambio en procesamiento/metodología</em></li>
+<li class="fragment">Tengo <strong>A</strong></li>
+<li class="fragment">Hago de nuevo <strong>B</strong></li>
+<li class="fragment">Hago de nuevo <strong>C</strong></li>
+</ul>
+</div><div class="column">
+<p><span class="subtitulo">Programar</span></p>
+<ul>
+<li class="fragment"><em>Cambio en procesamiento/metodología</em></li>
+<li class="fragment">Ajusto <strong>A</strong> si es conveniente</li>
+<li class="fragment">Aplico cambios en <strong>B</strong></li>
+<li class="fragment">Re-ejecuto <strong>A</strong>, <strong>B</strong> y <strong>C</strong></li>
+</ul>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h3 id="caso-4-replicar-un-resultado">Caso 4: <em>replicar un resultado</em></h3>
+<div class="pad">
+<p>Datos → A → B → C → Resultado</p>
+</div>
+<div class="columns">
+<div class="column">
+<p><span class="subtitulo">Hacer</span></p>
+<ul>
+<li class="fragment">Hago <strong>A</strong> para grupo 1</li>
+<li class="fragment">Hago <strong>B</strong> para grupo 1</li>
+<li class="fragment">Hago <strong>C</strong> para grupo 1</li>
+<li class="fragment">Hago <strong>A</strong> para grupo 2 🤨</li>
+<li class="fragment">Hago <strong>B</strong> para grupo 2</li>
+<li class="fragment">Hago <strong>C</strong> para grupo 2… 😵</li>
+</ul>
+</div><div class="column">
+<p><span class="subtitulo">Programar</span></p>
+<ul>
+<li class="fragment">Hago <strong>A</strong> para grupo 1</li>
+<li class="fragment">Hago <strong>B</strong> para grupo 1</li>
+<li class="fragment">Hago <strong>C</strong> para grupo 1</li>
+<li class="fragment">Ajusto scripts para que funcionen con más grupos</li>
+<li class="fragment">Re-ejecuto <strong>A</strong>, <strong>B</strong> y <strong>C</strong> para grupo 2</li>
+<li class="fragment">Re-ejecuto <strong>A</strong>, <strong>B</strong> y <strong>C</strong> para grupo 3</li>
+<li class="fragment">O mejor, hago un loop que haga <strong>A</strong>, <strong>B</strong> y <strong>C</strong> para todos los grupos 😌</li>
+</ul>
+</div></div>
+</section>
+<section id="diferencia-entre-r-y-rstudio" class="slide level2">
+<h2>Diferencia entre R y RStudio</h2>
 <div class="columns">
 <div class="column">
 <div class="fragment">
@@ -408,16 +503,16 @@ Bastián Olea Herrera
 <section class="slide level2">
 
 <h3 id="consola-y-scripts">Consola y scripts</h3>
+<p><img data-src="imagenes/rstudio_script.png" class="absolute" style="top: 5%; right: -20%; "></p>
 <div class="columns">
 <div class="column">
 <ul>
-<li>Todos los <strong>comandos</strong> se ejecutan por medio de la consola</li>
-<li>Pero al ejecutar código en la consola, el código no se guarda!</li>
-<li>Para <strong>guardar</strong> el código, escribimos en <strong>scripts</strong></li>
-<li>Escribimos las <strong>instrucciones</strong> en un script, y RStudio se encarga de pasarlos a la consola y ejecutarlos cuando se lo pidamos 💡</li>
+<li class="fragment">Todos los <strong>comandos</strong> se ejecutan por medio de la consola</li>
+<li class="fragment">Pero al ejecutar código en la consola, el código no se guarda!</li>
+<li class="fragment">Para <strong>guardar</strong> el código, escribimos en <strong>scripts</strong></li>
+<li class="fragment">Escribimos las <strong>instrucciones</strong> en un script, y RStudio se encarga de pasarlos a la consola y ejecutarlos cuando se lo pidamos 💡</li>
 </ul>
 </div></div>
-<p><img data-src="imagenes/rstudio_script.png" class="absolute" style="top: 5%; right: -20%; "></p>
 </section>
 <section class="slide level2">
 
@@ -460,14 +555,15 @@ Bastián Olea Herrera
 <div class="columns">
 <div class="column" style="padding-right:28px;">
 <ul>
-<li>Podemos realizar cualquier operación matemática en R.</li>
-<li>Para <strong>ejecutar</strong> un comando, pon el cursor de texto en la línea o expresión que desees ejecutar, o selecciónala, y presiona el botón <em>Run</em>, o las teclas <code>control + enter</code>.
+<li class="fragment">Podemos realizar cualquier operación matemática en R.</li>
+<li class="fragment">Para <strong>ejecutar</strong> un comando, pon el cursor de texto en la línea o expresión que desees ejecutar, o selecciónala, y presiona el botón <em>Run</em>, o las teclas <code>control + enter</code>.
 <ul>
-<li>Lo importante es que el cursor de texto <code>|</code> esté en cualquier lugar de la línea.</li>
+<li class="fragment">Lo importante es que el cursor de texto <code>|</code> esté en cualquier lugar de la línea.</li>
 </ul></li>
-<li>El <strong>resultado</strong> de todas las operaciones aparece en la <strong>consola</strong>.</li>
+<li class="fragment">El <strong>resultado</strong> de todas las operaciones aparece en la <strong>consola</strong>.</li>
 </ul>
 </div><div class="column" style="width:40%;">
+<div class="fragment">
 <div class="pad">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span> <span class="co">#suma</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -508,15 +604,17 @@ Bastián Olea Herrera
 </div>
 </div>
 </div>
+</div>
 </div></div>
 </section>
 <section class="slide level2">
 
 <h3 id="comentarios">Comentarios</h3>
 <ul>
-<li>Los comentarios nos permiten poner texto en cualquier parte del script sin que afecte los cálculos.</li>
-<li>También podemos poner un comentario al final de una línea sin que afecte el código</li>
+<li class="fragment">Los comentarios nos permiten poner texto en cualquier parte del script sin que afecte los cálculos.</li>
+<li class="fragment">También podemos poner un comentario al final de una línea sin que afecte el código</li>
 </ul>
+<div class="fragment">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span>
 <span id="cb11-2"><a></a><span class="co"># comentario: quizás esto debería</span></span>
@@ -525,10 +623,12 @@ Bastián Olea Herrera
 <span id="cb11-5"><a></a></span>
 <span id="cb11-6"><a></a><span class="dv">1</span> <span class="sc">*</span> <span class="dv">4</span> <span class="co"># así queda mucho mejor</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</div>
 </section>
 <section id="tipos-de-datos" class="slide level2">
 <h2>Tipos de datos</h2>
 <p>Lo que podemos hacer siempre va a depender del <strong>tipo</strong> de cada objeto.</p>
+<div class="fragment">
 <p>En R existen varios tipos:</p>
 <div class="pad">
 <p><strong>Numéricos</strong></p>
@@ -537,16 +637,21 @@ Bastián Olea Herrera
 </div>
 <p>Pueden ser decimales (<em>doubles</em>) o enteros (<em>integers</em>)</p>
 </div>
+</div>
+<div class="fragment">
 <div class="pad">
 <p><strong>Caracter</strong> (texto)</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="st">"ésta es una cadena de texto"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
+</div>
+<div class="fragment">
 <div class="pad">
 <p><strong>Lógicos</strong> (verdadero o falso)</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a aria-hidden="true" tabindex="-1"></a><span class="cn">TRUE</span> <span class="cn">FALSE</span> <span class="cn">TRUE</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 </div>
 </section>
@@ -588,11 +693,31 @@ Bastián Olea Herrera
 </section>
 <section class="slide level2">
 
+<h3 id="asignación">Asignación</h3>
+<p>Con el <em>operador de <strong>asignación</strong></em> creamos objetos nuevos.</p>
+<div class="centrar" style="font-size: 200%">
+<p><code>-&gt;</code></p>
+</div>
+<div class="fragment">
+<p>Se escribe con:</p>
+<div class="centrar" style="color: #563A74; opacity: 40%;">
+<p>Windows:</p>
+</div>
+<p><img data-src="imagenes/assignment_shortcut_win.png" class="centrar"></p>
+<div class="centrar" style="color: #563A74; opacity: 40%; margin-top:32px;">
+<p>Mac:</p>
+</div>
+<p><img data-src="imagenes/assignment_shortcut_mac.png" class="centrar"></p>
+</div>
+</section>
+<section class="slide level2">
+
 <div class="columns">
 <div class="column">
 <p>Al asignar algo, <strong>creamos</strong> o <strong>modificamos</strong> un objeto con el valor que le estamos asignando.</p>
 <p>Al ejecutar un objeto, obtenemos su valor.</p>
 </div><div class="column">
+<div class="fragment">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>edad <span class="ot">&lt;-</span> <span class="dv">32</span></span>
 <span id="cb18-2"><a></a>edad</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -600,6 +725,8 @@ Bastián Olea Herrera
 <pre><code>[1] 32</code></pre>
 </div>
 </div>
+</div>
+<div class="fragment">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>animal <span class="ot">=</span> <span class="st">"gato"</span></span>
 <span id="cb20-2"><a></a>animal</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -607,8 +734,10 @@ Bastián Olea Herrera
 <pre><code>[1] "gato"</code></pre>
 </div>
 </div>
+</div>
 </div></div>
 <p><br></p>
+<div class="fragment">
 <div class="columns">
 <div class="column" style="width:40%;">
 <div style="padding-right:12px;">
@@ -617,7 +746,7 @@ Bastián Olea Herrera
 </div>
 </div><div class="column" style="width:60%;">
 <div class="columns">
-<div class="column" style="width:49%;">
+<div class="fragment column" style="width:49%;">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>edad <span class="ot">&lt;-</span> <span class="dv">32</span></span>
 <span id="cb22-2"><a></a>año <span class="ot">&lt;-</span> <span class="dv">2026</span></span>
@@ -626,7 +755,7 @@ Bastián Olea Herrera
 <pre><code>[1] 1994</code></pre>
 </div>
 </div>
-</div><div class="column" style="width:49%;">
+</div><div class="fragment column" style="width:49%;">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>perros <span class="ot">=</span> <span class="dv">2</span></span>
 <span id="cb24-2"><a></a>gatos <span class="ot">=</span> <span class="dv">3</span></span>
@@ -636,6 +765,7 @@ Bastián Olea Herrera
 </div>
 </div>
 </div></div>
+<div class="fragment">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>presupuesto <span class="ot">=</span> <span class="dv">100000</span></span>
 <span id="cb26-2"><a></a>pizza <span class="ot">=</span> <span class="dv">15000</span></span>
@@ -644,18 +774,24 @@ Bastián Olea Herrera
 <pre><code>[1] -50000</code></pre>
 </div>
 </div>
+</div>
 </div></div>
+</div>
 </section>
 <section id="comparaciones" class="slide level2">
 <h2>Comparaciones</h2>
 <p>Podemos usar cifras u objetos para compararlas entre sí: la respuesta será <code>TRUE</code> (verdadero) o <code>FALSE</code> (falso).</p>
+<div class="fragment">
 <div class="pad" style="max-width: 400px;">
+<div class="fragment">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a>edad <span class="sc">&gt;=</span> <span class="dv">18</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
 </div>
+</div>
+<div class="fragment">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a>minimo <span class="ot">&lt;-</span> <span class="dv">35</span></span>
 <span id="cb30-2"><a></a>edad <span class="sc">&gt;</span> minimo</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -663,12 +799,16 @@ Bastián Olea Herrera
 <pre><code>[1] FALSE</code></pre>
 </div>
 </div>
+</div>
+<div class="fragment">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a>año <span class="sc">==</span> <span class="dv">2024</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
 </div>
+</div>
+<div class="fragment">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>año <span class="sc">!=</span> <span class="dv">2024</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -676,15 +816,20 @@ Bastián Olea Herrera
 </div>
 </div>
 </div>
+</div>
+</div>
+<div class="fragment">
 <p>Las comparaciones son el principio que luego nos permitirá filtrar datos, crear variables, y más!</p>
+</div>
 </section>
 <section id="vectores" class="slide level2">
 <h2>Vectores</h2>
-<p>Los vectores son <strong>secuencias</strong> de elementos.</p>
+<p>Los vectores son <strong>secuencias</strong> de elementos. Un objeto que contiene cero o más datos.</p>
 <ul>
-<li>Estos elementos son de un <strong>mismo tipo</strong>: numérico, carácter o lógico.</li>
-<li>Son la forma más básica de registrar e interactuar con varios datos a la vez.</li>
+<li class="fragment">Estos elementos son de un <strong>mismo tipo</strong>: numérico, carácter o lógico.</li>
+<li class="fragment">Son la forma más básica de registrar e interactuar con varios datos a la vez.</li>
 </ul>
+<div class="fragment">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -701,6 +846,7 @@ Bastián Olea Herrera
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a><span class="fu">c</span>(<span class="fl">0.2</span>, <span class="fl">0.1</span>, <span class="sc">-</span><span class="fl">0.0</span>, <span class="sc">-</span><span class="fl">0.1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  0.2  0.1  0.0 -0.1</code></pre>
+</div>
 </div>
 </div>
 </section>
@@ -728,12 +874,13 @@ Bastián Olea Herrera
 <section id="funciones" class="slide level2">
 <h2>Funciones</h2>
 <ul>
-<li>Las <strong>funciones</strong> son pequeños programas que permiten realizar distintas operaciones.</li>
-<li>Las funciones tienen <strong>argumentos</strong>, que son los inputs que recibe la función.
+<li class="fragment">Las <strong>funciones</strong> son pequeños programas que permiten realizar distintas operaciones.</li>
+<li class="fragment">Las funciones tienen <strong>argumentos</strong>, que son los inputs que recibe la función.
 <ul>
-<li>Usualmente el primer argumento son los <em>datos</em> sobre los que se va a operar.</li>
+<li class="fragment">Usualmente el primer argumento son los <em>datos</em> sobre los que se va a operar.</li>
 </ul></li>
 </ul>
+<div class="fragment">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>() <span class="co"># calcular promedio</span></span>
 <span id="cb48-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>() <span class="co"># calcular mediana</span></span>
@@ -744,15 +891,18 @@ Bastián Olea Herrera
 <span id="cb48-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">is.na</span>() <span class="co"># evaluar si es missing</span></span>
 <span id="cb48-8"><a aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>() <span class="co"># convertir a numérico</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</div>
 
 <aside><div>
+<div class="fragment">
 <p>Si no sabemos cómo usar una función, podemos buscar su nombre en el panel <strong>Ayuda</strong> de RStudio, o escribir el nombre de la función precedido de un signo de interrogación: <code>?funcion</code></p>
+</div>
 </div></aside></section>
 <section class="slide level2">
 
 <h4 id="funciones-en-vectores">Funciones en vectores</h4>
 <p>Las funciones también pueden operar <strong>sobre vectores</strong> de datos.</p>
-<div class="pad">
+<div class="pad fragment">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a>población <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">120</span>, <span class="dv">340</span>, <span class="dv">560</span>, <span class="dv">230</span>, <span class="dv">450</span>)</span>
 <span id="cb49-2"><a></a>prom_pob <span class="ot">&lt;-</span> <span class="fu">mean</span>(población)</span>
@@ -762,11 +912,10 @@ Bastián Olea Herrera
 </div>
 </div>
 </div>
+<div class="fragment">
 <p>Es decir que la <strong>operación</strong> que hace la función se aplica <strong>a cada elemento</strong> del vector.</p>
 <p>Pensemos las <strong>funciones</strong> como nuestras <strong>acciones</strong>, y los <strong>vectores</strong> como las columnas o <strong>variables</strong> de nuestras bases de datos.</p>
-</section>
-<section class="slide level2">
-
+</div>
 </section>
 <section>
 <section id="datos" class="title-slide slide level1 center">
@@ -803,20 +952,22 @@ Bastián Olea Herrera
 <section id="paquetes" class="slide level2">
 <h2>Paquetes</h2>
 <div class="columns">
-<div class="column" style="width:40%;">
+<div class="fragment column" style="width:60%;">
+<p><img data-src="imagenes/tidyverse.png"></p>
+</div><div class="column" style="width:40%;">
 <ul>
-<li><strong>Extensiones</strong> de R que te permiten agregar <strong>nuevas</strong> y <strong>mejores</strong> funcionalidades.</li>
-<li>Se instalan desde internet
+<li class="fragment"><strong>Extensiones</strong> de R que te permiten agregar <strong>nuevas</strong> y <strong>mejores</strong> funcionalidades.</li>
+<li class="fragment">Se instalan desde internet
 <ul>
-<li>Son creados y mantenidos <strong>por la comunidad</strong></li>
-<li>Se revisan para garantizar su seguridad y estabilidad</li>
+<li class="fragment">Son creados y mantenidos <strong>por la comunidad</strong></li>
+<li class="fragment">Se revisan para garantizar su seguridad y estabilidad</li>
 </ul></li>
 </ul>
+<div class="fragment">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</div><div class="column" style="width:60%;">
-<p><img data-src="imagenes/tidyverse.png"></p>
+</div>
 </div></div>
 </section>
 <section class="slide level2">
@@ -824,18 +975,15 @@ Bastián Olea Herrera
 <h3 id="paquetes-para-carga-de-datos">Paquetes para carga de datos</h3>
 <div class="pad">
 <ul>
-<li><code>{readxl}</code> es uno de los paquetes de lectura de planillas Excel. Para escribir un archivo excel está <code>{writexl}</code></li>
-<li><code>{readr}</code> lee y escribe datos de múltiples formatos, usualmente de forma más veloz y cómoda</li>
-<li><code>{haven}</code> permite cargar archivos SPSS, Stata, y SAS</li>
-<li><code>{arrow}</code> es un formato nuevo de datos, optimizado para grandes volúmenes y velocidad</li>
+<li class="fragment"><code>{readxl}</code> es uno de los paquetes de lectura de planillas Excel. Para escribir un archivo excel está <code>{writexl}</code></li>
+<li class="fragment"><code>{readr}</code> lee y escribe datos de múltiples formatos, usualmente de forma más veloz y cómoda</li>
+<li class="fragment"><code>{haven}</code> permite cargar archivos SPSS, Stata, y SAS</li>
+<li class="fragment"><code>{arrow}</code> es un formato nuevo de datos, optimizado para grandes volúmenes y velocidad</li>
 </ul>
 </div>
 <div class="rosa centrar pad">
 <p><i class="fa-solid fa-laptop-file fa-3x" aria-label="laptop-file"></i></p>
 </div>
-</section>
-<section class="slide level2">
-
 </section></section>
 <section>
 <section id="dplyr" class="title-slide slide level1 center">
@@ -843,9 +991,9 @@ Bastián Olea Herrera
 <div class="columns">
 <div class="column" style="width:70%;">
 <ul>
-<li>Paquete de exploración, manipulación y transformación de datos</li>
-<li>Sus funciones se escriben como verbos</li>
-<li>Las acciones se encadenan con el operador de conexión o <em>pipe</em>: <code>|&gt;</code></li>
+<li class="fragment">Paquete de exploración, manipulación y transformación de datos</li>
+<li class="fragment">Sus funciones se escriben como verbos</li>
+<li class="fragment">Las acciones se encadenan con el operador de conexión o <em>pipe</em>: <code>|&gt;</code></li>
 </ul>
 </div><div class="column" style="width:30%;">
 <p><img data-src="imagenes/dplyr.png"></p>
@@ -866,7 +1014,25 @@ Bastián Olea Herrera
 </section>
 <section id="conector" class="slide level2">
 <h2>Conector</h2>
-<p>El conector o <em>pipe</em> <code>|&gt;</code> nos permite encadenar varias funciones de forma más legible. Se escribe con <code>shift + control + M</code></p>
+<p>El conector o <em>pipe</em> <code>|&gt;</code> (o también <code>%&gt;%</code>) nos permite encadenar varias funciones de forma más legible.</p>
+<div class="centrar" style="font-size: 200%">
+<p><code>|&gt;</code> <code>%&gt;%</code></p>
+</div>
+<div class="fragment">
+<p>Se escribe con:</p>
+<div class="centrar" style="color: #563A74; opacity: 40%;">
+<p>Windows:</p>
+</div>
+<p><img data-src="imagenes/pipe_shortcut_win.png" class="centrar"></p>
+<div class="centrar" style="color: #563A74; opacity: 40%; margin-top:32px;">
+<p>Mac:</p>
+</div>
+<p><img data-src="imagenes/pipe_shortcut_mac.png" class="centrar"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="usando-el-conector">Usando el conector</h3>
 <div class="fragment pad">
 <p>Aplicar una función normalmente:</p>
 <div class="cell">

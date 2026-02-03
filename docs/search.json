@@ -18,7 +18,7 @@
     "href": "diapositivas.html#diferencia-entre-r-y-rstudio",
     "title": "Introducción al análisis de datos con R",
     "section": "Diferencia entre R y RStudio",
-    "text": "Diferencia entre R y RStudio\n\n\nR\n\n\nLenguaje de programación\nLanzado en 1993\nUsado por línea de comandos\nDesarrollado por R Core Team\nBasado en el lenguaje S (1976)\nSoftware libre\n\n\nRStudio\n\n\nEntorno de desarrollo integrado (IDE) enfocado en R\nLanzado en 2011\nInterfaz gráfica (ventanas y botones)\nDesarrollado por Posit (ex RStudio)\nSoftware libre\n\n\n\n\nPor favor digan que “aprendieron R” y no RStudio"
+    "text": "Diferencia entre R y RStudio\n\n\n\nR\n\n\nLenguaje de programación\nLanzado en 1993\nUsado por línea de comandos\nDesarrollado por R Core Team\nBasado en el lenguaje S (1976)\nSoftware libre\n\n\n\n\nRStudio\n\n\nEntorno de desarrollo integrado (IDE) enfocado en R\nLanzado en 2011\nInterfaz gráfica (ventanas y botones)\nDesarrollado por Posit (ex RStudio)\nSoftware libre\n\n\n\n\n\n\nPor favor no digan que “aprendieron RStudio” 😣"
   },
   {
     "objectID": "diapositivas.html#conceptos-clave",
@@ -53,14 +53,14 @@
     "href": "diapositivas.html#operaciones-básicas",
     "title": "Introducción al análisis de datos con R",
     "section": "Operaciones básicas",
-    "text": "Operaciones básicas\n\n\n\nPodemos realizar cualquier operación matemática en R.\nPara ejecutar un comando, pon el cursor de texto en la línea o expresión que desees ejecutar, o selecciónala, y presiona el botón Run, o las teclas control + enter.\n\nLo importante es que el cursor de texto | esté en cualquier lugar de la línea.\n\nEl resultado de todas las operaciones aparece en la consola.\n\n\n\n\n2 + 2 #suma\n\n[1] 4\n\n\n\n\n\n50 * 100 #multiplicación\n\n[1] 5000\n\n\n\n\n\n4556 - 1000 #resta\n\n[1] 3556\n\n\n\n\n\n6565 / 89 #división\n\n[1] 73.76404\n\n\n\n\n\n10^4 #potencias\n\n[1] 10000"
+    "text": "Operaciones básicas\n\n\n\nPodemos realizar cualquier operación matemática en R.\nPara ejecutar un comando, pon el cursor de texto en la línea o expresión que desees ejecutar, o selecciónala, y presiona el botón Run, o las teclas control + enter.\n\nLo importante es que el cursor de texto | esté en cualquier lugar de la línea.\n\nEl resultado de todas las operaciones aparece en la consola.\n\n\n\n\n\n2 + 2 #suma\n\n[1] 4\n\n\n\n\n\n50 * 100 #multiplicación\n\n[1] 5000\n\n\n\n\n\n4556 - 1000 #resta\n\n[1] 3556\n\n\n\n\n\n6565 / 89 #división\n\n[1] 73.76404\n\n\n\n\n\n10^4 #potencias\n\n[1] 10000"
   },
   {
     "objectID": "diapositivas.html#tipos-de-datos",
     "href": "diapositivas.html#tipos-de-datos",
     "title": "Introducción al análisis de datos con R",
     "section": "Tipos de datos",
-    "text": "Tipos de datos\nLo que podemos hacer siempre va a depender del tipo de cada objeto.\nEn R existen varios tipos:\n\nNuméricos\n\n1  2  3  4  5.1  5.2  5.333\n\nPueden ser decimales (doubles) o enteros (integers)\n\n\nCaracter (texto)\n\n\"ésta es una cadena de texto\"\n\n\n\nLógicos (verdadero o falso)\n\nTRUE FALSE TRUE"
+    "text": "Tipos de datos\nLo que podemos hacer siempre va a depender del tipo de cada objeto.\n\nEn R existen varios tipos:\n\nNuméricos\n\n1  2  3  4  5.1  5.2  5.333\n\nPueden ser decimales (doubles) o enteros (integers)\n\n\n\n\nCaracter (texto)\n\n\"ésta es una cadena de texto\"\n\n\n\n\n\nLógicos (verdadero o falso)\n\nTRUE FALSE TRUE"
   },
   {
     "objectID": "diapositivas.html#objetos",
@@ -74,21 +74,21 @@
     "href": "diapositivas.html#comparaciones",
     "title": "Introducción al análisis de datos con R",
     "section": "Comparaciones",
-    "text": "Comparaciones\nPodemos usar cifras u objetos para compararlas entre sí: la respuesta será TRUE (verdadero) o FALSE (falso).\n\n\nedad &gt;= 18\n\n[1] TRUE\n\n\n\nminimo &lt;- 35\nedad &gt; minimo\n\n[1] FALSE\n\n\n\naño == 2024\n\n[1] FALSE\n\n\n\naño != 2024\n\n[1] TRUE\n\n\n\nLas comparaciones son el principio que luego nos permitirá filtrar datos, crear variables, y más!"
+    "text": "Comparaciones\nPodemos usar cifras u objetos para compararlas entre sí: la respuesta será TRUE (verdadero) o FALSE (falso).\n\n\n\n\nedad &gt;= 18\n\n[1] TRUE\n\n\n\n\n\nminimo &lt;- 35\nedad &gt; minimo\n\n[1] FALSE\n\n\n\n\n\naño == 2024\n\n[1] FALSE\n\n\n\n\n\naño != 2024\n\n[1] TRUE\n\n\n\n\n\n\nLas comparaciones son el principio que luego nos permitirá filtrar datos, crear variables, y más!"
   },
   {
     "objectID": "diapositivas.html#vectores",
     "href": "diapositivas.html#vectores",
     "title": "Introducción al análisis de datos con R",
     "section": "Vectores",
-    "text": "Vectores\nLos vectores son secuencias de elementos.\n\nEstos elementos son de un mismo tipo: numérico, carácter o lógico.\nSon la forma más básica de registrar e interactuar con varios datos a la vez.\n\n\nc(1, 2, 3, 4, 5, 6)\n\n[1] 1 2 3 4 5 6\n\nc(\"a\", \"b\", \"c\", \"d\")\n\n[1] \"a\" \"b\" \"c\" \"d\"\n\nc(TRUE, FALSE, FALSE)\n\n[1]  TRUE FALSE FALSE\n\nc(0.2, 0.1, -0.0, -0.1)\n\n[1]  0.2  0.1  0.0 -0.1"
+    "text": "Vectores\nLos vectores son secuencias de elementos. Un objeto que contiene cero o más datos.\n\nEstos elementos son de un mismo tipo: numérico, carácter o lógico.\nSon la forma más básica de registrar e interactuar con varios datos a la vez.\n\n\n\nc(1, 2, 3, 4, 5, 6)\n\n[1] 1 2 3 4 5 6\n\nc(\"a\", \"b\", \"c\", \"d\")\n\n[1] \"a\" \"b\" \"c\" \"d\"\n\nc(TRUE, FALSE, FALSE)\n\n[1]  TRUE FALSE FALSE\n\nc(0.2, 0.1, -0.0, -0.1)\n\n[1]  0.2  0.1  0.0 -0.1"
   },
   {
     "objectID": "diapositivas.html#funciones",
     "href": "diapositivas.html#funciones",
     "title": "Introducción al análisis de datos con R",
     "section": "Funciones",
-    "text": "Funciones\n\nLas funciones son pequeños programas que permiten realizar distintas operaciones.\nLas funciones tienen argumentos, que son los inputs que recibe la función.\n\nUsualmente el primer argumento son los datos sobre los que se va a operar.\n\n\n\nmean() # calcular promedio\nmedian() # calcular mediana\nsum() # sumar elementos\nmin() # valor mínimo\nmax() # valor máximo\ntypeof() # tipo del objeto\nis.na() # evaluar si es missing\nas.numeric() # convertir a numérico\n\n\n\nSi no sabemos cómo usar una función, podemos buscar su nombre en el panel Ayuda de RStudio, o escribir el nombre de la función precedido de un signo de interrogación: ?funcion"
+    "text": "Funciones\n\nLas funciones son pequeños programas que permiten realizar distintas operaciones.\nLas funciones tienen argumentos, que son los inputs que recibe la función.\n\nUsualmente el primer argumento son los datos sobre los que se va a operar.\n\n\n\n\nmean() # calcular promedio\nmedian() # calcular mediana\nsum() # sumar elementos\nmin() # valor mínimo\nmax() # valor máximo\ntypeof() # tipo del objeto\nis.na() # evaluar si es missing\nas.numeric() # convertir a numérico\n\n\n\n\n\nSi no sabemos cómo usar una función, podemos buscar su nombre en el panel Ayuda de RStudio, o escribir el nombre de la función precedido de un signo de interrogación: ?funcion"
   },
   {
     "objectID": "diapositivas.html#portafolio",
@@ -130,7 +130,7 @@
     "href": "diapositivas.html#paquetes",
     "title": "Introducción al análisis de datos con R",
     "section": "Paquetes",
-    "text": "Paquetes\n\n\n\nExtensiones de R que te permiten agregar nuevas y mejores funcionalidades.\nSe instalan desde internet\n\nSon creados y mantenidos por la comunidad\nSe revisan para garantizar su seguridad y estabilidad\n\n\n\ninstall.packages()"
+    "text": "Paquetes\n\n\n\n\n\nExtensiones de R que te permiten agregar nuevas y mejores funcionalidades.\nSe instalan desde internet\n\nSon creados y mantenidos por la comunidad\nSe revisan para garantizar su seguridad y estabilidad\n\n\n\n\ninstall.packages()"
   },
   {
     "objectID": "diapositivas.html#dplyr",
@@ -165,6 +165,20 @@
     "href": "diapositivas.html#conector",
     "title": "Introducción al análisis de datos con R",
     "section": "Conector",
-    "text": "Conector\nEl conector o pipe |&gt; nos permite encadenar varias funciones de forma más legible. Se escribe con shift + control + M\n\nAplicar una función normalmente:\n\nfunción(objeto) # a la función le pasamos un objeto\n\n\n\nOtra forma de hacerlo con |&gt; es:\n\nobjeto |&gt; función() # al objeto luego le aplicamos la función\n\n\n\nLuego podemos encadenar varias funciones:\n\nobjeto |&gt; función() |&gt; función() # al objeto le aplicamos dos funciones\n\n\n\nTambién podemos ordenar las instrucciones hacia abajo:\n\nresultado &lt;- objeto |&gt; \n  función() |&gt; \n  función()"
+    "text": "Conector\nEl conector o pipe |&gt; (o también %&gt;%) nos permite encadenar varias funciones de forma más legible.\n\n|&gt; %&gt;%\n\n\nSe escribe con:\n\nWindows:\n\n\n\nMac:"
+  },
+  {
+    "objectID": "diapositivas.html#diferencia-entre-hacer-y-programar",
+    "href": "diapositivas.html#diferencia-entre-hacer-y-programar",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Diferencia entre hacer y programar",
+    "text": "Diferencia entre hacer y programar\n\nAprender a programar es un cambio de perspectiva: pasamos de hacer cosas a planificar cosas 💅🏼\nAcción 🔧 → instrucción 🧠\nTrabajamos desde arriba, viendo todos sus pasos y componentes 👩🏻‍💻\nPasos independientes, reutilizables, mejorables, intercambiables ⚙️\nEl trabajo que hagas puede servirte a futuro, a ti y a otrxs ♻️\nResultados replicables 🏭\n\n\nVeamos algunos casos!"
+  },
+  {
+    "objectID": "diapositivas.html#qué-se-puede-hacer-con-r",
+    "href": "diapositivas.html#qué-se-puede-hacer-con-r",
+    "title": "Introducción al análisis de datos con R",
+    "section": "¿Qué se puede hacer con R?",
+    "text": "¿Qué se puede hacer con R?\n\n\nMuestra de algunas aplicaciones, gráficos, tablas, y mapas hechos con R. También algunos trabajos que he hecho."
   }
 ]
