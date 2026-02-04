@@ -950,14 +950,18 @@ Cargar un archivo en una subcarpeta del proyecto:
 #| code-line-numbers: false
 datos <- read.csv("carpeta/datos.csv")
 ```
+:::
 
-::: {.rosa .centrar .pad}
-{{< fa folder-tree size=3x >}}
+<br>
+
+::: {.fragment}
+Probemos cargando unos datos!
+
+::: {.boton}
+<a href="https://github.com/bastianolea/curso_intro_R_gratis/raw/main/datos/pobreza.csv" target="_blank"> {{< fa file-download >}} Descargar datos de pobreza </a>
 :::
 
 :::
-
-
 
 
 
@@ -992,18 +996,18 @@ install.packages()
 
 ----
 
-### Paquetes para carga de datos
+### Paquetes para carga de datos {{< fa laptop-file >}}
+
+![](imagenes/paquetes_carga_datos.png){.pad style="height: 200px;"}
+
 
 ::: {.pad .incremental}
-- `{readxl}` es uno de los paquetes de lectura de planillas Excel. Para escribir un archivo excel está `{writexl}`
-- `{readr}` lee y escribe datos de múltiples formatos, usualmente de forma más veloz y cómoda
+- `{readxl}` es uno de los paquetes de lectura de planillas Excel. Para escribir un archivo Excel está `{writexl}`
+- `{readr}` lee y escribe datos de múltiples formatos (csv, rds, rdata), usualmente de forma más veloz y cómoda
 - `{haven}` permite cargar archivos SPSS, Stata, y SAS
-- `{arrow}` es un formato nuevo de datos, optimizado para grandes volúmenes y velocidad
+- `{arrow}` es un formato moderno de datos columnares, optimizado para grandes volúmenes y velocidad de carga, y pensado para usarse en distintos softwares
 :::
 
-::: {.rosa .centrar .pad}
-{{< fa laptop-file size=3x >}}
-:::
 
 
 

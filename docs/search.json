@@ -144,7 +144,7 @@
     "href": "diapositivas.html#cargar-datos",
     "title": "Introducción al análisis de datos con R",
     "section": "Cargar datos ",
-    "text": "Cargar datos \n\nLas funciones de carga de datos usan como argumento la ruta del archivo.\n\n\nCargar un archivo en la misma carperta del proyecto:\n\ndatos &lt;- read.csv(\"datos.csv\")\n\n\n\nCargar un archivo en una subcarpeta del proyecto:\n\ndatos &lt;- read.csv(\"carpeta/datos.csv\")"
+    "text": "Cargar datos \n\nLas funciones de carga de datos usan como argumento la ruta del archivo.\n\n\nCargar un archivo en la misma carperta del proyecto:\n\ndatos &lt;- read.csv(\"datos.csv\")\n\n\n\nCargar un archivo en una subcarpeta del proyecto:\n\ndatos &lt;- read.csv(\"carpeta/datos.csv\")\n\n\n\n\nProbemos cargando unos datos!\n\n  Descargar datos de pobreza"
   },
   {
     "objectID": "diapositivas.html#dplyr-1",
