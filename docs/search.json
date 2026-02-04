@@ -67,7 +67,7 @@
     "href": "diapositivas.html#objetos",
     "title": "Introducción al análisis de datos con R",
     "section": "Objetos",
-    "text": "Objetos\nSe le llama objeto a cualquier dato, variable, o elemento que tengas en R.\nPodemos guardar todo como un objeto.\n\nPara crear un objeto, simplemente le damos un nombre y le asignamos un contenido.\n\nnombre ← contenido\n\n\n\n\n\n\nPara asignar algo a un objeto, usamos el operador &lt;-\n\n\ncifra &lt;- 4\n\n\n\n\n\n\n\nEl objeto cifra se crea cuando declaramos que va a contener un 4\n\n\ncifra\n\n[1] 4"
+    "text": "Objetos\nSe le llama objeto a cualquier dato, variable, o elemento que tengas en R.\nPodemos guardar todo como un objeto.\n\nPara crear un objeto, simplemente le damos un nombre y le asignamos un contenido.\n\nnombre ← contenido\n\n\n\n\n\n\nPara asignar algo a un objeto, usamos el operador &lt;-\n\n\ncifra &lt;- 4\n\n\n\n\n\n\n\nEl objeto cifra se crea cuando declaramos que va a contener el valor 4\n\n\ncifra\n\n[1] 4"
   },
   {
     "objectID": "diapositivas.html#comparaciones",

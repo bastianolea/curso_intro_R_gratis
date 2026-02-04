@@ -664,7 +664,7 @@ cifra <- 4
 
 :::: {.columns}
 ::: {.column .just-der}
-El objeto `cifra` se crea cuando declaramos que va a contener un `4`
+El objeto `cifra` se crea cuando declaramos que va a contener el valor `4`
 :::
 
 ::: {.column}
