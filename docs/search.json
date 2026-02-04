@@ -165,7 +165,7 @@
     "href": "diapositivas.html#conector",
     "title": "Introducción al análisis de datos con R",
     "section": "Conector",
-    "text": "Conector\nEl conector o pipe |&gt; (o también %&gt;%) nos permite encadenar varias funciones de forma más legible.\n\n|&gt; %&gt;%\n\n\nSe escribe con:\n\nWindows:\n\n\n\nMac:"
+    "text": "Conector\n\n Ver tutorial\n\nEl conector o pipe |&gt; (o también %&gt;%) nos permite encadenar varias funciones de forma más legible.\n\n|&gt; %&gt;%\n\n\nSe escribe con:\n\nWindows:\n\n\n\nMac:"
   },
   {
     "objectID": "diapositivas.html#diferencia-entre-hacer-y-programar",
@@ -180,5 +180,33 @@
     "title": "Introducción al análisis de datos con R",
     "section": "¿Qué se puede hacer con R?",
     "text": "¿Qué se puede hacer con R?\n\n\nMuestra de algunas aplicaciones, gráficos, tablas, y mapas hechos con R. También algunos trabajos que he hecho."
+  },
+  {
+    "objectID": "diapositivas.html#crearmodificar-variables",
+    "href": "diapositivas.html#crearmodificar-variables",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Crear/modificar variables",
+    "text": "Crear/modificar variables\n\n Ver tutorial\n\n\nCon mutate() para crear una nueva variable o columna\n\n\nLe aplicamos mutate() a un data frame conectando los datos a la función con un conector (|&gt; o %&gt;%)\n\n\nejemplo |&gt; \n  mutate(saludo = \"hola\")"
+  },
+  {
+    "objectID": "diapositivas.html#tutoriales-de-dplyr",
+    "href": "diapositivas.html#tutoriales-de-dplyr",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Tutoriales de {dplyr}",
+    "text": "Tutoriales de {dplyr}\nPara que puedan repasar o guiarse, dejo un par de tutoriales de {dplyr} donde se repasan las funciones principales con datos reales:\n\n Tutorial de datos censales\n\n\n Tutorial de datos sociales"
+  },
+  {
+    "objectID": "diapositivas.html#filtrar-datos",
+    "href": "diapositivas.html#filtrar-datos",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Filtrar datos",
+    "text": "Filtrar datos\n\n Ver tutorial"
+  },
+  {
+    "objectID": "diapositivas.html#resúmenes-de-datos",
+    "href": "diapositivas.html#resúmenes-de-datos",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Resúmenes de datos",
+    "text": "Resúmenes de datos\n\n Ver tutorial"
   }
 ]

@@ -1015,6 +1015,7 @@ install.packages()
 
 # `{dplyr}`
 
+
 :::: {.columns}
 ::: {.incremental .column width=70%}
 - Paquete de exploración, manipulación y transformación de datos
@@ -1026,6 +1027,11 @@ install.packages()
 ![](imagenes/dplyr.png){}
 :::
 ::::
+
+::: {.boton .fragment}
+[{{< fa file-lines >}} Ver tutorial](https://bastianolea.rbind.io/blog/r_introduccion/dplyr_intro/)
+:::
+
 
 ----
 
@@ -1044,7 +1050,25 @@ install.packages()
 
 ----
 
+## Tutoriales de `{dplyr}`
+
+Para que puedan repasar o guiarse, dejo un par de tutoriales de `{dplyr}` donde se repasan las funciones principales con datos reales:
+
+::: {.boton .pad}
+[{{< fa file-lines >}} Tutorial de datos censales ](https://bastianolea.rbind.io/blog/r_introduccion/tutorial_dplyr_censo/)
+:::
+
+::: {.boton .pad}
+[{{< fa file-lines >}} Tutorial de datos sociales](https://bastianolea.rbind.io/blog/r_introduccion/tutorial_dplyr_campamentos/)
+:::
+
+----
+
 ## Conector
+
+::: {.boton .absolute top=0% right=0%}
+[{{< fa file-lines >}} Ver tutorial](https://bastianolea.rbind.io/blog/r_introduccion/conectores/)
+:::
 
 El conector o _pipe_ `|>` (o también `%>%`) nos permite encadenar varias funciones de forma más legible.
 
@@ -1080,7 +1104,7 @@ Aplicar una función normalmente:
 ```{r}
 #| eval: false
 #| code-line-numbers: false
-función(objeto) # a la función le pasamos un objeto
+funcion(objeto) # a la función le pasamos un objeto
 ```
 :::
 ::: {.fragment .pad}
@@ -1088,7 +1112,7 @@ Otra forma de hacerlo con `|>` es:
 ```{r}
 #| eval: false
 #| code-line-numbers: false
-objeto |> función() # al objeto luego le aplicamos la función
+objeto |> funcion() # al objeto luego le aplicamos la función
 ```
 :::
 ::: {.fragment .pad}
@@ -1097,7 +1121,7 @@ Luego podemos encadenar varias funciones:
 ```{r}
 #| eval: false
 #| code-line-numbers: false
-objeto |> función() |> función() # al objeto le aplicamos dos funciones
+objeto |> funcion() |> función() # al objeto le aplicamos dos funciones
 ```
 :::
 ::: {.fragment .pad}
@@ -1105,8 +1129,8 @@ También podemos ordenar las instrucciones hacia abajo:
 ```{r}
 #| eval: false
 resultado <- objeto |> 
-  función() |> 
-  función()
+  funcion() |> 
+  funcion()
 ```
 :::
 
@@ -1114,9 +1138,63 @@ resultado <- objeto |>
 
 
 
+----
+
+
+## Filtrar datos
+
+::: {.boton .absolute top=0% right=0%}
+[{{< fa file-lines >}} Ver tutorial](https://bastianolea.rbind.io/blog/r_introduccion/dplyr_intro/#filtrar-datos)
+:::
+
+```{r}
+
+```
+
+
+----
 
 
 
+## Crear/modificar variables
+
+::: {.boton .absolute top=0% right=0%}
+[{{< fa file-lines >}} Ver tutorial](https://bastianolea.rbind.io/blog/r_introduccion/dplyr_mutate/)
+:::
+
+::: {.pad}
+Con `mutate()` para crear una nueva variable o columna
+:::
+
+::: {.pad}
+Le aplicamos `mutate()` a un _data frame_ conectando los datos a la función con un conector (`|>` o `%>%`)
+:::
+
+```{r}
+#| eval: false
+ejemplo |> 
+  mutate(saludo = "hola")
+```
+
+
+----
+
+### Variables condicionales
+
+
+`ifelse()`
+
+`case_when()`
+
+
+
+----
+
+## Resúmenes de datos
+
+::: {.boton .absolute top=0% right=0%}
+[{{< fa file-lines >}} Ver tutorial](https://bastianolea.rbind.io/blog/r_introduccion/dplyr_summarize/)
+:::
 
 
 

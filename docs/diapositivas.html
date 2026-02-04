@@ -1000,6 +1000,9 @@ Bastián Olea Herrera
 </div><div class="column" style="width:30%;">
 <p><img data-src="imagenes/dplyr.png"></p>
 </div></div>
+<div class="boton fragment">
+<p><a href="https://bastianolea.rbind.io/blog/r_introduccion/dplyr_intro/"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Ver tutorial</a></p>
+</div>
 </section>
 <section id="funciones-comunes" class="slide level2">
 <h2>Funciones comunes</h2>
@@ -1014,8 +1017,21 @@ Bastián Olea Herrera
 <li class="fragment"><code>mutate()</code>: crear columnas</li>
 </ul>
 </section>
+<section id="tutoriales-de-dplyr" class="slide level2">
+<h2>Tutoriales de <code>{dplyr}</code></h2>
+<p>Para que puedan repasar o guiarse, dejo un par de tutoriales de <code>{dplyr}</code> donde se repasan las funciones principales con datos reales:</p>
+<div class="boton pad">
+<p><a href="https://bastianolea.rbind.io/blog/r_introduccion/tutorial_dplyr_censo/"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Tutorial de datos censales</a></p>
+</div>
+<div class="boton pad">
+<p><a href="https://bastianolea.rbind.io/blog/r_introduccion/tutorial_dplyr_campamentos/"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Tutorial de datos sociales</a></p>
+</div>
+</section>
 <section id="conector" class="slide level2">
 <h2>Conector</h2>
+<div class="boton absolute" style="top: 0%; right: 0%; ">
+<p><a href="https://bastianolea.rbind.io/blog/r_introduccion/conectores/"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Ver tutorial</a></p>
+</div>
 <p>El conector o <em>pipe</em> <code>|&gt;</code> (o también <code>%&gt;%</code>) nos permite encadenar varias funciones de forma más legible.</p>
 <div class="centrar" style="font-size: 200%">
 <p><code>|&gt;</code> <code>%&gt;%</code></p>
@@ -1038,28 +1054,62 @@ Bastián Olea Herrera
 <div class="fragment pad">
 <p>Aplicar una función normalmente:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a aria-hidden="true" tabindex="-1"></a>función(objeto) <span class="co"># a la función le pasamos un objeto</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">funcion</span>(objeto) <span class="co"># a la función le pasamos un objeto</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <div class="fragment pad">
 <p>Otra forma de hacerlo con <code>|&gt;</code> es:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a aria-hidden="true" tabindex="-1"></a>objeto <span class="sc">|&gt;</span> función() <span class="co"># al objeto luego le aplicamos la función</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a aria-hidden="true" tabindex="-1"></a>objeto <span class="sc">|&gt;</span> <span class="fu">funcion</span>() <span class="co"># al objeto luego le aplicamos la función</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <div class="fragment pad">
 <p>Luego podemos encadenar varias funciones:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a aria-hidden="true" tabindex="-1"></a>objeto <span class="sc">|&gt;</span> función() <span class="sc">|&gt;</span> función() <span class="co"># al objeto le aplicamos dos funciones</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a aria-hidden="true" tabindex="-1"></a>objeto <span class="sc">|&gt;</span> <span class="fu">funcion</span>() <span class="sc">|&gt;</span> función() <span class="co"># al objeto le aplicamos dos funciones</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <div class="fragment pad">
 <p>También podemos ordenar las instrucciones hacia abajo:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a></a>resultado <span class="ot">&lt;-</span> objeto <span class="sc">|&gt;</span> </span>
-<span id="cb57-2"><a></a>  función() <span class="sc">|&gt;</span> </span>
-<span id="cb57-3"><a></a>  función()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb57-2"><a></a>  <span class="fu">funcion</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb57-3"><a></a>  <span class="fu">funcion</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</div>
+</section>
+<section id="filtrar-datos" class="slide level2">
+<h2>Filtrar datos</h2>
+<div class="boton absolute" style="top: 0%; right: 0%; ">
+<p><a href="https://bastianolea.rbind.io/blog/r_introduccion/dplyr_intro/#filtrar-datos"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Ver tutorial</a></p>
+</div>
+</section>
+<section id="crearmodificar-variables" class="slide level2">
+<h2>Crear/modificar variables</h2>
+<div class="boton absolute" style="top: 0%; right: 0%; ">
+<p><a href="https://bastianolea.rbind.io/blog/r_introduccion/dplyr_mutate/"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Ver tutorial</a></p>
+</div>
+<div class="pad">
+<p>Con <code>mutate()</code> para crear una nueva variable o columna</p>
+</div>
+<div class="pad">
+<p>Le aplicamos <code>mutate()</code> a un <em>data frame</em> conectando los datos a la función con un conector (<code>|&gt;</code> o <code>%&gt;%</code>)</p>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a></a>ejemplo <span class="sc">|&gt;</span> </span>
+<span id="cb58-2"><a></a>  <span class="fu">mutate</span>(<span class="at">saludo =</span> <span class="st">"hola"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="variables-condicionales">Variables condicionales</h3>
+<p><code>ifelse()</code></p>
+<p><code>case_when()</code></p>
+</section>
+<section id="resúmenes-de-datos" class="slide level2">
+<h2>Resúmenes de datos</h2>
+<div class="boton absolute" style="top: 0%; right: 0%; ">
+<p><a href="https://bastianolea.rbind.io/blog/r_introduccion/dplyr_summarize/"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Ver tutorial</a></p>
 </div>
 </section>
 <section class="slide level2">
