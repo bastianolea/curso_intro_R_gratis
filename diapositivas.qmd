@@ -869,11 +869,15 @@ años
 
 ::: {.incremental}
 - Las **funciones** son pequeños programas que permiten realizar distintas operaciones.
-- Las funciones tienen **argumentos**, que son los inputs que recibe la función.
-  - Usualmente el primer argumento son los _datos_ sobre los que se va a operar.
+:::
+
+::: {.centrar}
+`función(argumento = 123)`
 :::
 
 ::: {.fragment}
+Algunas funciones comunes:
+
 ```{r}
 #| code-line-numbers: false
 #| eval: false

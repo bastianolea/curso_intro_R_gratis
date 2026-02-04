@@ -88,7 +88,7 @@
     "href": "diapositivas.html#funciones",
     "title": "Introducción al análisis de datos con R",
     "section": "Funciones",
-    "text": "Funciones\n\nLas funciones son pequeños programas que permiten realizar distintas operaciones.\nLas funciones tienen argumentos, que son los inputs que recibe la función.\n\nUsualmente el primer argumento son los datos sobre los que se va a operar.\n\n\n\n\nmean() # calcular promedio\nmedian() # calcular mediana\nsum() # sumar elementos\nmin() # valor mínimo\nmax() # valor máximo\ntypeof() # tipo del objeto\nis.na() # evaluar si es missing\nas.numeric() # convertir a numérico\n\n\n\n\n\nSi no sabemos cómo usar una función, podemos buscar su nombre en el panel Ayuda de RStudio, o escribir el nombre de la función precedido de un signo de interrogación: ?funcion"
+    "text": "Funciones\n\nLas funciones son pequeños programas que permiten realizar distintas operaciones.\n\n\nfunción(argumento = 123)\n\n\nAlgunas funciones comunes:\n\nmean() # calcular promedio\nmedian() # calcular mediana\nsum() # sumar elementos\nmin() # valor mínimo\nmax() # valor máximo\ntypeof() # tipo del objeto\nis.na() # evaluar si es missing\nas.numeric() # convertir a numérico\n\n\n\n\n\nSi no sabemos cómo usar una función, podemos buscar su nombre en el panel Ayuda de RStudio, o escribir el nombre de la función precedido de un signo de interrogación: ?funcion"
   },
   {
     "objectID": "diapositivas.html#portafolio",
