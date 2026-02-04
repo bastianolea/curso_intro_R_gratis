@@ -958,7 +958,7 @@ datos <- read.csv("carpeta/datos.csv")
 Probemos cargando unos datos!
 
 ::: {.boton}
-<a href="https://github.com/bastianolea/curso_intro_R_gratis/raw/main/datos/pobreza.csv" target="_blank"> {{< fa file-download >}} Descargar datos de pobreza </a>
+<a href="https://github.com/bastianolea/curso_intro_R_gratis/raw/main/datos/pobreza/estimaciones_pobreza.csv" target="_blank"> {{< fa file-download >}} Descargar datos de pobreza </a>
 :::
 
 :::
@@ -1050,16 +1050,17 @@ install.packages()
 
 ----
 
+
 ## Tutoriales de `{dplyr}`
 
 Para que puedan repasar o guiarse, dejo un par de tutoriales de `{dplyr}` donde se repasan las funciones principales con datos reales:
 
 ::: {.boton .pad}
-[{{< fa file-lines >}} Tutorial de datos censales ](https://bastianolea.rbind.io/blog/r_introduccion/tutorial_dplyr_censo/)
+[{{< fa file-lines >}} Tutorial con datos censales ](https://bastianolea.rbind.io/blog/r_introduccion/tutorial_dplyr_censo/)
 :::
 
 ::: {.boton .pad}
-[{{< fa file-lines >}} Tutorial de datos sociales](https://bastianolea.rbind.io/blog/r_introduccion/tutorial_dplyr_campamentos/)
+[{{< fa file-lines >}} Tutorial con datos sociales](https://bastianolea.rbind.io/blog/r_introduccion/tutorial_dplyr_campamentos/)
 :::
 
 ----
@@ -1121,7 +1122,7 @@ Luego podemos encadenar varias funciones:
 ```{r}
 #| eval: false
 #| code-line-numbers: false
-objeto |> funcion() |> función() # al objeto le aplicamos dos funciones
+objeto |> funcion() |> funcion() # al objeto le aplicamos dos funciones
 ```
 :::
 ::: {.fragment .pad}
@@ -1135,6 +1136,42 @@ resultado <- objeto |>
 :::
 
 
+----
+
+### Ejemplo de conector:
+
+```{r}
+#| message: false
+datos <- readr::read_csv2("datos/pobreza/estimaciones_pobreza.csv")
+library(dplyr)
+```
+
+::: {.pad}
+En vez de:
+```{r}
+#| eval: false
+# selección
+select(datos, 
+       region, comuna, personas)
+
+# ordenar los datos luego de la selección
+arrange(
+  select(datos, 
+         region, comuna, personas), 
+  personas)
+```
+:::
+
+::: {.pad}
+Hacemos:
+```{r}
+#| eval: false
+# primero selecciono y después ordeno
+datos |> 
+  select(region, comuna, personas) |> 
+  arrange(personas)
+```
+:::
 
 
 
@@ -1147,9 +1184,21 @@ resultado <- objeto |>
 [{{< fa file-lines >}} Ver tutorial](https://bastianolea.rbind.io/blog/r_introduccion/dplyr_intro/#filtrar-datos)
 :::
 
-```{r}
+- Para filtrar, realizamos una **comparación** entre los valores de una columna y un valor específico.
 
+```{r}
+datos <- readr::read_csv2("datos/pobreza/estimaciones_pobreza.csv")
 ```
+
+```{r}
+#| message: false
+library(dplyr)
+
+datos |> 
+  filter(porcentaje > 0.35) |> 
+  arrange(desc(porcentaje))
+```
+
 
 
 ----

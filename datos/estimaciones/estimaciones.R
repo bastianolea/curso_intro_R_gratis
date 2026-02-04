@@ -3,7 +3,7 @@
 library(readxl)
 library(dplyr)
 
-datos_original <- read_xlsx("datos/estimaciones-y-proyecciones-de-población-1992-2070_base-2024_base-de-datos.xlsx")
+datos_original <- read_xlsx("datos/estimaciones/estimaciones-y-proyecciones-de-población-1992-2070_base-2024_base-de-datos.xlsx")
 
 library(janitor)
 
@@ -94,7 +94,7 @@ datos_2 |>
 
 
 
-migracion <- read_xlsx("datos/estimaciones-y-proyecciones-de-población-1992-2070_base-2024_tabulados.xlsx",
+migracion <- read_xlsx("datos/estimaciones/estimaciones-y-proyecciones-de-población-1992-2070_base-2024_tabulados.xlsx",
                        sheet = 4)
 
 

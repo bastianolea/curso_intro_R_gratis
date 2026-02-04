@@ -949,7 +949,7 @@ Bastián Olea Herrera
 <div class="fragment">
 <p>Probemos cargando unos datos!</p>
 <div class="boton">
-<p><a href="https://github.com/bastianolea/curso_intro_R_gratis/raw/main/datos/pobreza.csv" target="_blank"> <i class="fa-solid fa-file-download" aria-label="file-download"></i> Descargar datos de pobreza </a></p>
+<p><a href="https://github.com/bastianolea/curso_intro_R_gratis/raw/main/datos/pobreza/estimaciones_pobreza.csv" target="_blank"> <i class="fa-solid fa-file-download" aria-label="file-download"></i> Descargar datos de pobreza </a></p>
 </div>
 </div>
 </section>
@@ -1021,10 +1021,10 @@ Bastián Olea Herrera
 <h2>Tutoriales de <code>{dplyr}</code></h2>
 <p>Para que puedan repasar o guiarse, dejo un par de tutoriales de <code>{dplyr}</code> donde se repasan las funciones principales con datos reales:</p>
 <div class="boton pad">
-<p><a href="https://bastianolea.rbind.io/blog/r_introduccion/tutorial_dplyr_censo/"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Tutorial de datos censales</a></p>
+<p><a href="https://bastianolea.rbind.io/blog/r_introduccion/tutorial_dplyr_censo/"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Tutorial con datos censales</a></p>
 </div>
 <div class="boton pad">
-<p><a href="https://bastianolea.rbind.io/blog/r_introduccion/tutorial_dplyr_campamentos/"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Tutorial de datos sociales</a></p>
+<p><a href="https://bastianolea.rbind.io/blog/r_introduccion/tutorial_dplyr_campamentos/"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Tutorial con datos sociales</a></p>
 </div>
 </section>
 <section id="conector" class="slide level2">
@@ -1066,7 +1066,7 @@ Bastián Olea Herrera
 <div class="fragment pad">
 <p>Luego podemos encadenar varias funciones:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a aria-hidden="true" tabindex="-1"></a>objeto <span class="sc">|&gt;</span> <span class="fu">funcion</span>() <span class="sc">|&gt;</span> función() <span class="co"># al objeto le aplicamos dos funciones</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a aria-hidden="true" tabindex="-1"></a>objeto <span class="sc">|&gt;</span> <span class="fu">funcion</span>() <span class="sc">|&gt;</span> <span class="fu">funcion</span>() <span class="co"># al objeto le aplicamos dos funciones</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <div class="fragment pad">
@@ -1078,10 +1078,70 @@ Bastián Olea Herrera
 </div>
 </div>
 </section>
+<section class="slide level2">
+
+<h3 id="ejemplo-de-conector">Ejemplo de conector:</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a></a>datos <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv2</span>(<span class="st">"datos/pobreza/estimaciones_pobreza.csv"</span>)</span>
+<span id="cb58-2"><a></a><span class="fu">library</span>(dplyr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="pad">
+<p>En vez de:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a></a><span class="co"># selección</span></span>
+<span id="cb59-2"><a></a><span class="fu">select</span>(datos, </span>
+<span id="cb59-3"><a></a>       region, comuna, personas)</span>
+<span id="cb59-4"><a></a></span>
+<span id="cb59-5"><a></a><span class="co"># ordenar los datos luego de la selección</span></span>
+<span id="cb59-6"><a></a><span class="fu">arrange</span>(</span>
+<span id="cb59-7"><a></a>  <span class="fu">select</span>(datos, </span>
+<span id="cb59-8"><a></a>         region, comuna, personas), </span>
+<span id="cb59-9"><a></a>  personas)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div class="pad">
+<p>Hacemos:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a></a><span class="co"># primero selecciono y después ordeno</span></span>
+<span id="cb60-2"><a></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb60-3"><a></a>  <span class="fu">select</span>(region, comuna, personas) <span class="sc">|&gt;</span> </span>
+<span id="cb60-4"><a></a>  <span class="fu">arrange</span>(personas)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</section>
 <section id="filtrar-datos" class="slide level2">
 <h2>Filtrar datos</h2>
 <div class="boton absolute" style="top: 0%; right: 0%; ">
 <p><a href="https://bastianolea.rbind.io/blog/r_introduccion/dplyr_intro/#filtrar-datos"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Ver tutorial</a></p>
+</div>
+<ul>
+<li>Para filtrar, realizamos una <strong>comparación</strong> entre los valores de una columna y un valor específico.</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a></a>datos <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv2</span>(<span class="st">"datos/pobreza/estimaciones_pobreza.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb62-2"><a></a></span>
+<span id="cb62-3"><a></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb62-4"><a></a>  <span class="fu">filter</span>(porcentaje <span class="sc">&gt;</span> <span class="fl">0.35</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb62-5"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(porcentaje))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 10
+   codigo region        comuna personas_proy personas porcentaje limite_inferior
+    &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;      &lt;dbl&gt;           &lt;dbl&gt;
+ 1  15202 Arica y Pari… Gener…           668     392.      0.586           0.435
+ 2   9116 La Araucanía  Saave…         12717    5654.      0.445           0.361
+ 3   9204 La Araucanía  Ercil…          8422    3503.      0.416           0.361
+ 4   9106 La Araucanía  Galva…         12594    5029.      0.399           0.313
+ 5   8314 Biobío        Alto …          6784    2640.      0.389           0.319
+ 6  10306 Los Lagos     San J…          7521    2923.      0.389           0.314
+ 7   1404 Tarapacá      Huara           3072    1185.      0.386           0.319
+ 8  15102 Arica y Pari… Camar…          1242     460.      0.370           0.216
+ 9   9121 La Araucanía  Cholc…         12539    4578.      0.365           0.289
+10  14203 Los Ríos      Lago …         10287    3647.      0.354           0.297
+# ℹ 3 more variables: limite_superior &lt;dbl&gt;, casen &lt;chr&gt;, tipo_estimacion &lt;chr&gt;</code></pre>
+</div>
 </div>
 </section>
 <section id="crearmodificar-variables" class="slide level2">
@@ -1096,8 +1156,8 @@ Bastián Olea Herrera
 <p>Le aplicamos <code>mutate()</code> a un <em>data frame</em> conectando los datos a la función con un conector (<code>|&gt;</code> o <code>%&gt;%</code>)</p>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a></a>ejemplo <span class="sc">|&gt;</span> </span>
-<span id="cb58-2"><a></a>  <span class="fu">mutate</span>(<span class="at">saludo =</span> <span class="st">"hola"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a></a>ejemplo <span class="sc">|&gt;</span> </span>
+<span id="cb64-2"><a></a>  <span class="fu">mutate</span>(<span class="at">saludo =</span> <span class="st">"hola"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section class="slide level2">

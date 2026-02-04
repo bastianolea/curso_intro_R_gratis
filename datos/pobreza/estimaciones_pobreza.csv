@@ -1,4 +1,4 @@
-"codigo";"region";"nombre_comuna";"numero_de_personas_segun_proyecciones_de_poblacion";"numero_de_personas_en_situacion_de_pobreza_multidimensional";"porcentaje_de_personas_en_situacion_de_pobreza_multidimensional_2022";"limite_inferior";"limite_superior";"presencia_de_la_comuna_en_la_muestra_casen";"tipo_de_estimacion_sae"
+"codigo";"region";"comuna";"personas_proy";"personas";"porcentaje";"limite_inferior";"limite_superior";"casen";"tipo_estimacion"
 "1101";"Tarapacá";"Iquique";229674;41966,5662413712;0,182722320512427;0,162429287767374;0,20301535325748;"Sí";"Directa y Sintética (Fay-Herriot)"
 "1107";"Tarapacá";"Alto Hospicio";138527;45162,4429812612;0,326019064740168;0,294775537042412;0,357262592437923;"Sí";"Directa y Sintética (Fay-Herriot)"
 "1401";"Tarapacá";"Pozo Almonte";18290;4563,39531276156;0,249502204087565;0,199333537665668;0,299670870509462;"Sí";"Directa y Sintética (Fay-Herriot)"
@@ -344,8 +344,3 @@
 "16303";"Ñuble";"Ñiquén";11543;2211,64459741408;0,191600502245004;0,117714692039294;0,265486312450714;"Sí";"Sintética"
 "16304";"Ñuble";"San Fabián";4738;712,309026272598;0,150339600310806;0,0791460915734734;0,221533109048138;"Sí";"Sintética"
 "16305";"Ñuble";"San Nicolás";12365;2437,47808885268;0,197127221096051;0,124273267659;0,269981174533102;"Sí";"Directa y Sintética (Fay-Herriot)"
-NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
-"La metodología de áreas pequeñas busca realizar estimaciones a nivel comunal, ya que Casen no está diseñada para obtener estimaciones de calidad adecuada a ese nivel de desagregación. Para estimaciones a nivel regional y nacional, se deben utilizar las estadísticas oficiales publicadas a partir de Casen (https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen-2022). De todas formas se recomienda tomar en consideración los intervalos de confianza elaborados, ya que la metodología SAE entrega estimaciones de pobreza multidimensional comunal que están sujetas a errores de estimación.";NA;NA;NA;NA;NA;NA;NA;NA;NA
-"(*) Proyecciones de población comunal en viviendas particulares al 30 de noviembre de 2022 según el Censo de Población y Vivienda 2017.";NA;NA;NA;NA;NA;NA;NA;NA;NA
-"(**) Este número se obtiene de multiplicar las proyecciones de población de cada comuna por su respectiva estimación de pobreza multidimensional comunal según la metodología de áreas pequeñas.";NA;NA;NA;NA;NA;NA;NA;NA;NA
-"(***) Las estimaciones para área pequeña asignan una estimación de pobreza para todas las comunas del país. En el caso de comunas sin presencia en Casen o con presencia en Casen pero que no cumplen los criterios de inclusión, se asigna como tasa de pobreza SAE la estimación sintética. El resto de las comunas tiene una tasa de pobreza SAE que pondera las estimación directa de Casen y sintética, conocidas como estimaciones Fay-Herriot.";NA;NA;NA;NA;NA;NA;NA;NA;NA
