@@ -158,7 +158,7 @@
     "href": "diapositivas.html#funciones-comunes",
     "title": "Introducción al análisis de datos con R",
     "section": "Funciones comunes",
-    "text": "Funciones comunes\n\nhead(), tail(), glimpse(): vistazos a los datos\nselect(): seleccionar columnas o variables de una tabla\nslice(): extraer filas de una tabla por su posición o distintos criterios\npull(): convertir una columna en vector\nfilter(): filtrar observaciones en base a condiciones personalizadas\ndistinct(): filtrar observaciones repetidas a través de una o más columnas\ncount(): conteo de casos\nmutate(): crear columnas"
+    "text": "Funciones comunes\n\nhead(), tail(), glimpse(): vistazos a los datos\nselect(): seleccionar columnas o variables de una tabla\nslice(): extraer filas de una tabla por su posición o distintos criterios\npull(): extraer una columna como vector\nfilter(): filtrar observaciones en base a condiciones personalizadas\ndistinct(): filtrar observaciones repetidas en una o más columnas\ncount(): conteo de casos únicos en una o más columnas\nmutate(): crear columnas entregando valores, funciones sobre columnas, o calculando a partir de otras columnas"
   },
   {
     "objectID": "diapositivas.html#conector",
@@ -193,14 +193,14 @@
     "href": "diapositivas.html#tutoriales-de-dplyr",
     "title": "Introducción al análisis de datos con R",
     "section": "Tutoriales de {dplyr}",
-    "text": "Tutoriales de {dplyr}\nPara que puedan repasar o guiarse, dejo un par de tutoriales de {dplyr} donde se repasan las funciones principales con datos reales:\n\n Tutorial con datos censales\n\n\n Tutorial con datos sociales"
+    "text": "Tutoriales de {dplyr}\nPara que puedan repasar o guiarse con casos básicos de uso de {dplyr} con datos reales, dejo un par de tutoriales:\n\n Tutorial con datos censales\n\n\n Tutorial con datos sociales"
   },
   {
     "objectID": "diapositivas.html#filtrar-datos",
     "href": "diapositivas.html#filtrar-datos",
     "title": "Introducción al análisis de datos con R",
     "section": "Filtrar datos",
-    "text": "Filtrar datos\n\n Ver tutorial\n\n\nPara filtrar, realizamos una comparación entre los valores de una columna y un valor específico.\n\n\n\ndatos &lt;- readr::read_csv2(\"datos/pobreza/estimaciones_pobreza.csv\")\n\n\n\n\nlibrary(dplyr)\n\ndatos |&gt; \n  filter(porcentaje &gt; 0.35) |&gt; \n  arrange(desc(porcentaje)) |&gt; \n  head()\n\n# A tibble: 6 × 10\n  codigo region         comuna personas_proy personas porcentaje limite_inferior\n   &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;      &lt;dbl&gt;           &lt;dbl&gt;\n1  15202 Arica y Parin… Gener…           668     392.      0.586           0.435\n2   9116 La Araucanía   Saave…         12717    5654.      0.445           0.361\n3   9204 La Araucanía   Ercil…          8422    3503.      0.416           0.361\n4   9106 La Araucanía   Galva…         12594    5029.      0.399           0.313\n5   8314 Biobío         Alto …          6784    2640.      0.389           0.319\n6  10306 Los Lagos      San J…          7521    2923.      0.389           0.314\n# ℹ 3 more variables: limite_superior &lt;dbl&gt;, casen &lt;chr&gt;, tipo_estimacion &lt;chr&gt;"
+    "text": "Filtrar datos\n\n Ver tutorial\n\n\nPara filtrar, realizamos una comparación entre los valores de una columna y un valor específico.\n\n\n\nlibrary(dplyr)\n\ndatos |&gt; \n  filter(porcentaje &gt; 0.35) |&gt; \n  arrange(desc(porcentaje)) |&gt; \n  head()\n\n# A tibble: 6 × 10\n  codigo region         comuna personas_proy personas porcentaje limite_inferior\n   &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;      &lt;dbl&gt;           &lt;dbl&gt;\n1  15202 Arica y Parin… Gener…           668     392.      0.586           0.435\n2   9116 La Araucanía   Saave…         12717    5654.      0.445           0.361\n3   9204 La Araucanía   Ercil…          8422    3503.      0.416           0.361\n4   9106 La Araucanía   Galva…         12594    5029.      0.399           0.313\n5   8314 Biobío         Alto …          6784    2640.      0.389           0.319\n6  10306 Los Lagos      San J…          7521    2923.      0.389           0.314\n# ℹ 3 more variables: limite_superior &lt;dbl&gt;, casen &lt;chr&gt;, tipo_estimacion &lt;chr&gt;"
   },
   {
     "objectID": "diapositivas.html#resúmenes-de-datos",
@@ -208,5 +208,33 @@
     "title": "Introducción al análisis de datos con R",
     "section": "Resúmenes de datos",
     "text": "Resúmenes de datos\n\n Ver tutorial\n\n\nAplicar una función para resumir todas las filas de una tabla en un sólo resultado:\n\ndatos |&gt; \n  summarize(total = sum(personas))\n\n# A tibble: 1 × 1\n     total\n     &lt;dbl&gt;\n1 3368245.\n\n\n\n\nSi agrupamos los datos, obtendremos una fila de resultado por cada grupo:\n\ndatos |&gt; \n  group_by(region) |&gt; \n  summarize(total = sum(personas)) |&gt; \n  head(n = 4)\n\n# A tibble: 4 × 2\n  region               total\n  &lt;chr&gt;                &lt;dbl&gt;\n1 Antofagasta        121379.\n2 Arica y Parinacota  48086.\n3 Atacama             64481.\n4 Aysén               15113."
+  },
+  {
+    "objectID": "diapositivas.html#seleccionar-y-ordenar",
+    "href": "diapositivas.html#seleccionar-y-ordenar",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Seleccionar y ordenar",
+    "text": "Seleccionar y ordenar\n\n Ver tutorial\n\nCargamos un conjunto de datos de prueba:\n\nlibrary(dplyr)\nlibrary(readr)\n\ndatos &lt;- read_csv2(\"datos/pobreza/estimaciones_pobreza.csv\")\n\nEstos datos son del Ministerio Desarrollo Social y Familia de Chile.\n\n\n\nSeleccionar\n\ndatos |&gt; \n  select(region, comuna, personas) |&gt; \n  head()\n\n# A tibble: 6 × 3\n  region   comuna        personas\n  &lt;chr&gt;    &lt;chr&gt;            &lt;dbl&gt;\n1 Tarapacá Iquique         41967.\n2 Tarapacá Alto Hospicio   45162.\n3 Tarapacá Pozo Almonte     4563.\n4 Tarapacá Camiña            308.\n5 Tarapacá Colchane          473.\n6 Tarapacá Huara            1185.\n\n\n\nOrdenar\n\ndatos |&gt; \n  select(region, comuna, personas) |&gt; \n  arrange(desc(personas)) |&gt; \n  head()\n\n# A tibble: 6 × 3\n  region        comuna       personas\n  &lt;chr&gt;         &lt;chr&gt;           &lt;dbl&gt;\n1 Metropolitana Puente Alto   125235.\n2 Metropolitana Santiago       87355.\n3 Metropolitana Maipú          86976.\n4 Antofagasta   Antofagasta    73103.\n5 Metropolitana San Bernardo   64276.\n6 Valparaíso    Valparaíso     60901."
+  },
+  {
+    "objectID": "diapositivas.html#trabajando-con-texto",
+    "href": "diapositivas.html#trabajando-con-texto",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Trabajando con texto",
+    "text": "Trabajando con texto\n\nEl paquete {stringr} se especializa en texto.\n\n\nlibrary(stringr)\n\n\n\ntexto &lt;- \"todxs pueden aprender a programar 💕\" \n\nstr_detect(texto, \"todos\")\n\n[1] FALSE\n\nstr_detect(texto, \"aprender\")\n\n[1] TRUE\n\n\n\n\n\ndatos |&gt; \n  filter(str_detect(comuna, \"Alto\")) |&gt; \n  select(region, comuna)\n\n# A tibble: 4 × 2\n  region        comuna         \n  &lt;chr&gt;         &lt;chr&gt;          \n1 Tarapacá      Alto Hospicio  \n2 Atacama       Alto Del Carmen\n3 Biobío        Alto Biobío    \n4 Metropolitana Puente Alto"
+  },
+  {
+    "objectID": "diapositivas.html#datos-para-practicar",
+    "href": "diapositivas.html#datos-para-practicar",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Datos para practicar",
+    "text": "Datos para practicar\n\n Estimaciones de población Censo\n\n\n Variables educacionales Censo 2024\n\n\n Estimación de pobreza multidimensional 2022\n\n\nAhora que ya sabes lo básico, todo lo demás se trata de aprender piezas y herramientas que puedes ir agregando a tus análisis! 🧩🛠️"
+  },
+  {
+    "objectID": "diapositivas.html#cruzar-datos",
+    "href": "diapositivas.html#cruzar-datos",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Cruzar datos",
+    "text": "Cruzar datos\n\n Ver tutorial\n\nPara cruzar dos tablas de datosusamos left_join() de {dplyr}"
   }
 ]

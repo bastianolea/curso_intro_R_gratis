@@ -30,7 +30,7 @@ $code-color: #F4E8FD;
 // code blocks
 $code-block-bg: #1A111E;
 $code-block-border-color: lighten($code-block-bg, 10%);
-$code-block-font-size: 0.7em;
+$code-block-font-size: 0.6em;
 
 
 // general
@@ -191,6 +191,17 @@ h4 {
 .izq {
  float: left !important;
  padding-right: 16px;
+}
+
+.der {
+ float: right !important;
+ padding-left: 16px;
+}
+
+.esquina-der {
+  float: right !important;
+  margin-right: 32px !important;
+  margin-top: -80px !important;
 }
 
 .ancho-medio {

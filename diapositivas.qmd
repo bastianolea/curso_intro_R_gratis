@@ -1025,12 +1025,21 @@ install.packages()
 - Paquete de exploración, manipulación y transformación de datos
 - Sus funciones se escriben como verbos
 - Las acciones se encadenan con el operador de conexión o _pipe_: `|>`
+
+::: {.fragment}
+```{r}
+#| message: false
+library(dplyr)
+```
+:::
 :::
 
 ::: {.column width=30%}
 ![](imagenes/dplyr.png){}
 :::
 ::::
+
+<br>
 
 ::: {.boton .fragment}
 [{{< fa file-lines >}} Ver tutorial](https://bastianolea.rbind.io/blog/r_introduccion/dplyr_intro/)
@@ -1045,11 +1054,11 @@ install.packages()
 - `head()`, `tail()`, `glimpse()`: vistazos a los datos
 - `select()`: seleccionar columnas o variables de una tabla
 - `slice()`: extraer filas de una tabla por su posición o distintos criterios
-- `pull()`: convertir una columna en vector
+- `pull()`: extraer una columna como vector
 - `filter()`: filtrar observaciones en base a condiciones personalizadas
-- `distinct()`: filtrar observaciones repetidas a través de una o más columnas
-- `count()`: conteo de casos
-- `mutate()`: crear columnas
+- `distinct()`: filtrar observaciones repetidas en una o más columnas
+- `count()`: conteo de casos únicos en una o más columnas
+- `mutate()`: crear columnas entregando valores, funciones sobre columnas, o calculando a partir de otras columnas
 :::
 
 ----
@@ -1057,7 +1066,7 @@ install.packages()
 
 ## Tutoriales de `{dplyr}`
 
-Para que puedan repasar o guiarse, dejo un par de tutoriales de `{dplyr}` donde se repasan las funciones principales con datos reales:
+Para que puedan repasar o guiarse con **casos básicos de uso** de `{dplyr}` con **datos reales**, dejo un par de tutoriales:
 
 ::: {.boton .pad}
 [{{< fa file-lines >}} Tutorial con datos censales ](https://bastianolea.rbind.io/blog/r_introduccion/tutorial_dplyr_censo/)
@@ -1142,41 +1151,47 @@ resultado <- objeto |>
 
 ----
 
-### Ejemplo de conector:
 
-```{r}
-#| message: false
-datos <- readr::read_csv2("datos/pobreza/estimaciones_pobreza.csv")
-library(dplyr)
-```
+## Seleccionar y ordenar
 
-::: {.pad}
-En vez de:
-```{r}
-#| eval: false
-# selección
-select(datos, 
-       region, comuna, personas)
-
-# ordenar los datos luego de la selección
-arrange(
-  select(datos, 
-         region, comuna, personas), 
-  personas)
-```
+::: {.boton .absolute top=-1% right=0%}
+[{{< fa file-lines >}} Ver tutorial](https://bastianolea.rbind.io/blog/r_introduccion/dplyr_intro/#datos)
 :::
 
-::: {.pad}
-Hacemos:
+Cargamos un conjunto de datos de prueba:
+
 ```{r}
-#| eval: false
-# primero selecciono y después ordeno
+library(dplyr)
+library(readr)
+
+datos <- read_csv2("datos/pobreza/estimaciones_pobreza.csv")
+```
+
+Estos datos son del [Ministerio Desarrollo Social y Familia](https://bidat.gob.cl/directorio/Pobreza%20comunal/estimaciones-de-pobreza-comunal-2022) de Chile.
+
+<br>
+
+:::: {.columns}
+
+::: {.column .fragment}
+#### Seleccionar
+```{r}
 datos |> 
   select(region, comuna, personas) |> 
-  arrange(personas)
+  head()
+```
+::: 
+
+::: {.column .fragment}
+#### Ordenar
+```{r}
+datos |> 
+  select(region, comuna, personas) |> 
+  arrange(desc(personas)) |> 
+  head()
 ```
 :::
-
+::::
 
 
 ----
@@ -1190,11 +1205,6 @@ datos |>
 
 - Para filtrar, realizamos una **comparación** entre los valores de una columna y un valor específico.
 
-::: {.fragment}
-```{r}
-datos <- readr::read_csv2("datos/pobreza/estimaciones_pobreza.csv")
-```
-:::
 
 ::: {.fragment}
 ```{r}
@@ -1318,12 +1328,109 @@ datos |>
 :::
 
 
+----
 
 
 
+## Trabajando con texto
+
+![](imagenes/stringr.png){.esquina-der style='height:128px;'}
+
+El paquete `{stringr}` se especializa en texto.
+
+::: {.pad}
+```{r}
+library(stringr)
+```
+
+::: {.fragment}
+```{r}
+texto <- "todxs pueden aprender a programar 💕" 
+
+str_detect(texto, "todos")
+
+str_detect(texto, "aprender")
+```
+:::
+
+::: {.fragment}
+```{r}
+datos |> 
+  filter(str_detect(comuna, "Alto")) |> 
+  select(region, comuna)
+```
+:::
+:::
 
 
 
+----
+
+## Cruzar datos
+
+::: {.boton .absolute top=0% right=0%}
+[{{< fa file-lines >}} Ver tutorial](https://bastianolea.rbind.io/blog/left_join/)
+:::
+
+Para cruzar dos tablas de datos<br>usamos `left_join()` de `{dplyr}`
+
+<br>
+
+![](imagenes/left_join.png){.centrar style='max-height: 400px;'}
+
+----
+
+
+### Cruzando datos
+
+Veamos un ejemplo donde cruzamos dos tablas, la de **pobreza** y una nueva de **clasificación comunal** (urbana, mixta, rural), a partir de la columna que tienen en común: `codigo`
+
+::: {.fragment}
+```{r}
+#| message: false
+clasificacion <- readr::read_csv2("datos/clasificacion/clasificacion.csv")
+```
+:::
+
+::: {.fragment}
+```{r}
+clasificacion_b <- clasificacion |> 
+  select(codigo, clasificacion)
+```
+:::
+
+::: {.fragment}
+```{r}
+datos_clasif <- datos |> 
+  select(codigo, comuna, personas, porcentaje) |> 
+  left_join(clasificacion_b, by = "codigo")
+
+datos_clasif |> head()
+```
+:::
+
+----
+
+
+## Datos para practicar
+
+
+::: {.boton}
+[{{< fa file-lines >}} Estimaciones de población Censo](https://github.com/bastianolea/curso_intro_R_gratis/raw/main/datos/estimaciones/estimaciones-y-proyecciones-de-población-1992-2070_base-2024_base-de-datos.xls)
+:::
+
+
+::: {.boton }
+[{{< fa file-lines >}} Variables educacionales Censo 2024](https://github.com/bastianolea/curso_intro_R_gratis/raw/main/datos/censo/P7_Educacion.xlsx)
+:::
+
+::: {.boton }
+[{{< fa file-lines >}} Estimación de pobreza multidimensional 2022](https://github.com/bastianolea/curso_intro_R_gratis/raw/main/datos/pobreza/estimaciones_indice_pobreza_multidimensional_comunas_2022.xlsx)
+:::
+
+::: {.fragment}
+Ahora que ya sabes lo básico, todo lo demás se trata de aprender piezas y herramientas que puedes ir agregando a tus análisis! 🧩🛠️
+:::
 
 
 
