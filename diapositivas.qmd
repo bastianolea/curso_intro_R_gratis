@@ -518,7 +518,7 @@ Cambiar de **proyecto** o crear uno nuevo
 ::: {.incremental}
 - Podemos realizar cualquier operación matemática en R.
 - Para **ejecutar** un comando, pon el cursor de texto en la línea o expresión que desees ejecutar, o selecciónala, y presiona el botón _Run_, o las teclas `control + enter`.
-  - Lo importante es que el cursor de texto `|` esté en cualquier lugar de la línea.
+- Lo importante es que el cursor de texto `|` esté en cualquier lugar de la línea.
 - El **resultado** de todas las operaciones aparece en la **consola**.
 :::
 
@@ -982,10 +982,10 @@ Probemos cargando unos datos!
 ::: {.incremental}
 - **Extensiones** de R que te permiten agregar **nuevas** y **mejores** funcionalidades.
 - Se instalan desde internet
-  - Son creados y mantenidos **por la comunidad**
-  - Se revisan para garantizar su seguridad y estabilidad
+- Son creados y mantenidos **por la comunidad**
+- Se revisan para garantizar su seguridad y estabilidad
 :::
-  
+
 ::: {.fragment}
 ```{r}
 #| eval: false
@@ -1184,25 +1184,29 @@ datos |>
 
 ## Filtrar datos
 
-::: {.boton .absolute top=0% right=0%}
+::: {.boton .absolute top=-1% right=0%}
 [{{< fa file-lines >}} Ver tutorial](https://bastianolea.rbind.io/blog/r_introduccion/dplyr_intro/#filtrar-datos)
 :::
 
 - Para filtrar, realizamos una **comparación** entre los valores de una columna y un valor específico.
 
+::: {.fragment}
 ```{r}
 datos <- readr::read_csv2("datos/pobreza/estimaciones_pobreza.csv")
 ```
+:::
 
+::: {.fragment}
 ```{r}
 #| message: false
 library(dplyr)
 
 datos |> 
   filter(porcentaje > 0.35) |> 
-  arrange(desc(porcentaje))
+  arrange(desc(porcentaje)) |> 
+  head()
 ```
-
+:::
 
 
 ----
@@ -1223,31 +1227,96 @@ Con `mutate()` para crear una nueva variable o columna
 Le aplicamos `mutate()` a un _data frame_ conectando los datos a la función con un conector (`|>` o `%>%`)
 :::
 
+:::: {.columns}
+::: {.column .fragment}
 ```{r}
-#| eval: false
-ejemplo |> 
-  mutate(saludo = "hola")
+datos |> 
+  select(codigo, comuna) |> 
+  mutate(saludo = "hola") |> 
+  head()
 ```
+:::
 
+::: {.column .fragment}
+```{r}
+datos |> 
+  select(comuna, personas) |> 
+  mutate(miles = personas/1000) |> 
+  head()
+```
+:::
+::::
 
 ----
 
 ### Variables condicionales
 
 
-`ifelse()`
 
-`case_when()`
 
+
+
+
+:::: {.columns}
+::: {.column .fragment}
+#### `ifelse()`
+
+**Si** ocurre _esto,_ **entonces** retorno _lo primero_, y **si no**, _lo segundo._
+```{r}
+datos |> 
+  select(comuna, porcentaje) |> 
+  mutate(nivel = ifelse(
+    porcentaje >= 0.3,
+    yes = "alta", 
+    no = "baja")) |> 
+  head()
+```
+:::
+
+::: {.column .fragment}
+#### `case_when()`
+Recodificación avanzada con **múltiples condicionales**.
+```{r}
+datos |> 
+  select(comuna, porcentaje) |> 
+  mutate(miles = case_when(
+    porcentaje >= 0.3 ~ "alta",
+    porcentaje >= 0.2 ~ "media",
+    porcentaje < 0.2 ~ "baja")) |> 
+  head()
+```
+:::
+::::
 
 
 ----
 
 ## Resúmenes de datos
 
-::: {.boton .absolute top=0% right=0%}
+::: {.boton .absolute top=-1% right=0%}
 [{{< fa file-lines >}} Ver tutorial](https://bastianolea.rbind.io/blog/r_introduccion/dplyr_summarize/)
 :::
+
+::: {.fragment}
+Aplicar una **función** para **resumir** todas las filas de una tabla en un sólo resultado:
+
+```{r}
+datos |> 
+  summarize(total = sum(personas))
+```
+:::
+
+::: {.fragment}
+Si **agrupamos** los datos, obtendremos una fila de resultado por cada grupo:
+
+```{r}
+datos |> 
+  group_by(region) |> 
+  summarize(total = sum(personas)) |> 
+  head(n = 4)
+```
+:::
+
 
 
 

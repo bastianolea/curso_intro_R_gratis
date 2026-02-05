@@ -556,10 +556,8 @@ Bastián Olea Herrera
 <div class="column" style="padding-right:28px;">
 <ul>
 <li class="fragment">Podemos realizar cualquier operación matemática en R.</li>
-<li class="fragment">Para <strong>ejecutar</strong> un comando, pon el cursor de texto en la línea o expresión que desees ejecutar, o selecciónala, y presiona el botón <em>Run</em>, o las teclas <code>control + enter</code>.
-<ul>
+<li class="fragment">Para <strong>ejecutar</strong> un comando, pon el cursor de texto en la línea o expresión que desees ejecutar, o selecciónala, y presiona el botón <em>Run</em>, o las teclas <code>control + enter</code>.</li>
 <li class="fragment">Lo importante es que el cursor de texto <code>|</code> esté en cualquier lugar de la línea.</li>
-</ul></li>
 <li class="fragment">El <strong>resultado</strong> de todas las operaciones aparece en la <strong>consola</strong>.</li>
 </ul>
 </div><div class="column" style="width:40%;">
@@ -961,11 +959,9 @@ Bastián Olea Herrera
 </div><div class="column" style="width:40%;">
 <ul>
 <li class="fragment"><strong>Extensiones</strong> de R que te permiten agregar <strong>nuevas</strong> y <strong>mejores</strong> funcionalidades.</li>
-<li class="fragment">Se instalan desde internet
-<ul>
+<li class="fragment">Se instalan desde internet</li>
 <li class="fragment">Son creados y mantenidos <strong>por la comunidad</strong></li>
 <li class="fragment">Se revisan para garantizar su seguridad y estabilidad</li>
-</ul></li>
 </ul>
 <div class="fragment">
 <div class="cell">
@@ -1111,36 +1107,37 @@ Bastián Olea Herrera
 </section>
 <section id="filtrar-datos" class="slide level2">
 <h2>Filtrar datos</h2>
-<div class="boton absolute" style="top: 0%; right: 0%; ">
+<div class="boton absolute" style="top: -1%; right: 0%; ">
 <p><a href="https://bastianolea.rbind.io/blog/r_introduccion/dplyr_intro/#filtrar-datos"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Ver tutorial</a></p>
 </div>
 <ul>
 <li>Para filtrar, realizamos una <strong>comparación</strong> entre los valores de una columna y un valor específico.</li>
 </ul>
+<div class="fragment">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a></a>datos <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv2</span>(<span class="st">"datos/pobreza/estimaciones_pobreza.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</div>
+<div class="fragment">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb62-2"><a></a></span>
 <span id="cb62-3"><a></a>datos <span class="sc">|&gt;</span> </span>
 <span id="cb62-4"><a></a>  <span class="fu">filter</span>(porcentaje <span class="sc">&gt;</span> <span class="fl">0.35</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb62-5"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(porcentaje))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb62-5"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(porcentaje)) <span class="sc">|&gt;</span> </span>
+<span id="cb62-6"><a></a>  <span class="fu">head</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 10 × 10
-   codigo region        comuna personas_proy personas porcentaje limite_inferior
-    &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;      &lt;dbl&gt;           &lt;dbl&gt;
- 1  15202 Arica y Pari… Gener…           668     392.      0.586           0.435
- 2   9116 La Araucanía  Saave…         12717    5654.      0.445           0.361
- 3   9204 La Araucanía  Ercil…          8422    3503.      0.416           0.361
- 4   9106 La Araucanía  Galva…         12594    5029.      0.399           0.313
- 5   8314 Biobío        Alto …          6784    2640.      0.389           0.319
- 6  10306 Los Lagos     San J…          7521    2923.      0.389           0.314
- 7   1404 Tarapacá      Huara           3072    1185.      0.386           0.319
- 8  15102 Arica y Pari… Camar…          1242     460.      0.370           0.216
- 9   9121 La Araucanía  Cholc…         12539    4578.      0.365           0.289
-10  14203 Los Ríos      Lago …         10287    3647.      0.354           0.297
+<pre><code># A tibble: 6 × 10
+  codigo region         comuna personas_proy personas porcentaje limite_inferior
+   &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;      &lt;dbl&gt;           &lt;dbl&gt;
+1  15202 Arica y Parin… Gener…           668     392.      0.586           0.435
+2   9116 La Araucanía   Saave…         12717    5654.      0.445           0.361
+3   9204 La Araucanía   Ercil…          8422    3503.      0.416           0.361
+4   9106 La Araucanía   Galva…         12594    5029.      0.399           0.313
+5   8314 Biobío         Alto …          6784    2640.      0.389           0.319
+6  10306 Los Lagos      San J…          7521    2923.      0.389           0.314
 # ℹ 3 more variables: limite_superior &lt;dbl&gt;, casen &lt;chr&gt;, tipo_estimacion &lt;chr&gt;</code></pre>
+</div>
 </div>
 </div>
 </section>
@@ -1155,21 +1152,132 @@ Bastián Olea Herrera
 <div class="pad">
 <p>Le aplicamos <code>mutate()</code> a un <em>data frame</em> conectando los datos a la función con un conector (<code>|&gt;</code> o <code>%&gt;%</code>)</p>
 </div>
+<div class="columns">
+<div class="column fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a></a>ejemplo <span class="sc">|&gt;</span> </span>
-<span id="cb64-2"><a></a>  <span class="fu">mutate</span>(<span class="at">saludo =</span> <span class="st">"hola"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb64-2"><a></a>  <span class="fu">select</span>(codigo, comuna) <span class="sc">|&gt;</span> </span>
+<span id="cb64-3"><a></a>  <span class="fu">mutate</span>(<span class="at">saludo =</span> <span class="st">"hola"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb64-4"><a></a>  <span class="fu">head</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+  codigo comuna        saludo
+   &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt; 
+1   1101 Iquique       hola  
+2   1107 Alto Hospicio hola  
+3   1401 Pozo Almonte  hola  
+4   1402 Camiña        hola  
+5   1403 Colchane      hola  
+6   1404 Huara         hola  </code></pre>
 </div>
+</div>
+</div><div class="column fragment">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb66-2"><a></a>  <span class="fu">select</span>(comuna, personas) <span class="sc">|&gt;</span> </span>
+<span id="cb66-3"><a></a>  <span class="fu">mutate</span>(<span class="at">miles =</span> personas<span class="sc">/</span><span class="dv">1000</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb66-4"><a></a>  <span class="fu">head</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+  comuna        personas  miles
+  &lt;chr&gt;            &lt;dbl&gt;  &lt;dbl&gt;
+1 Iquique         41967. 42.0  
+2 Alto Hospicio   45162. 45.2  
+3 Pozo Almonte     4563.  4.56 
+4 Camiña            308.  0.308
+5 Colchane          473.  0.473
+6 Huara            1185.  1.18 </code></pre>
+</div>
+</div>
+</div></div>
 </section>
 <section class="slide level2">
 
 <h3 id="variables-condicionales">Variables condicionales</h3>
-<p><code>ifelse()</code></p>
-<p><code>case_when()</code></p>
+<div class="columns">
+<div class="column fragment">
+<h4 id="ifelse"><code>ifelse()</code></h4>
+<p><strong>Si</strong> ocurre <em>esto,</em> <strong>entonces</strong> retorno <em>lo primero</em>, y <strong>si no</strong>, <em>lo segundo.</em></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb68-2"><a></a>  <span class="fu">select</span>(comuna, porcentaje) <span class="sc">|&gt;</span> </span>
+<span id="cb68-3"><a></a>  <span class="fu">mutate</span>(<span class="at">nivel =</span> <span class="fu">ifelse</span>(</span>
+<span id="cb68-4"><a></a>    porcentaje <span class="sc">&gt;=</span> <span class="fl">0.3</span>,</span>
+<span id="cb68-5"><a></a>    <span class="at">yes =</span> <span class="st">"alta"</span>, </span>
+<span id="cb68-6"><a></a>    <span class="at">no =</span> <span class="st">"baja"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb68-7"><a></a>  <span class="fu">head</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+  comuna        porcentaje nivel
+  &lt;chr&gt;              &lt;dbl&gt; &lt;chr&gt;
+1 Iquique            0.183 baja 
+2 Alto Hospicio      0.326 alta 
+3 Pozo Almonte       0.250 baja 
+4 Camiña             0.223 baja 
+5 Colchane           0.300 alta 
+6 Huara              0.386 alta </code></pre>
+</div>
+</div>
+</div><div class="column fragment">
+<h4 id="case_when"><code>case_when()</code></h4>
+<p>Recodificación avanzada con <strong>múltiples condicionales</strong>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb70-2"><a></a>  <span class="fu">select</span>(comuna, porcentaje) <span class="sc">|&gt;</span> </span>
+<span id="cb70-3"><a></a>  <span class="fu">mutate</span>(<span class="at">miles =</span> <span class="fu">case_when</span>(</span>
+<span id="cb70-4"><a></a>    porcentaje <span class="sc">&gt;=</span> <span class="fl">0.3</span> <span class="sc">~</span> <span class="st">"alta"</span>,</span>
+<span id="cb70-5"><a></a>    porcentaje <span class="sc">&gt;=</span> <span class="fl">0.2</span> <span class="sc">~</span> <span class="st">"media"</span>,</span>
+<span id="cb70-6"><a></a>    porcentaje <span class="sc">&lt;</span> <span class="fl">0.2</span> <span class="sc">~</span> <span class="st">"baja"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb70-7"><a></a>  <span class="fu">head</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+  comuna        porcentaje miles
+  &lt;chr&gt;              &lt;dbl&gt; &lt;chr&gt;
+1 Iquique            0.183 baja 
+2 Alto Hospicio      0.326 alta 
+3 Pozo Almonte       0.250 media
+4 Camiña             0.223 media
+5 Colchane           0.300 alta 
+6 Huara              0.386 alta </code></pre>
+</div>
+</div>
+</div></div>
 </section>
 <section id="resúmenes-de-datos" class="slide level2">
 <h2>Resúmenes de datos</h2>
-<div class="boton absolute" style="top: 0%; right: 0%; ">
+<div class="boton absolute" style="top: -1%; right: 0%; ">
 <p><a href="https://bastianolea.rbind.io/blog/r_introduccion/dplyr_summarize/"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Ver tutorial</a></p>
+</div>
+<div class="fragment">
+<p>Aplicar una <strong>función</strong> para <strong>resumir</strong> todas las filas de una tabla en un sólo resultado:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb72-2"><a></a>  <span class="fu">summarize</span>(<span class="at">total =</span> <span class="fu">sum</span>(personas))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+     total
+     &lt;dbl&gt;
+1 3368245.</code></pre>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Si <strong>agrupamos</strong> los datos, obtendremos una fila de resultado por cada grupo:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a></a>datos <span class="sc">|&gt;</span> </span>
+<span id="cb74-2"><a></a>  <span class="fu">group_by</span>(region) <span class="sc">|&gt;</span> </span>
+<span id="cb74-3"><a></a>  <span class="fu">summarize</span>(<span class="at">total =</span> <span class="fu">sum</span>(personas)) <span class="sc">|&gt;</span> </span>
+<span id="cb74-4"><a></a>  <span class="fu">head</span>(<span class="at">n =</span> <span class="dv">4</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 2
+  region               total
+  &lt;chr&gt;                &lt;dbl&gt;
+1 Antofagasta        121379.
+2 Arica y Parinacota  48086.
+3 Atacama             64481.
+4 Aysén               15113.</code></pre>
+</div>
+</div>
 </div>
 </section>
 <section class="slide level2">

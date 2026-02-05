@@ -53,7 +53,7 @@
     "href": "diapositivas.html#operaciones-básicas",
     "title": "Introducción al análisis de datos con R",
     "section": "Operaciones básicas",
-    "text": "Operaciones básicas\n\n\n\nPodemos realizar cualquier operación matemática en R.\nPara ejecutar un comando, pon el cursor de texto en la línea o expresión que desees ejecutar, o selecciónala, y presiona el botón Run, o las teclas control + enter.\n\nLo importante es que el cursor de texto | esté en cualquier lugar de la línea.\n\nEl resultado de todas las operaciones aparece en la consola.\n\n\n\n\n\n2 + 2 #suma\n\n[1] 4\n\n\n\n\n\n50 * 100 #multiplicación\n\n[1] 5000\n\n\n\n\n\n4556 - 1000 #resta\n\n[1] 3556\n\n\n\n\n\n6565 / 89 #división\n\n[1] 73.76404\n\n\n\n\n\n10^4 #potencias\n\n[1] 10000"
+    "text": "Operaciones básicas\n\n\n\nPodemos realizar cualquier operación matemática en R.\nPara ejecutar un comando, pon el cursor de texto en la línea o expresión que desees ejecutar, o selecciónala, y presiona el botón Run, o las teclas control + enter.\nLo importante es que el cursor de texto | esté en cualquier lugar de la línea.\nEl resultado de todas las operaciones aparece en la consola.\n\n\n\n\n\n2 + 2 #suma\n\n[1] 4\n\n\n\n\n\n50 * 100 #multiplicación\n\n[1] 5000\n\n\n\n\n\n4556 - 1000 #resta\n\n[1] 3556\n\n\n\n\n\n6565 / 89 #división\n\n[1] 73.76404\n\n\n\n\n\n10^4 #potencias\n\n[1] 10000"
   },
   {
     "objectID": "diapositivas.html#tipos-de-datos",
@@ -130,7 +130,7 @@
     "href": "diapositivas.html#paquetes",
     "title": "Introducción al análisis de datos con R",
     "section": "Paquetes",
-    "text": "Paquetes\n\n\n\n\n\nExtensiones de R que te permiten agregar nuevas y mejores funcionalidades.\nSe instalan desde internet\n\nSon creados y mantenidos por la comunidad\nSe revisan para garantizar su seguridad y estabilidad\n\n\n\n\ninstall.packages()"
+    "text": "Paquetes\n\n\n\n\n\nExtensiones de R que te permiten agregar nuevas y mejores funcionalidades.\nSe instalan desde internet\nSon creados y mantenidos por la comunidad\nSe revisan para garantizar su seguridad y estabilidad\n\n\n\ninstall.packages()"
   },
   {
     "objectID": "diapositivas.html#dplyr",
@@ -186,7 +186,7 @@
     "href": "diapositivas.html#crearmodificar-variables",
     "title": "Introducción al análisis de datos con R",
     "section": "Crear/modificar variables",
-    "text": "Crear/modificar variables\n\n Ver tutorial\n\n\nCon mutate() para crear una nueva variable o columna\n\n\nLe aplicamos mutate() a un data frame conectando los datos a la función con un conector (|&gt; o %&gt;%)\n\n\nejemplo |&gt; \n  mutate(saludo = \"hola\")"
+    "text": "Crear/modificar variables\n\n Ver tutorial\n\n\nCon mutate() para crear una nueva variable o columna\n\n\nLe aplicamos mutate() a un data frame conectando los datos a la función con un conector (|&gt; o %&gt;%)\n\n\n\n\ndatos |&gt; \n  select(codigo, comuna) |&gt; \n  mutate(saludo = \"hola\") |&gt; \n  head()\n\n# A tibble: 6 × 3\n  codigo comuna        saludo\n   &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt; \n1   1101 Iquique       hola  \n2   1107 Alto Hospicio hola  \n3   1401 Pozo Almonte  hola  \n4   1402 Camiña        hola  \n5   1403 Colchane      hola  \n6   1404 Huara         hola  \n\n\n\n\ndatos |&gt; \n  select(comuna, personas) |&gt; \n  mutate(miles = personas/1000) |&gt; \n  head()\n\n# A tibble: 6 × 3\n  comuna        personas  miles\n  &lt;chr&gt;            &lt;dbl&gt;  &lt;dbl&gt;\n1 Iquique         41967. 42.0  \n2 Alto Hospicio   45162. 45.2  \n3 Pozo Almonte     4563.  4.56 \n4 Camiña            308.  0.308\n5 Colchane          473.  0.473\n6 Huara            1185.  1.18"
   },
   {
     "objectID": "diapositivas.html#tutoriales-de-dplyr",
@@ -200,13 +200,13 @@
     "href": "diapositivas.html#filtrar-datos",
     "title": "Introducción al análisis de datos con R",
     "section": "Filtrar datos",
-    "text": "Filtrar datos\n\n Ver tutorial\n\n\nPara filtrar, realizamos una comparación entre los valores de una columna y un valor específico.\n\n\ndatos &lt;- readr::read_csv2(\"datos/pobreza/estimaciones_pobreza.csv\")\n\n\nlibrary(dplyr)\n\ndatos |&gt; \n  filter(porcentaje &gt; 0.35) |&gt; \n  arrange(desc(porcentaje))\n\n# A tibble: 10 × 10\n   codigo region        comuna personas_proy personas porcentaje limite_inferior\n    &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;      &lt;dbl&gt;           &lt;dbl&gt;\n 1  15202 Arica y Pari… Gener…           668     392.      0.586           0.435\n 2   9116 La Araucanía  Saave…         12717    5654.      0.445           0.361\n 3   9204 La Araucanía  Ercil…          8422    3503.      0.416           0.361\n 4   9106 La Araucanía  Galva…         12594    5029.      0.399           0.313\n 5   8314 Biobío        Alto …          6784    2640.      0.389           0.319\n 6  10306 Los Lagos     San J…          7521    2923.      0.389           0.314\n 7   1404 Tarapacá      Huara           3072    1185.      0.386           0.319\n 8  15102 Arica y Pari… Camar…          1242     460.      0.370           0.216\n 9   9121 La Araucanía  Cholc…         12539    4578.      0.365           0.289\n10  14203 Los Ríos      Lago …         10287    3647.      0.354           0.297\n# ℹ 3 more variables: limite_superior &lt;dbl&gt;, casen &lt;chr&gt;, tipo_estimacion &lt;chr&gt;"
+    "text": "Filtrar datos\n\n Ver tutorial\n\n\nPara filtrar, realizamos una comparación entre los valores de una columna y un valor específico.\n\n\n\ndatos &lt;- readr::read_csv2(\"datos/pobreza/estimaciones_pobreza.csv\")\n\n\n\n\nlibrary(dplyr)\n\ndatos |&gt; \n  filter(porcentaje &gt; 0.35) |&gt; \n  arrange(desc(porcentaje)) |&gt; \n  head()\n\n# A tibble: 6 × 10\n  codigo region         comuna personas_proy personas porcentaje limite_inferior\n   &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;      &lt;dbl&gt;           &lt;dbl&gt;\n1  15202 Arica y Parin… Gener…           668     392.      0.586           0.435\n2   9116 La Araucanía   Saave…         12717    5654.      0.445           0.361\n3   9204 La Araucanía   Ercil…          8422    3503.      0.416           0.361\n4   9106 La Araucanía   Galva…         12594    5029.      0.399           0.313\n5   8314 Biobío         Alto …          6784    2640.      0.389           0.319\n6  10306 Los Lagos      San J…          7521    2923.      0.389           0.314\n# ℹ 3 more variables: limite_superior &lt;dbl&gt;, casen &lt;chr&gt;, tipo_estimacion &lt;chr&gt;"
   },
   {
     "objectID": "diapositivas.html#resúmenes-de-datos",
     "href": "diapositivas.html#resúmenes-de-datos",
     "title": "Introducción al análisis de datos con R",
     "section": "Resúmenes de datos",
-    "text": "Resúmenes de datos\n\n Ver tutorial"
+    "text": "Resúmenes de datos\n\n Ver tutorial\n\n\nAplicar una función para resumir todas las filas de una tabla en un sólo resultado:\n\ndatos |&gt; \n  summarize(total = sum(personas))\n\n# A tibble: 1 × 1\n     total\n     &lt;dbl&gt;\n1 3368245.\n\n\n\n\nSi agrupamos los datos, obtendremos una fila de resultado por cada grupo:\n\ndatos |&gt; \n  group_by(region) |&gt; \n  summarize(total = sum(personas)) |&gt; \n  head(n = 4)\n\n# A tibble: 4 × 2\n  region               total\n  &lt;chr&gt;                &lt;dbl&gt;\n1 Antofagasta        121379.\n2 Arica y Parinacota  48086.\n3 Atacama             64481.\n4 Aysén               15113."
   }
 ]
