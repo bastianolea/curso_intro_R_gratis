@@ -1416,7 +1416,7 @@ datos_clasif |> head()
 
 
 ::: {.boton}
-[{{< fa file-lines >}} Estimaciones de población Censo](https://github.com/bastianolea/curso_intro_R_gratis/raw/main/datos/estimaciones/estimaciones-y-proyecciones-base.xlsx)
+[{{< fa file-lines >}} Estimaciones de población Censo](https://raw.githubusercontent.com/bastianolea/curso_intro_R_gratis/refs/heads/main/datos/estimaciones/estimaciones-y-proyecciones-base.xlsx)
 :::
 
 
