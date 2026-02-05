@@ -1381,9 +1381,9 @@ Para cruzar dos tablas de datos<br>usamos `left_join()` de `{dplyr}`
 ----
 
 
-### Cruzando datos
+### Cruzando datos {{< fa table >}}
 
-Veamos un ejemplo donde cruzamos dos tablas, la de **pobreza** y una nueva de **clasificación comunal** (urbana, mixta, rural), a partir de la columna que tienen en común: `codigo`
+Veamos un ejemplo donde cruzamos dos tablas, la de **pobreza** y una nueva de **clasificación comunal** (urbana, mixta, rural según la [PNDR](https://bibliotecadigital.odepa.gob.cl/handle/20.500.12650/74476)), a partir de la columna que tienen en común: `codigo`
 
 ::: {.fragment}
 ```{r}
@@ -1409,10 +1409,11 @@ datos_clasif |> head()
 ```
 :::
 
+
 ----
 
 
-## Datos para practicar
+## Datos para practicar {{< fa file-code >}}
 
 
 ::: {.boton}
@@ -1428,9 +1429,13 @@ datos_clasif |> head()
 [{{< fa file-lines >}} Estimación de pobreza multidimensional 2022](https://github.com/bastianolea/curso_intro_R_gratis/raw/main/datos/pobreza/estimaciones_indice_pobreza_multidimensional_comunas_2022.xlsx)
 :::
 
+Puedes encontrar más datos en mi [repositorio de datos sociales](https://bastianolea.github.io/datos_sociales/), en el [banco integrado de datos del Ministerio de Desarrollo](https://bidat.midesof.cl/), en los [datos abiertos del Estado Chile](https://datos.gob.cl/), y [muchos más](https://bastianolea.rbind.io/blog/r_introduccion/recursos_r/#datos).
+
+:::: aside 
 ::: {.fragment}
 Ahora que ya sabes lo básico, todo lo demás se trata de aprender piezas y herramientas que puedes ir agregando a tus análisis! 🧩🛠️
 :::
+::::
 
 
 
