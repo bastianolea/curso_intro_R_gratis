@@ -37,7 +37,7 @@ Encuentra todo sobre el curso [en este post](https://bastianolea.rbind.io/blog/c
 :::
 
 ::: {.boton}
-[{{< fa video >}} Streaming](https://youtube.com/live/A9wtPBEaVvY)
+[{{< fa video >}} Grabaciones](https://bastianolea.rbind.io/blog/curso_gratis_r_intro_1/#streaming-y-grabaciones)
 :::
 
 ::: {.boton}
@@ -1557,31 +1557,37 @@ Ahora que ya sabes lo básico, todo lo demás se trata de aprender piezas y herr
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ----
 
+## Consejos 
 
-
-::: {.absolute top=40% style="text-align: center;"}
-**¡Gracias!**
-
-Si tienes dudas o quieres seguir por tu cuenta, [visita este sitio con recursos para aprender R.](https://bastianolea.github.io/aprende_r/)
+::: {.incremental}
+- Mantengan su propio **libro de aprendizajes**
+- Leer bien los **errores**
+- Probar **paso a paso**
+- Devolverse y **empezar de nuevo**
+- No se vuelvan dependientes de la IA
+- Asistencia con IA: **autocompletado** de GitHub Copilot
+- **Mensaje de sistema** para su proveedor de IA
+- Aprender a **googlear** bien 
 :::
 
+
+
+
+# Gracias <span style="font-size: 110%; color: #9F69C7;">♥</span>
+
+
+Puedes escribirme cualquier duda o comentario [por aquí](https://bastianolea.rbind.io/contact/)
+
+<br>
+
+
 :::: {.centrar}
+::: {.boton}
+[{{< fa link >}} Aprende R](https://bastianolea.github.io/aprende_r/)
+:::
+
 ::: {.boton}
 [{{< fa book-open >}} Curso](https://bastianolea.rbind.io/clases/curso_gratis_r_intro_1/)
 :::
@@ -1591,7 +1597,7 @@ Si tienes dudas o quieres seguir por tu cuenta, [visita este sitio con recursos 
 :::
 
 ::: {.boton}
-[{{< fa video >}} Streaming](https://youtube.com/live/A9wtPBEaVvY)
+[{{< fa video >}} Grabaciones](https://bastianolea.rbind.io/blog/curso_gratis_r_intro_1/#streaming-y-grabaciones)
 :::
 ::::
 

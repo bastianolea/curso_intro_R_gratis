@@ -116,7 +116,7 @@
     "href": "diapositivas.html#inicio",
     "title": "Introducción al análisis de datos con R",
     "section": "Inicio",
-    "text": "Inicio\nBastián Olea Herrera\nbastianolea.rbind.io\n\nEncuentra todo sobre el curso en este post de mi blog.\n\n\n\n Curso\n\n\n Código\n\n\n Streaming\n\n\n Diapositivas\n\n\n Contacto\n\n\n\nPuedes encontrar más contenidos para aprender R en este sitio, y más cosas de R en mi sitio web."
+    "text": "Inicio\nBastián Olea Herrera\nbastianolea.rbind.io\n\nEncuentra todo sobre el curso en este post de mi blog.\n\n\n\n Curso\n\n\n Código\n\n\n Grabaciones\n\n\n Diapositivas\n\n\n Contacto\n\n\n\nPuedes encontrar más contenidos para aprender R en este sitio, y más cosas de R en mi sitio web."
   },
   {
     "objectID": "diapositivas.html#botones-2",
@@ -250,5 +250,12 @@
     "title": "Introducción al análisis de datos con R",
     "section": "Datos de texto",
     "text": "Datos de texto\n\nEl paquete {stringr} se especializa en texto.\n\n\nlibrary(stringr)\n\n\n\ntexto &lt;- \"todxs pueden aprender a programar 💕\" \n\nstr_detect(texto, \"todos\")\n\n[1] FALSE\n\nstr_detect(texto, \"aprender\")\n\n[1] TRUE\n\n\n\n\n\ndatos |&gt; \n  filter(str_detect(comuna, \"Alto\")) |&gt; \n  select(region, comuna)\n\n# A tibble: 4 × 2\n  region        comuna         \n  &lt;chr&gt;         &lt;chr&gt;          \n1 Tarapacá      Alto Hospicio  \n2 Atacama       Alto Del Carmen\n3 Biobío        Alto Biobío    \n4 Metropolitana Puente Alto"
+  },
+  {
+    "objectID": "diapositivas.html#consejos",
+    "href": "diapositivas.html#consejos",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Consejos",
+    "text": "Consejos\n\nMantengan su propio libro de aprendizajes\nLeer bien los errores\nProbar paso a paso\nDevolverse y empezar de nuevo\nNo se vuelvan dependientes de la IA\nAsistencia con IA: autocompletado de GitHub Copilot\nMensaje de sistema para su proveedor de IA\nAprender a googlear bien"
   }
 ]
