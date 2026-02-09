@@ -1,10 +1,11 @@
 library(ellmer)
+# ollamar::pull("llama3.2:3b") # descargar modelo
 chat <- chat_ollama(model = "llama3.2:3b") # elegir modelo
 
 library(mall)
 llm_use(chat) # configurar modelo
 
-
+library(dplyr)
 noticias <- tibble(
   cuerpo = c(
     "El equipo de fútbol ganó el partido con un gol en el último minuto.",

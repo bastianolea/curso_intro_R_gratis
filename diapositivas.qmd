@@ -1374,7 +1374,7 @@ datos |>
 :::
 
 ::: {.boton}
-<a href="https://raw.githubusercontent.com/bastianolea/prensa_chile/refs/heads/main/datos/prensa_datos_muestra.csv" target="_blank"> {{< fa file-download >}} Descargar datos de noticias </a>
+<a href="https://raw.githubusercontent.com/bastianolea/prensa_chile/refs/heads/main/prensa_datos_muestra.csv" target="_blank"> {{< fa file-download >}} Descargar datos de noticias </a>
 :::
 
 :::{.incremental}
