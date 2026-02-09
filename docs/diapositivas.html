@@ -97,7 +97,7 @@
     code span.vs { color: #9ecbff; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-ef4e08d436557c9890f3aa908a583171.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-f3b7ff798fdab3e80a3beb2e0d794e6c.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -1304,8 +1304,8 @@ Bastián Olea Herrera
 </div>
 </div>
 </section>
-<section id="trabajando-con-texto" class="slide level2">
-<h2>Trabajando con texto</h2>
+<section id="datos-de-texto" class="slide level2">
+<h2>Datos de texto</h2>
 <p><img data-src="imagenes/stringr.png" class="esquina-der" style="height:128px;"></p>
 <p>El paquete <code>{stringr}</code> se especializa en texto.</p>
 <div class="pad">
@@ -1344,6 +1344,66 @@ Bastián Olea Herrera
 </div>
 </div>
 </section>
+<section class="slide level2">
+
+<h3 id="trabajando-con-datos-de-texto">Trabajando con datos de texto</h3>
+<div class="boton absolute" style="top: 0%; right: 0%; ">
+<p><a href="https://bastianolea.rbind.io/blog/nubes_de_palabras/"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Ver tutorial</a></p>
+</div>
+<div class="boton">
+<p><a href="https://raw.githubusercontent.com/bastianolea/prensa_chile/refs/heads/main/datos/prensa_datos_muestra.csv" target="_blank"> <i class="fa-solid fa-file-download" aria-label="file-download"></i> Descargar datos de noticias </a></p>
+</div>
+<ul>
+<li class="fragment">Podemos usar un <strong>conteo de palabras</strong> generado con <code>count()</code> para hacer una <strong>nube de palabras</strong>.</li>
+<li class="fragment">Pero antes, tenemos que <strong>tokenizar</strong> el texto para convertirlo desde una cadena de texto a palabras independientes.</li>
+</ul>
+<div class="fragment">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a></a>noticias <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv2</span>(<span class="st">"https://raw.githubusercontent.com/bastianolea/prensa_chile/refs/heads/main/prensa_datos_muestra.csv"</span>)</span>
+<span id="cb85-2"><a></a></span>
+<span id="cb85-3"><a></a><span class="fu">library</span>(tidytext)</span>
+<span id="cb85-4"><a></a></span>
+<span id="cb85-5"><a></a>palabras <span class="ot">&lt;-</span> noticias <span class="sc">|&gt;</span> </span>
+<span id="cb85-6"><a></a>  tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(<span class="at">input =</span> cuerpo, <span class="at">output =</span> palabra) <span class="sc">|&gt;</span> <span class="co"># tokenizar documentos</span></span>
+<span id="cb85-7"><a></a>  <span class="fu">filter</span>(<span class="sc">!</span>palabra <span class="sc">%in%</span> stopwords<span class="sc">::</span><span class="fu">stopwords</span>(<span class="st">"spanish"</span>)) <span class="co"># eliminar palabras vacías</span></span>
+<span id="cb85-8"><a></a></span>
+<span id="cb85-9"><a></a>palabras_conteo <span class="ot">&lt;-</span> palabras_conteo <span class="sc">|&gt;</span> </span>
+<span id="cb85-10"><a></a>  <span class="fu">slice_max</span>(n, <span class="at">n =</span> <span class="dv">1000</span>) <span class="co"># sólo las más frecuentes</span></span>
+<span id="cb85-11"><a></a></span>
+<span id="cb85-12"><a></a><span class="fu">library</span>(wordcloud2)</span>
+<span id="cb85-13"><a></a></span>
+<span id="cb85-14"><a></a>palabras_conteo <span class="sc">|&gt;</span></span>
+<span id="cb85-15"><a></a>  wordcloud2<span class="sc">::</span><span class="fu">wordcloud2</span>(<span class="at">backgroundColor =</span> <span class="st">"#23102A"</span>, <span class="at">color =</span> <span class="st">"#9F69C7"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="análisis-de-sentimiento">Análisis de sentimiento</h3>
+<div class="boton absolute" style="top: 0%; right: 0%; ">
+<p><a href="https://bastianolea.rbind.io/blog/analisis_sentimiento_llm/"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Ver tutorial</a></p>
+</div>
+<div class="fragment pad">
+<p>Podemos usar un <strong>modelo de lenguaje</strong> (LLM) local o remoto para que R analice los textos y retorne si son <strong>positivos</strong>, <strong>neutros</strong> o <strong>negativos</strong>.</p>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb86"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a></a><span class="fu">library</span>(ellmer)</span>
+<span id="cb86-2"><a></a>chat <span class="ot">&lt;-</span> <span class="fu">chat_ollama</span>(<span class="at">model =</span> <span class="st">"llama3.2:3b"</span>) <span class="co"># elegir modelo</span></span>
+<span id="cb86-3"><a></a></span>
+<span id="cb86-4"><a></a><span class="fu">library</span>(mall)</span>
+<span id="cb86-5"><a></a><span class="fu">llm_use</span>(chat) <span class="co"># configurar modelo</span></span>
+<span id="cb86-6"><a></a></span>
+<span id="cb86-7"><a></a>sentimiento <span class="ot">&lt;-</span> noticias <span class="sc">|&gt;</span> </span>
+<span id="cb86-8"><a></a>  <span class="fu">slice_sample</span>(<span class="at">n =</span> <span class="dv">10</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb86-9"><a></a>  <span class="co"># extraer sentimiento</span></span>
+<span id="cb86-10"><a></a>  <span class="fu">llm_sentiment</span>(cuerpo, <span class="at">pred_name =</span> <span class="st">"sentimiento"</span>,</span>
+<span id="cb86-11"><a></a>                <span class="at">options =</span> <span class="fu">c</span>(<span class="st">"positivo"</span>, <span class="st">"neutro"</span>, <span class="st">"negativo"</span>))</span>
+<span id="cb86-12"><a></a></span>
+<span id="cb86-13"><a></a>sentimiento</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</section>
 <section id="cruzar-datos" class="slide level2">
 <h2>Cruzar datos</h2>
 <div class="boton absolute" style="top: 0%; right: 0%; ">
@@ -1351,7 +1411,9 @@ Bastián Olea Herrera
 </div>
 <p>Para cruzar dos tablas de datos<br>usamos <code>left_join()</code> de <code>{dplyr}</code></p>
 <p><br></p>
+<div class="fragment">
 <p><img data-src="imagenes/left_join.png" class="centrar" style="max-height: 400px;"></p>
+</div>
 </section>
 <section class="slide level2">
 
@@ -1359,22 +1421,22 @@ Bastián Olea Herrera
 <p>Veamos un ejemplo donde cruzamos dos tablas, la de <strong>pobreza</strong> y una nueva de <strong>clasificación comunal</strong> (urbana, mixta, rural según la <a href="https://bibliotecadigital.odepa.gob.cl/handle/20.500.12650/74476">PNDR</a>), a partir de la columna que tienen en común: <code>codigo</code></p>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a></a>clasificacion <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv2</span>(<span class="st">"datos/clasificacion/clasificacion.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a></a>clasificacion <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv2</span>(<span class="st">"datos/clasificacion/clasificacion.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb86"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a></a>clasificacion_b <span class="ot">&lt;-</span> clasificacion <span class="sc">|&gt;</span> </span>
-<span id="cb86-2"><a></a>  <span class="fu">select</span>(codigo, clasificacion)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb88"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a></a>clasificacion_b <span class="ot">&lt;-</span> clasificacion <span class="sc">|&gt;</span> </span>
+<span id="cb88-2"><a></a>  <span class="fu">select</span>(codigo, clasificacion)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a></a>datos_clasif <span class="ot">&lt;-</span> datos <span class="sc">|&gt;</span> </span>
-<span id="cb87-2"><a></a>  <span class="fu">select</span>(codigo, comuna, personas, porcentaje) <span class="sc">|&gt;</span> </span>
-<span id="cb87-3"><a></a>  <span class="fu">left_join</span>(clasificacion_b, <span class="at">by =</span> <span class="st">"codigo"</span>)</span>
-<span id="cb87-4"><a></a></span>
-<span id="cb87-5"><a></a>datos_clasif <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb89"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a></a>datos_clasif <span class="ot">&lt;-</span> datos <span class="sc">|&gt;</span> </span>
+<span id="cb89-2"><a></a>  <span class="fu">select</span>(codigo, comuna, personas, porcentaje) <span class="sc">|&gt;</span> </span>
+<span id="cb89-3"><a></a>  <span class="fu">left_join</span>(clasificacion_b, <span class="at">by =</span> <span class="st">"codigo"</span>)</span>
+<span id="cb89-4"><a></a></span>
+<span id="cb89-5"><a></a>datos_clasif <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 5
   codigo comuna        personas porcentaje clasificacion
@@ -1389,6 +1451,41 @@ Bastián Olea Herrera
 </div>
 </div>
 </section>
+<section id="transformar-datos" class="slide level2">
+<h2>Transformar datos</h2>
+<div class="boton absolute" style="top: 0%; right: 0%; ">
+<p><a href="https://bastianolea.rbind.io/blog/r_introduccion/tidyr_pivotar/"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Ver tutorial</a></p>
+</div>
+<ul>
+<li class="fragment">El paquete <code>{tidyr}</code> se especializa en <strong>transformar la estructura de los datos</strong>.</li>
+<li class="fragment">Esto nos permite <strong>manipular</strong> los datos para que sea más cómodo o lógico realizar ciertas operaciones.
+<ul>
+<li class="fragment">Por ejemplo:
+<ul>
+<li class="fragment">Si necesitamos sumar varias variables, es más cómodo tenerlas en filas (para poder usar algo como <code>sum(valores)</code>) que en columnas (y tener que sumar <code>a+b+c+d</code>…)</li>
+<li class="fragment">Si queremos comparar varias variables, o mostrarlas a un público, es mejor que estén lado a lado, como en las tablas comunes.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="transformando-datos">Transformando datos</h3>
+<p><img data-src="imagenes/tidyr.png" class="esquina-der" style="height:128px;"></p>
+<ul>
+<li><strong>Pivotar</strong> una tabla sirve para cambiar su forma:
+<ul>
+<li>De variables en columnas a filas: <code>pivot_longer()</code></li>
+<li>De variables en filas a columnas: <code>pivot_wider()</code></li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p><img data-src="imagenes/pivot_longer.png" class="centrar" style="max-height: 200px;"></p>
+</div>
+<div class="fragment">
+<p><img data-src="imagenes/pivot_wider.png" class="centrar" style="max-height: 200px;"></p>
+</div>
+</section>
 <section id="datos-para-practicar" class="slide level2">
 <h2>Datos para practicar <i class="fa-solid fa-file-code" aria-label="file-code"></i></h2>
 <div class="boton">
@@ -1399,6 +1496,9 @@ Bastián Olea Herrera
 </div>
 <div class="boton">
 <p><a href="https://github.com/bastianolea/curso_intro_R_gratis/raw/main/datos/pobreza/estimaciones_indice_pobreza_multidimensional_comunas_2022.xlsx"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Estimación de pobreza multidimensional 2022</a></p>
+</div>
+<div class="boton">
+<p><a href="https://github.com/bastianolea/curso_intro_R_gratis/raw/main/datos/clasificacion/ClasificacionComunasPNDR_Censo2024.xlsx"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Clasificaciones comunales 2024</a></p>
 </div>
 <p>Puedes encontrar más datos en mi <a href="https://bastianolea.github.io/datos_sociales/">repositorio de datos sociales</a>, en el <a href="https://bidat.midesof.cl/">banco integrado de datos del Ministerio de Desarrollo</a>, en los <a href="https://datos.gob.cl/">datos abiertos del Estado Chile</a>, y <a href="https://bastianolea.rbind.io/blog/r_introduccion/recursos_r/#datos">muchos más</a>.</p>
 

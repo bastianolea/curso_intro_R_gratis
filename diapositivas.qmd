@@ -1332,7 +1332,7 @@ datos |>
 
 
 
-## Trabajando con texto
+## Datos de texto
 
 ![](imagenes/stringr.png){.esquina-der style='height:128px;'}
 
@@ -1363,6 +1363,80 @@ datos |>
 :::
 
 
+----
+
+
+### Trabajando con datos de texto
+
+
+::: {.boton .absolute top=0% right=0%}
+[{{< fa file-lines >}} Ver tutorial](https://bastianolea.rbind.io/blog/nubes_de_palabras/)
+:::
+
+::: {.boton}
+<a href="https://raw.githubusercontent.com/bastianolea/prensa_chile/refs/heads/main/datos/prensa_datos_muestra.csv" target="_blank"> {{< fa file-download >}} Descargar datos de noticias </a>
+:::
+
+:::{.incremental}
+- Podemos usar un **conteo de palabras** generado con `count()` para hacer una **nube de palabras**.
+- Pero antes, tenemos que **tokenizar** el texto para convertirlo desde una cadena de texto a palabras independientes.
+:::
+
+::: {.fragment}
+```{r}
+#| eval: false
+
+noticias <- readr::read_csv2("https://raw.githubusercontent.com/bastianolea/prensa_chile/refs/heads/main/prensa_datos_muestra.csv")
+
+library(tidytext)
+
+palabras <- noticias |> 
+  tidytext::unnest_tokens(input = cuerpo, output = palabra) |> # tokenizar documentos
+  filter(!palabra %in% stopwords::stopwords("spanish")) # eliminar palabras vacías
+
+palabras_conteo <- palabras_conteo |> 
+  slice_max(n, n = 1000) # sólo las más frecuentes
+
+library(wordcloud2)
+
+palabras_conteo |>
+  wordcloud2::wordcloud2(backgroundColor = "#23102A", color = "#9F69C7")
+```
+:::
+
+----
+
+
+### Análisis de sentimiento
+
+::: {.boton .absolute top=0% right=0%}
+[{{< fa file-lines >}} Ver tutorial](https://bastianolea.rbind.io/blog/analisis_sentimiento_llm/)
+:::
+
+::: {.fragment .pad}
+Podemos usar un **modelo de lenguaje** (LLM) local o remoto para que R analice los textos y retorne si son **positivos**, **neutros** o **negativos**.
+:::
+
+::: {.fragment}
+```{r}
+#| eval: false
+
+library(ellmer)
+chat <- chat_ollama(model = "llama3.2:3b") # elegir modelo
+
+library(mall)
+llm_use(chat) # configurar modelo
+
+sentimiento <- noticias |> 
+  slice_sample(n = 10) |> 
+  # extraer sentimiento
+  llm_sentiment(cuerpo, pred_name = "sentimiento",
+                options = c("positivo", "neutro", "negativo"))
+
+sentimiento
+```
+:::
+
 
 ----
 
@@ -1376,7 +1450,9 @@ Para cruzar dos tablas de datos<br>usamos `left_join()` de `{dplyr}`
 
 <br>
 
+::: {.fragment}
 ![](imagenes/left_join.png){.centrar style='max-height: 400px;'}
+:::
 
 ----
 
@@ -1413,6 +1489,44 @@ datos_clasif |> head()
 ----
 
 
+## Transformar datos
+
+::: {.boton .absolute top=0% right=0%}
+[{{< fa file-lines >}} Ver tutorial](https://bastianolea.rbind.io/blog/r_introduccion/tidyr_pivotar/)
+:::
+
+::: {.incremental}
+- El paquete `{tidyr}` se especializa en **transformar la estructura de los datos**.
+- Esto nos permite **manipular** los datos para que sea más cómodo o lógico realizar ciertas operaciones.
+  - Por ejemplo:
+    - Si necesitamos sumar varias variables, es más cómodo tenerlas en filas (para poder usar algo como `sum(valores)`) que en columnas (y tener que sumar `a+b+c+d`...)
+    - Si queremos comparar varias variables, o mostrarlas a un público, es mejor que estén lado a lado, como en las tablas comunes.
+:::
+  
+  
+----
+
+
+### Transformando datos
+
+![](imagenes/tidyr.png){.esquina-der style='height:128px;'}
+
+- **Pivotar** una tabla sirve para cambiar su forma:
+  - De variables en columnas a filas: `pivot_longer()`
+  - De variables en filas a columnas: `pivot_wider()`
+
+
+::: {.fragment}
+![](imagenes/pivot_longer.png){.centrar style='max-height: 200px;'}
+:::
+
+::: {.fragment}
+![](imagenes/pivot_wider.png){.centrar style='max-height: 200px;'}
+:::
+
+----
+
+
 ## Datos para practicar {{< fa file-code >}}
 
 
@@ -1427,6 +1541,10 @@ datos_clasif |> head()
 
 ::: {.boton }
 [{{< fa file-lines >}} Estimación de pobreza multidimensional 2022](https://github.com/bastianolea/curso_intro_R_gratis/raw/main/datos/pobreza/estimaciones_indice_pobreza_multidimensional_comunas_2022.xlsx)
+:::
+
+::: {.boton }
+[{{< fa file-lines >}} Clasificaciones comunales 2024](https://github.com/bastianolea/curso_intro_R_gratis/raw/main/datos/clasificacion/ClasificacionComunasPNDR_Censo2024.xlsx)
 :::
 
 Puedes encontrar más datos en mi [repositorio de datos sociales](https://bastianolea.github.io/datos_sociales/), en el [banco integrado de datos del Ministerio de Desarrollo](https://bidat.midesof.cl/), en los [datos abiertos del Estado Chile](https://datos.gob.cl/), y [muchos más](https://bastianolea.rbind.io/blog/r_introduccion/recursos_r/#datos).

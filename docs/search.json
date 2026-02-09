@@ -228,7 +228,7 @@
     "href": "diapositivas.html#datos-para-practicar",
     "title": "Introducción al análisis de datos con R",
     "section": "Datos para practicar ",
-    "text": "Datos para practicar \n\n Estimaciones de población Censo\n\n\n Variables educacionales Censo 2024\n\n\n Estimación de pobreza multidimensional 2022\n\nPuedes encontrar más datos en mi repositorio de datos sociales, en el banco integrado de datos del Ministerio de Desarrollo, en los datos abiertos del Estado Chile, y muchos más.\n\n\n\nAhora que ya sabes lo básico, todo lo demás se trata de aprender piezas y herramientas que puedes ir agregando a tus análisis! 🧩🛠️"
+    "text": "Datos para practicar \n\n Estimaciones de población Censo\n\n\n Variables educacionales Censo 2024\n\n\n Estimación de pobreza multidimensional 2022\n\n\n Clasificaciones comunales 2024\n\nPuedes encontrar más datos en mi repositorio de datos sociales, en el banco integrado de datos del Ministerio de Desarrollo, en los datos abiertos del Estado Chile, y muchos más.\n\n\n\nAhora que ya sabes lo básico, todo lo demás se trata de aprender piezas y herramientas que puedes ir agregando a tus análisis! 🧩🛠️"
   },
   {
     "objectID": "diapositivas.html#cruzar-datos",
@@ -236,5 +236,19 @@
     "title": "Introducción al análisis de datos con R",
     "section": "Cruzar datos",
     "text": "Cruzar datos\n\n Ver tutorial\n\nPara cruzar dos tablas de datosusamos left_join() de {dplyr}"
+  },
+  {
+    "objectID": "diapositivas.html#transformar-datos",
+    "href": "diapositivas.html#transformar-datos",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Transformar datos",
+    "text": "Transformar datos\n\n Ver tutorial\n\n\nEl paquete {tidyr} se especializa en transformar la estructura de los datos.\nEsto nos permite manipular los datos para que sea más cómodo o lógico realizar ciertas operaciones.\n\nPor ejemplo:\n\nSi necesitamos sumar varias variables, es más cómodo tenerlas en filas (para poder usar algo como sum(valores)) que en columnas (y tener que sumar a+b+c+d…)\nSi queremos comparar varias variables, o mostrarlas a un público, es mejor que estén lado a lado, como en las tablas comunes."
+  },
+  {
+    "objectID": "diapositivas.html#datos-de-texto",
+    "href": "diapositivas.html#datos-de-texto",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Datos de texto",
+    "text": "Datos de texto\n\nEl paquete {stringr} se especializa en texto.\n\n\nlibrary(stringr)\n\n\n\ntexto &lt;- \"todxs pueden aprender a programar 💕\" \n\nstr_detect(texto, \"todos\")\n\n[1] FALSE\n\nstr_detect(texto, \"aprender\")\n\n[1] TRUE\n\n\n\n\n\ndatos |&gt; \n  filter(str_detect(comuna, \"Alto\")) |&gt; \n  select(region, comuna)\n\n# A tibble: 4 × 2\n  region        comuna         \n  &lt;chr&gt;         &lt;chr&gt;          \n1 Tarapacá      Alto Hospicio  \n2 Atacama       Alto Del Carmen\n3 Biobío        Alto Biobío    \n4 Metropolitana Puente Alto"
   }
 ]
