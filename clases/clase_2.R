@@ -278,3 +278,4 @@ datos |>
   summarise(promedio = mean(porcentaje))
 
 
+library(stringr)
