@@ -1,3 +1,4 @@
+
 ## Curso gratuito: introducción al análisis de datos con R
 
 _Curso online introductorio de programación dirigido a estudiantes o profesionales de ciencias sociales y humanidades, sin experiencia previa_
@@ -19,14 +20,13 @@ Aprende desde cero a usar este lenguaje y complementa tu carrera con herramienta
 
 ### Diapositivas
 
-En el navegador: https://bastianolea.github.io/curso_intro_R_gratis/
-
-En formato pdf: https://bastianolea.rbind.io/blog/curso_gratis_r_intro_1/diapositivas.pdf
+- [Ver diapositivas en el navegador](https://bastianolea.github.io/curso_intro_R_gratis/) **(recomendado)**
+- Ver diapositivas en [formato pdf](https://bastianolea.rbind.io/blog/curso_gratis_r_intro_1/diapositivas.pdf)
 
 
 ### Grabaciones de clases
 
-https://bastianolea.rbind.io/blog/curso_gratis_r_intro_1/#grabaciones
+Mira las [grabaciones de las clases completas en Youtube.](https://bastianolea.rbind.io/blog/curso_gratis_r_intro_1/#grabaciones)
 
 
 ### Código de las clases
@@ -36,7 +36,7 @@ Revisa [todos los scripts vistos en clase aquí.](https://github.com/bastianolea
 
 ### Código de las diapositivas
 
-Código de las [diapositivas hechas con Quarto y RevealJS](https://github.com/bastianolea/curso_intro_R_gratis/blob/main/diapositivas.qmd)
+Código que usé para crear las [diapositivas hechas con Quarto y RevealJS](https://github.com/bastianolea/curso_intro_R_gratis/blob/main/diapositivas.qmd)
 
 ----
 
