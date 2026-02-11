@@ -14,16 +14,30 @@ Aprende desde cero a usar este lenguaje y complementa tu carrera con herramienta
 
 [Más información en este post](https://bastianolea.rbind.io/blog/curso_gratis_r_intro_1/)
 
+## Materiales
 
-## Diapositivas
+### Diapositivas
 
-https://bastianolea.github.io/curso_intro_R_gratis/
+En el navegador: https://bastianolea.github.io/curso_intro_R_gratis/
+
+En PDF: https://github.com/bastianolea/curso_intro_R_gratis/blob/main/diapositivas.pdf
 
 
-## Streaming
+### Grabaciones de clases
 
-https://www.youtube.com/watch?v=A9wtPBEaVvY
+https://bastianolea.rbind.io/blog/curso_gratis_r_intro_1/#grabaciones
 
+
+### Código de las clases
+
+Revisa [todos los scripts vistos en clase aquí.](https://github.com/bastianolea/curso_intro_R_gratis/tree/main/clases)
+
+
+### Código de las diapositivas
+
+Código de las [diapositivas hechas con Quarto y RevealJS](https://github.com/bastianolea/curso_intro_R_gratis/blob/main/diapositivas.qmd)
+
+----
 
 ## Código de conducta
 
