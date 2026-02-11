@@ -21,7 +21,7 @@ Aprende desde cero a usar este lenguaje y complementa tu carrera con herramienta
 
 En el navegador: https://bastianolea.github.io/curso_intro_R_gratis/
 
-En formato pdf: https://github.com/bastianolea/curso_intro_R_gratis/blob/main/diapositivas.pdf
+En formato pdf: https://bastianolea.rbind.io/blog/curso_gratis_r_intro_1/diapositivas.pdf
 
 
 ### Grabaciones de clases
