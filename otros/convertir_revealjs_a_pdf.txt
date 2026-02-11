@@ -1,0 +1,1 @@
+decktape reveal https://bastianolea.github.io/curso_intro_R_gratis/diapositivas.html#/title-slide /Users/baolea/Desktop/diapo_b.pdf
